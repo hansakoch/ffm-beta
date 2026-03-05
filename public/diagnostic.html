@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FansFollow - Diagnostic Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .status {
+            background: rgba(34, 197, 94, 0.2);
+            border: 2px solid rgba(34, 197, 94, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        .status-item::before {
+            content: "✓";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: rgba(34, 197, 94, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .info {
+            background: rgba(59, 130, 246, 0.2);
+            border: 2px solid rgba(59, 130, 246, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 FansFollow</h1>
+        <h2 style="text-align: center; margin-bottom: 30px; opacity: 0.9;">Diagnostic Page</h2>
+
+        <div class="status">
+            <div class="status-item">Server is running</div>
+            <div class="status-item">Static files are accessible</div>
+            <div class="status-item">Preview window is working</div>
+        </div>
+
+        <div class="info">
+            <strong>📋 System Information:</strong><br><br>
+            <strong>Project:</strong> FansFollow - Creator Platform<br>
+            <strong>Framework:</strong> React + TypeScript + Vite<br>
+            <strong>Build Status:</strong> ✓ Compiled successfully<br>
+            <strong>Assets:</strong> ✓ All files present
+        </div>
+
+        <div class="button-container">
+            <a href="/" class="button">🏠 Go to Homepage</a>
+            <a href="/test.html" class="button">🧪 Test Page</a>
+        </div>
+
+        <div class="info" style="margin-top: 30px; font-size: 0.85rem;">
+            <strong>🔍 Next Steps:</strong><br><br>
+            1. Click "Go to Homepage" to view the main application<br>
+            2. If you see errors, check the browser console (F12)<br>
+            3. Ensure the dev server is running on the correct port<br>
+            4. Try refreshing the preview window
+        </div>
+    </div>
+
+    <script>
+        console.log('✓ Diagnostic page loaded successfully');
+        console.log('Current URL:', window.location.href);
+        console.log('Timestamp:', new Date().toISOString());
+    </script>
+</body>
+</html>

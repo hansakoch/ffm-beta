@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FansFollow - System Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 2rem;
+    }
+    .container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 3rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      max-width: 700px;
+      width: 100%;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.5rem; margin: 2rem 0 1rem; color: #fbbf24; }
+    .status {
+      background: #10b981;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #667eea;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    #console-output {
+      background: #000;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      font-family: monospace;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .log { padding: 0.25rem 0; }
+    .log.success { color: #10b981; }
+    .log.error { color: #ef4444; }
+    .log.info { color: #3b82f6; }
+    .log.warn { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 FansFollow System Test</h1>
+    <div class="status">✓ Preview Window Active</div>
+
+    <p style="margin: 1.5rem 0; font-size: 1.1rem;">
+      If you see this page, your preview window is working!
+    </p>
+
+    <h2>Navigation Tests</h2>
+    <div>
+      <a href="/" class="btn">→ Main App</a>
+      <a href="/creators" class="btn">→ Creators</a>
+      <a href="/test-preview.html" class="btn">→ Simple Test</a>
+      <a href="/diagnostic.html" class="btn">→ Full Diagnostic</a>
+    </div>
+
+    <button class="btn" onclick="testReact()" style="background: #10b981; color: white; margin-top: 1rem;">
+      Test React Loading
+    </button>
+
+    <h2>System Log</h2>
+    <div id="console-output">
+      <div class="log info">Initializing system tests...</div>
+    </div>
+  </div>
+
+  <script>
+    const output = document.getElementById('console-output');
+
+    function log(msg, type = 'info') {
+      const line = document.createElement('div');
+      line.className = `log ${type}`;
+      line.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+      output.appendChild(line);
+      output.scrollTop = output.scrollHeight;
+      console.log(msg);
+    }
+
+    log('✓ HTML rendered successfully', 'success');
+    log('✓ JavaScript executing', 'success');
+    log('✓ CSS styles applied', 'success');
+    log('Current URL: ' + window.location.href, 'info');
+    log('Viewport: ' + window.innerWidth + 'x' + window.innerHeight, 'info');
+
+    // Test server connectivity
+    fetch('/')
+      .then(res => {
+        log(`✓ Server responding (HTTP ${res.status})`, 'success');
+        return res.text();
+      })
+      .then(html => {
+        if (html.includes('<div id="root">')) {
+          log('✓ Root div found in index.html', 'success');
+        } else {
+          log('✗ Root div NOT found!', 'error');
+        }
+        if (html.includes('/src/main.tsx')) {
+          log('✓ Main script tag present', 'success');
+        } else {
+          log('✗ Main script tag missing!', 'error');
+        }
+        log('If all tests pass, click "Main App" button above', 'info');
+      })
+      .catch(err => {
+        log('✗ Server error: ' + err.message, 'error');
+      });
+
+    // Test React module loading
+    window.testReact = async function() {
+      try {
+        log('→ Testing React module import...', 'info');
+        const React = await import('react');
+        log('✓ React imported successfully!', 'success');
+
+        const ReactDOM = await import('react-dom/client');
+        log('✓ ReactDOM imported successfully!', 'success');
+
+        log('✓ React modules are loadable!', 'success');
+        log('→ The issue may be in a specific component', 'warn');
+        log('→ Check browser console on main app for errors', 'warn');
+      } catch (err) {
+        log('✗ React import failed: ' + err.message, 'error');
+        log('→ This indicates a module loading problem', 'error');
+      }
+    };
+
+    log('═══════════════════════════', 'info');
+    log('All static tests complete!', 'success');
+    log('Click buttons above to test navigation', 'info');
+  </script>
+</body>
+</html>

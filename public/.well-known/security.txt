@@ -1,0 +1,8 @@
+Contact: mailto:security@fansfollow.me
+Expires: 2026-12-31T23:59:59.000Z
+Encryption: https://fansfollow.me/pgp-key.txt
+Acknowledgments: https://fansfollow.me/security-hall-of-fame
+Preferred-Languages: en, es, fr, de
+Canonical: https://fansfollow.me/.well-known/security.txt
+Policy: https://fansfollow.me/security-policy
+Hiring: https://fansfollow.me/careers

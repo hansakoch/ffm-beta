@@ -1,0 +1,11 @@
+/* TEAM */
+	Creator: FansFollow Team
+	Contact: team@fansfollow.me
+	Twitter: @fansfollow
+	From: Global
+
+/* SITE */
+	Last update: 2025/07/01
+	Language: English, Spanish, French, German, Italian, Portuguese, Russian, Japanese, Chinese, Arabic
+	Doctype: HTML5
+	IDE: Visual Studio Code, Figma

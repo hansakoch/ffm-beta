@@ -1,0 +1,140 @@
+User-agent: *
+Allow: /
+
+# Creator Platform Comparison Pages
+Allow: /vs/
+Allow: /best-creator-platform
+Allow: /creator-platform-comparison
+Allow: /sell-fitness-content
+Allow: /sell-martial-arts-content
+Allow: /monetize-fitness-content
+
+# Google News Bot
+User-agent: Googlebot-News
+Allow: /
+Disallow: /panel/admin/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Google Video Bot
+User-agent: Googlebot-Video
+Allow: /
+Allow: /*.mp4$
+Allow: /*.webm$
+Allow: /*.ogg$
+
+# Google Mobile Bot
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Sitemap location
+Sitemap: https://fansfollow.me/sitemap.xml
+Sitemap: https://fansfollow.me/news-sitemap.xml
+Sitemap: https://fansfollow.me/video-sitemap.xml
+Sitemap: https://fansfollow.me/image-sitemap.xml
+
+# Allow all bots to access all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Exabot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# International search engines
+User-agent: Yandex
+Allow: /
+
+User-agent: Naver
+Allow: /
+
+User-agent: Baidu
+Allow: /
+
+User-agent: Seznam
+Allow: /
+
+User-agent: Qwant
+Allow: /
+
+User-agent: Coccoc
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Soso
+Allow: /
+
+User-agent: Mail.Ru
+Allow: /
+
+# Special directives for Google
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.json$
+Allow: /*.xml$
+
+# Special directives for Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /website-header-3000-1500 original.png
+Allow: /background-1718534992.jpeg
+Allow: /1000011998.jpg
+Allow: /1000011998 copy.jpg
+Allow: /ffm-silver-flat-png.png
+
+# Special directives for Google News
+User-agent: Googlebot-News
+Allow: /news/
+Allow: /blog/
+Allow: /press/
+
+# Disallow crawling of admin areas
+User-agent: *
+Disallow: /panel/admin/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
