@@ -52,7 +52,7 @@ const Footer = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-8 sm:py-12">
+        <div className="py-4 sm:py-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
             {/* Logo and Description - Takes full width */}
             <div className="lg:col-span-12 text-center">
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Links Section - Now at bottom */}
-        <div className="relative pt-8 sm:pt-8 pb-8 sm:pb-8">
+        <div className="relative pt-4 sm:pt-4 pb-8 sm:pb-8">
           {/* Premium Tapered Divider Line */}
           <div className="absolute top-0 left-0 right-0 h-[3px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-80"></div>

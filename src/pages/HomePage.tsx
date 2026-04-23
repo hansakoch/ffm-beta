@@ -359,7 +359,7 @@ const HomePage = () => {
       </section>
 
       {/* Creator CTA Section */}
-      <section className="py-12 sm:py-14 lg:py-16 relative overflow-hidden">
+      <section className="py-10 sm:py-12 lg:py-14 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
