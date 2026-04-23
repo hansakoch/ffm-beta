@@ -1,32 +1,14 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import SEOOptimizer from '../components/SEOOptimizer'
 import Footer from '../components/Footer'
-import { organizationSchema, createBreadcrumbSchema } from '../config/seo'
 
 const FansPage = () => {
   const navigate = useNavigate()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <SEOOptimizer
-        title="For Fans - FansFollowMe"
-        description="Discover and connect with your favourite fitness creators. Get closer access through chats, exclusive content, calls and video sessions."
-        keywords="fitness creators, coaches, bodybuilders, exclusive content, fitness community"
-        ogImage="/Artboard-1-transparent.png"
-        structuredData={[
-          organizationSchema,
-          createBreadcrumbSchema([
-            { name: 'Home', url: 'https://fansfollow.me' },
-            { name: 'For Fans', url: 'https://fansfollow.me/fans' }
-          ])
-        ]}
-      />
-
-      {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden min-h-screen flex items-center">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
