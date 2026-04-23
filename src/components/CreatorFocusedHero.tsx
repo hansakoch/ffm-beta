@@ -28,14 +28,11 @@ const CreatorFocusedHero = () => {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-black text-white mb-8 leading-tight">
-              More Revenue Streams
-              <span className="block text-transparent bg-gradient-to-r from-orange-400 via-purple-400 to-pink-400 bg-clip-text"> 
-                Than Any Platform
-              </span>
+              Ready to grow your fitness brand?
             </h1>
-            
+
             <p className="text-xl text-gray-200 mb-10 leading-relaxed">
-              For fitness trainers, nutritionists, bodybuilders, martial artists, martial art actors, and combat sports athletes. <strong className="text-white">Keep 80%+. BTC/ETH/USDT/SOL accepted.</strong>
+              Join fitness, martial arts and combat sports creators building loyal fan communities and new revenue streams on FansFollowMe.
             </p>
 
             {/* Revenue streams grid - 3x3 */}
@@ -110,7 +107,7 @@ const CreatorFocusedHero = () => {
                 onClick={() => window.location.href = '/signup'}
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400/20 to-purple-500/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
-                <span>Start Earning Today</span>
+                <span>Create Your Profile Now</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
