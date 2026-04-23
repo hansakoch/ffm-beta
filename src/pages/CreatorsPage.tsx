@@ -41,7 +41,7 @@ const CreatorsPage = () => {
               How It Works
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Get started in just three simple steps and begin earning from your fitness, nutrition, martial arts, or combat sports expertise. Most creators start earning within 24-48 hours.
+              Get started in three simple steps and turn your fitness, nutrition, martial arts or combat sports expertise into paid content and fan relationships.
             </p>
           </div>
 
@@ -86,9 +86,9 @@ const CreatorsPage = () => {
                 1
               </div>
               <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Sign Up & Create Profile</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Sign Up & Create Your Profile</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Join FansFollow.me and create your professional creator profile in under 5 minutes.
+                  Create your professional creator profile in under 5 minutes with links, photos and your offer types.
                 </p>
               </div>
             </div>
@@ -99,9 +99,9 @@ const CreatorsPage = () => {
                 2
               </div>
               <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Create Outstanding Content</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Launch Your Offers</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Share training videos, meal plans, offer paid consultations, and exclusive content.
+                  Add paid chats, video sessions, programs, meal plans or products using simple templates.
                 </p>
               </div>
             </div>
@@ -112,9 +112,9 @@ const CreatorsPage = () => {
                 3
               </div>
               <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Build Your Community</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Grow Your Community</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Build relationships through personalized calls and chats. Offer premium coaching at your own rates.
+                  Share your link, use QR codes at events and convert fans into long-term clients on one platform.
                 </p>
               </div>
             </div>
