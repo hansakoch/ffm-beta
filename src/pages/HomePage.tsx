@@ -128,7 +128,7 @@ const HomePage = () => {
             {/* Left side - Text content */}
             <div className="mb-8 lg:mb-0 text-left">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
-                FansFollow — Where Fans Become Friends
+                FansFollowMe — Where Fans Become Friends
               </h1>
 
               <div className="mb-4 sm:mb-6">
@@ -165,7 +165,7 @@ const HomePage = () => {
             <div className="relative flex justify-center items-center w-full mx-auto overflow-visible mt-4 lg:mt-0">
               <img
                 src="/fans-foloow-me-logo-final-file--png-version.png"
-                alt="FansFollow Logo - Where Fans Become Friends - Global Platform for Fitness, Martial Arts & Combat Sports Creators"
+                alt="FansFollowMe Logo - Where Fans Become Friends - Global Platform for Fitness, Martial Arts & Combat Sports Creators"
                 className="h-auto max-w-full mx-auto transform drop-shadow-2xl animate-float opacity-95 hover:opacity-100 transition-all duration-300 bg-transparent"
                 style={{ width: '75%', maxWidth: '400px', margin: '0 auto', animationDuration: '6s' }}
                 width="400"
