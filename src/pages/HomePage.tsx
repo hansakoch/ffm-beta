@@ -1,9 +1,8 @@
 import React from 'react'
-import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard } from 'lucide-react'
+import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import SEOOptimizer from '../components/SEOOptimizer'
 import Footer from '../components/Footer'
-import MobileAppSection from '../components/MobileAppSection'
 import { pageSEO, organizationSchema, websiteSchema, createBreadcrumbSchema } from '../config/seo'
 
 // SEO-optimized keywords and phrases
@@ -190,8 +189,8 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* 6 Creator Benefit Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          {/* 7 Creator Benefit Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {/* Card 1: Keep 80%+ Revenue */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
@@ -244,29 +243,42 @@ const HomePage = () => {
               </p>
             </div>
 
-            {/* Card 5: Professional Creator Tools */}
+            {/* Card 5: Mobile Content Creation */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
-                <TrendingUp size={28} className="text-white" />
+                <Camera size={28} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                Professional Creator Tools
+                Mobile Content Creation
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Manage content, earnings, communication and audience in one place.
+                Create and upload content directly from your phone.
               </p>
             </div>
 
-            {/* Card 6: Personal Video Messages */}
+            {/* Card 6: Instant Messaging */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
+                <Phone size={28} className="text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                Instant Messaging
+              </h3>
+              <p className="text-sm sm:text-base text-gray-300">
+                Chat privately with fans in real time.
+              </p>
+            </div>
+
+            {/* Card 7: Live Streaming */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
                 <Video size={28} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                Personal Video Messages
+                Live Streaming
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Offer paid shoutouts, personalised videos and fan requests.
+                Go live to your audience from any device.
               </p>
             </div>
           </div>
@@ -369,9 +381,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Mobile App Section */}
-      <MobileAppSection />
 
       {/* Footer */}
       <Footer />
