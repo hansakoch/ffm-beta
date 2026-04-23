@@ -74,30 +74,6 @@ const Footer = () => {
                 The world's leading platform for fitness, nutrition, bodybuilding, martial arts and combat sports creators. Our founder starred in "The Last Kumite," "Bloodstorm," "Elite Target," and "Order of the Dragon" with Steven Seagal - with more films in production. David Kurzhal is co-directing films and creating casting opportunities for creators.
               </p>
 
-              <div className="bg-gradient-to-r from-orange-500/10 to-purple-500/10 border border-orange-500/20 rounded-2xl p-4 sm:p-5 mb-4 sm:mb-6 max-w-4xl mx-auto backdrop-blur-sm">
-                <p className="text-orange-300 font-semibold text-sm sm:text-base lg:text-lg mb-4 sm:mb-6" aria-label="Global creator benefits">
-                  Keep more earnings, get paid instantly, and build a loyal community. For fitness trainers, nutritionists, bodybuilders, martial artists, and combat sports athletes from all countries. Crypto payments accepted!
-                </p>
-
-                {/* CTA Button */}
-                <div className="flex justify-center mb-4 sm:mb-6">
-                  <button
-                    onClick={() => navigate('/signup')}
-                    className="bg-gradient-to-r from-orange-500 to-purple-600 text-white px-8 py-3 rounded-full font-bold text-base sm:text-lg hover:from-orange-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl min-h-[44px]"
-                    aria-label="Get started on FansFollow"
-                  >
-                    Get Started
-                  </button>
-                </div>
-
-                {/* Contact Info */}
-                <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-8">
-                  <div className="flex items-center space-x-2 text-gray-300 text-sm sm:text-base">
-                    <Mail size={18} className="text-orange-400" />
-                    <a href="mailto:support@fansfollow.me" className="hover:text-orange-300 transition-colors">support@fansfollow.me</a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
