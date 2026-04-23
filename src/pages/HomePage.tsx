@@ -186,7 +186,7 @@ const HomePage = () => {
               What FansFollowMe Lets You Do
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-              FansFollow is built for fitness, bodybuilding, nutrition, martial arts and combat sports creators to earn from fans through direct access, premium content and paid interactions.
+              FansFollowMe is built for fitness creators, martial artists, combat sports athletes, sports professionals and public figures to earn from fans through direct access, premium content and paid interactions.
             </p>
           </div>
 
