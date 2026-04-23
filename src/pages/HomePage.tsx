@@ -284,10 +284,10 @@ const HomePage = () => {
             </div>
 
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 sm:mb-4">
-              Connect With Your Favorite Athletes & Actors Worldwide
+              Get closer access to your favourite athletes & creators
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto mb-4 sm:mb-6" aria-label="Fan benefits">
-              Build real friendships with UFC fighters, bodybuilders, nutritionists, martial artists, fitness models, and combat sports athletes from around the world through personal interactions.
+              FansFollowMe lets you build real connections with UFC fighters, bodybuilders, martial artists, fitness models and other creators through private chats, exclusive content, calls and video sessions.
             </p>
           </div>
 
