@@ -1,5 +1,5 @@
 import React from 'react'
-import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera, QrCode, Mail } from 'lucide-react'
+import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera, QrCode } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import SEOOptimizer from '../components/SEOOptimizer'
 import Footer from '../components/Footer'
@@ -141,7 +141,7 @@ const HomePage = () => {
 
               {/* Quick Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <Link
+                <Link 
                   to="/explore"
                   className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl animate-glow flex items-center justify-center space-x-2 relative overflow-hidden group text-sm sm:text-base"
                 >
@@ -149,8 +149,8 @@ const HomePage = () => {
                   <Search size={20} />
                   <span>Explore Creators</span>
                 </Link>
-
-                <Link
+                
+                <Link 
                   to="/signup"
                   className="bg-white/10 backdrop-blur-lg border border-white/20 text-white hover:bg-white/20 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:border-white/40 hover:shadow-lg flex items-center justify-center space-x-2 text-sm sm:text-base"
                 >
@@ -161,7 +161,7 @@ const HomePage = () => {
             </div>
 
             {/* Logo on right side */}
-            <div className="relative flex justify-center items-center w-full mx-auto overflow-visible mt-4 lg:mt-0 flex-col">
+            <div className="relative flex justify-center items-center w-full mx-auto overflow-visible mt-4 lg:mt-0">
               <img
                 src="/fans-foloow-me-logo-final-file--png-version.png"
                 alt="FansFollowMe Logo - Where Fans Become Friends - Global Platform for Fitness, Martial Arts & Combat Sports Creators"
@@ -171,31 +171,6 @@ const HomePage = () => {
                 height="400"
                 loading="eager"
               />
-
-              {/* Founder Paragraph */}
-              <p className="text-center text-sm sm:text-base text-gray-300 mt-6 max-w-md leading-relaxed">
-                FansFollowMe is built for fitness, combat sports and performance creators. The founding team has decades of experience in action films and combat sports, and actively creates casting and media opportunities for FFM creators worldwide.
-              </p>
-
-              {/* Orange CTA Box */}
-              <div className="mt-8 w-full max-w-md bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-2xl p-6 sm:p-8 text-center shadow-xl">
-                <h3 className="text-xl sm:text-2xl font-bold text-orange-400 mb-3">
-                  Ready to start as a creator?
-                </h3>
-                <p className="text-sm sm:text-base text-orange-200 mb-6 leading-relaxed">
-                  Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
-                </p>
-                <Link
-                  to="/signup"
-                  className="inline-block w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-4 text-sm sm:text-base"
-                >
-                  Get Started as Creator
-                </Link>
-                <div className="flex items-center justify-center space-x-2 text-gray-400 text-xs sm:text-sm">
-                  <Mail size={16} />
-                  <span>support@fansfollow.me</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
