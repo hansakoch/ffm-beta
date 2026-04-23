@@ -126,7 +126,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Keep 80%+ of Earnings</h3>
-                    <p className="text-gray-300">Industry-leading revenue share. Earn from content, calls, chats, and coaching.</p>
+                    <p className="text-gray-300">Industry-leading revenue share from subscriptions, content, calls and coaching.</p>
                   </div>
                 </div>
 
@@ -137,7 +137,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Get Paid Your Way</h3>
-                    <p className="text-gray-300">Bank transfer, PayPal, or crypto. Fast payouts with low fees.</p>
+                    <p className="text-gray-300">Bank transfer, PayPal or crypto payouts with low fees and fast processing.</p>
                   </div>
                 </div>
 
@@ -148,7 +148,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Direct Fan Connection</h3>
-                    <p className="text-gray-300">Paid phone calls, text coaching, and personalized training programs.</p>
+                    <p className="text-gray-300">Paid calls, private chats and coaching so fans become long-term clients.</p>
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Secure & Professional</h3>
-                    <p className="text-gray-300">Encrypted communications, automatic billing, and dedicated support.</p>
+                    <p className="text-gray-300">Encrypted messaging, automated billing and a professional environment for your brand.</p>
                   </div>
                 </div>
 
@@ -170,7 +170,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Track Your Success</h3>
-                    <p className="text-gray-300">Analytics dashboard to monitor earnings, engagement, and growth.</p>
+                    <p className="text-gray-300">Simple dashboard to see earnings, active fans and content performance at a glance.</p>
                   </div>
                 </div>
 
@@ -192,7 +192,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Earn FFM Reward Tokens</h3>
-                    <p className="text-gray-300">Earn extra rewards as your fans engage and grow on FansFollowMe.</p>
+                    <p className="text-gray-300">Earn extra reward tokens as your fans engage, which you can convert inside the platform.</p>
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Negotiate Higher Rates</h3>
-                    <p className="text-gray-300">Large creators can negotiate custom payout terms above 80%+. Contact us for VIP options.</p>
+                    <p className="text-gray-300">Large creators can discuss custom payout terms above 80%+. Contact us for VIP options.</p>
                   </div>
                 </div>
               </div>
