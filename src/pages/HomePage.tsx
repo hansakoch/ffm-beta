@@ -1,5 +1,5 @@
 import React from 'react'
-import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera, QrCode } from 'lucide-react'
+import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera, QrCode, Mail } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import SEOOptimizer from '../components/SEOOptimizer'
 import Footer from '../components/Footer'
@@ -380,30 +380,31 @@ const HomePage = () => {
           </p>
 
           {/* Orange CTA Box */}
-          <div className="bg-gradient-to-br from-orange-500/30 to-orange-600/20 backdrop-blur-lg rounded-2xl p-8 sm:p-10 lg:p-12 border border-orange-500/50 shadow-2xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 sm:mb-6 drop-shadow-xl">
+          <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-8 border border-gray-700/50 shadow-xl shadow-orange-500/10 hover:shadow-orange-500/20 transition-all duration-300">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent mb-3 sm:mb-4 drop-shadow-xl">
               Ready to start as a creator?
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-100 mb-8 sm:mb-10 leading-relaxed drop-shadow-lg">
+            <p className="text-sm sm:text-base lg:text-lg text-orange-300 mb-6 sm:mb-7 leading-relaxed drop-shadow-lg">
               Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-5">
               <Link
                 to="/signup"
-                className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-3 px-6 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105"
                 onClick={(e) => {
                   e.preventDefault()
                   window.location.href = '/signup'
                 }}
               >
-                <span>Get Started as Creator</span>
+                <span>Get Started</span>
               </Link>
             </div>
 
             {/* Email line */}
-            <p className="text-xs sm:text-sm text-gray-300">
-              Questions? Email us at <a href="mailto:support@fansfollow.me" className="text-white hover:text-gray-100 font-semibold transition-colors">support@fansfollow.me</a>
+            <p className="text-xs sm:text-sm text-gray-400 flex items-center justify-center gap-2">
+              <Mail size={16} className="text-orange-500" />
+              <a href="mailto:support@fansfollow.me" className="text-gray-300 hover:text-orange-300 transition-colors">support@fansfollow.me</a>
             </p>
           </div>
         </div>
