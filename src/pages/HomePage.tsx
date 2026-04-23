@@ -177,10 +177,10 @@ const HomePage = () => {
       </section>
 
       {/* Creator Benefits Section */}
-      <section className="py-16 pb-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-10 pb-6 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-8 sm:mb-12">
+          <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">
               One home for fitness creators and their fans
             </h2>
@@ -190,7 +190,7 @@ const HomePage = () => {
           </div>
 
           {/* 7 Creator Benefit Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {/* Card 1: Keep 80%+ Revenue */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
@@ -299,24 +299,24 @@ const HomePage = () => {
       </section>
 
       {/* For Fans/Members Section */}
-      <section className="py-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-6 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
         <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <div className="text-center mb-4 sm:mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <Users className="w-5 h-5 text-orange-400 mr-2" />
               <span className="text-orange-300 font-semibold text-xs sm:text-sm">For Fans Globally | Pay with BTC/ETH/USDT/SOL</span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 sm:mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 sm:mb-3">
               Get closer access to your favourite athletes & creators
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto mb-4 sm:mb-6" aria-label="Fan benefits">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto mb-3 sm:mb-4" aria-label="Fan benefits">
               FansFollowMe lets you build real connections with UFC fighters, bodybuilders, martial artists, fitness models and other creators through private chats, exclusive content, calls and video sessions.
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/10 hover:shadow-orange-500/30 hover:border-orange-500/30 transition-all duration-500 hover:scale-[1.02] mb-6 sm:mb-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/10 hover:shadow-orange-500/30 hover:border-orange-500/30 transition-all duration-500 hover:scale-[1.02] mb-4 sm:mb-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-4 sm:mb-6">
               <div className="bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-xl p-4 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-orange-500/30">
                 <MessageCircle size={24} className="text-orange-400 mx-auto mb-2 drop-shadow-md" />
@@ -359,14 +359,14 @@ const HomePage = () => {
       </section>
 
       {/* Creator CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <section className="py-12 sm:py-14 lg:py-16 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
 
         <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
           {/* Small FFM Logo */}
-          <div className="flex justify-center mb-8 sm:mb-10">
+          <div className="flex justify-center mb-6 sm:mb-7">
             <img
               src="/fans-foloow-me-logo-final-file--png-version.png"
               alt="FansFollowMe Logo"
@@ -375,7 +375,7 @@ const HomePage = () => {
           </div>
 
           {/* About FFM Paragraph */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-200 mb-10 sm:mb-14 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-200 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
             FansFollowMe is built for fitness, combat sports and performance creators. The founding team has decades of experience in action films and combat sports, and actively creates casting and media opportunities for FFM creators worldwide.
           </p>
 
