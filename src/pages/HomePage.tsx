@@ -1,5 +1,5 @@
 import React from 'react'
-import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera } from 'lucide-react'
+import { Users, Star, ArrowRight, Search, UserPlus, Zap, CheckCircle, DollarSign, MessageCircle, Phone, Video, Lock, TrendingUp, Globe, Shield, CreditCard, Camera, QrCode } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import SEOOptimizer from '../components/SEOOptimizer'
 import Footer from '../components/Footer'
@@ -282,16 +282,16 @@ const HomePage = () => {
               </p>
             </div>
 
-            {/* Card 8: All-In-One Creator Hub */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+            {/* Card 8: In-Person QR Sign-Ups */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
-                <TrendingUp size={28} className="text-white" />
+                <QrCode size={28} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                All-In-One Creator Hub
+                In-Person QR Sign-Ups
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Manage content, earnings and fan relationships in one place.
+                Let fans join and pay on the spot by scanning your unique QR code at events and gyms.
               </p>
             </div>
           </div>
