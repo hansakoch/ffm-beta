@@ -68,14 +68,14 @@ const CreatorFocusedHero = () => {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:border-orange-500/30 transition-colors duration-300">
                 <div className="text-center">
                   <div className="text-2xl mb-2">🔒</div>
-                  <div className="text-white font-bold text-sm">PPV Content</div>
+                  <div className="text-white font-bold text-sm">Paid Videos & Streams</div>
                 </div>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 hover:border-orange-500/30 transition-colors duration-300">
                 <div className="text-center">
                   <div className="text-2xl mb-2">🎁</div>
-                  <div className="text-white font-bold text-sm">Tips & Gifts</div>
+                  <div className="text-white font-bold text-sm">Tips & Supporters</div>
                 </div>
               </div>
               
@@ -181,7 +181,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Built for Your Niche</h3>
-                    <p className="text-gray-300">Designed for fitness, bodybuilding, nutrition, martial arts, and combat sports.</p>
+                    <p className="text-gray-300">Designed for fitness, bodybuilding, nutrition, martial arts and combat sports creators.</p>
                   </div>
                 </div>
 
@@ -192,7 +192,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Earn FFM Reward Tokens</h3>
-                    <p className="text-gray-300">Creators earn reward tokens which they can convert to the FFM token.</p>
+                    <p className="text-gray-300">Earn extra rewards as your fans engage and grow on FansFollowMe.</p>
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Negotiate Higher Rates</h3>
-                    <p className="text-gray-300">Creators with large followings can negotiate custom payout rates above 80%+. Contact us for VIP terms.</p>
+                    <p className="text-gray-300">Large creators can negotiate custom payout terms above 80%+. Contact us for VIP options.</p>
                   </div>
                 </div>
               </div>
