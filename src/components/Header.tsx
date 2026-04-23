@@ -37,7 +37,7 @@ const Header = () => {
             <Link to="/" className="flex items-center">
               <img
                 src="/artboard_1_copy.png"
-                alt="FansFollow - Global Fitness & Martial Arts Creator Platform Logo"
+                alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
                 className="h-12 w-auto"
                 width="180"
                 height="48"
