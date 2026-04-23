@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowRight, Sparkles, MessageCircle, Video, Heart, Lock, Users, Zap } from 'lucide-react'
+import { ArrowRight, Sparkles, MessageCircle, Video, Lock, Users, Zap, Heart, ShoppingBag, FileText, Gift } from 'lucide-react'
 
 const FanFocusedHero = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -89,6 +89,12 @@ const FanFocusedHero = () => {
                 <span>Sign Up as Fan – It's Free</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
+              <button
+                className="bg-white/10 backdrop-blur-lg border border-white/20 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 group relative overflow-hidden"
+                onClick={() => window.location.href = '/explore-creators'}
+              >
+                <span>Explore Creators</span>
+              </button>
             </div>
           </div>
 
@@ -105,35 +111,24 @@ const FanFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Closer access</h3>
-                    <p className="text-gray-300">Send private messages, ask questions and get personal feedback.</p>
+                    <p className="text-gray-300">Go beyond social media with real conversations and interactions.</p>
                   </div>
                 </div>
 
-                {/* Exclusive Content */}
+                {/* All Your Favourites in One Place */}
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Video size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-lg mb-2">Exclusive content</h3>
-                    <p className="text-gray-300">Watch members-only videos, live streams and behind-the-scenes updates.</p>
-                  </div>
-                </div>
-
-                {/* One Place for Your Favourites */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Users size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-2">One place for your favourites</h3>
+                    <h3 className="text-white font-bold text-lg mb-2">All your favourites in one place</h3>
                     <p className="text-gray-300">Follow multiple fitness and combat sports creators on a single platform.</p>
                   </div>
                 </div>
 
                 {/* Safe & Secure */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Lock size={24} className="text-white" />
                   </div>
                   <div>
@@ -144,12 +139,23 @@ const FanFocusedHero = () => {
 
                 {/* Global Access */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Zap size={24} className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Global access</h3>
                     <p className="text-gray-300">Support creators from any country with card or crypto payments.</p>
+                  </div>
+                </div>
+
+                {/* Easy to Use */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Heart size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">Easy to use</h3>
+                    <p className="text-gray-300">Simple mobile-friendly experience for chats, content and calls.</p>
                   </div>
                 </div>
               </div>
