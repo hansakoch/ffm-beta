@@ -366,7 +366,7 @@ const HomePage = () => {
 
         <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
           {/* Small FFM Logo */}
-          <div className="flex justify-center mb-6 sm:mb-7">
+          <div className="flex justify-center mb-4 sm:mb-5">
             <img
               src="/fans-foloow-me-logo-final-file--png-version.png"
               alt="FansFollowMe Logo"
