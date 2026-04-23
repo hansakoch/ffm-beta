@@ -126,15 +126,17 @@ const HomePage = () => {
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
             {/* Left side - Text content */}
             <div className="mb-8 lg:mb-0 text-left">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
-                FansFollowMe — Where Fans Become Friends
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4 sm:mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-purple-600 bg-clip-text text-transparent">FansFollowMe</span>
+                <br />
+                <span className="text-white">Where Fans Become Friends</span>
               </h1>
 
-              <div className="mb-4 sm:mb-6">
-                <p className="text-orange-400 font-semibold text-sm sm:text-base mb-3">
+              <div className="mb-6 sm:mb-8">
+                <p className="text-lg sm:text-xl font-bold text-orange-400 mb-4">
                   For Fitness, Bodybuilding and Martial Arts Creators
                 </p>
-                <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-lg" aria-label="Platform description">
+                <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl font-medium" aria-label="Platform description">
                   Built for fitness coaches, bodybuilders, nutrition experts, martial artists and combat sports creators to earn from fans worldwide through content, coaching and direct fan access.
                 </p>
               </div>
