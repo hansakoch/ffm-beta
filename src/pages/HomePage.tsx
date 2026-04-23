@@ -177,20 +177,20 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* For Creators Section - Merged */}
+      {/* Creator Benefits Section */}
       <section className="py-16 pb-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">
-              What FansFollowMe Lets You Do
+              Everything creators need to earn from fans
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-              FansFollowMe is built for fitness creators, martial artists, combat sports athletes, sports professionals and public figures to earn from fans through direct access, premium content and paid interactions.
+              FansFollowMe helps fitness creators, martial artists, athletes and public figures grow revenue through subscriptions, paid interactions and premium content.
             </p>
           </div>
 
-          {/* 6 Benefit Cards */}
+          {/* 6 Creator Benefit Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {/* Card 1: Keep 80%+ Revenue */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
@@ -201,7 +201,7 @@ const HomePage = () => {
                 Keep 80%+ Revenue
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Keep more of what you earn with a creator-first revenue share designed to reward growth.
+                Keep more of what you earn with a creator-first revenue share.
               </p>
             </div>
 
@@ -214,11 +214,11 @@ const HomePage = () => {
                 17+ Revenue Streams
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Earn through coaching, premium content, subscriptions, video calls, digital products and more.
+                Earn through subscriptions, coaching, premium content, calls, tips and more.
               </p>
             </div>
 
-            {/* Card 3: Global Crypto Payments */}
+            {/* Card 3: Global Payments */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
                 <Globe size={28} className="text-white" />
@@ -227,7 +227,7 @@ const HomePage = () => {
                 Global Payments
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Accept payments from fans worldwide with flexible payment options including crypto and traditional methods.
+                Accept payments from fans worldwide with flexible payment options.
               </p>
             </div>
 
@@ -240,7 +240,7 @@ const HomePage = () => {
                 Direct Fan Connection
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Build stronger fan relationships through private messaging, paid interactions and exclusive access.
+                Build stronger fan relationships through private access and paid interactions.
               </p>
             </div>
 
@@ -253,7 +253,7 @@ const HomePage = () => {
                 Professional Creator Tools
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Use creator tools to manage earnings, content, communication and audience growth in one place.
+                Manage content, earnings, communication and audience in one place.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ const HomePage = () => {
                 Personal Video Messages
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Offer paid personal video messages, shoutouts and fan requests as another direct revenue stream.
+                Offer paid shoutouts, personalised videos and fan requests.
               </p>
             </div>
           </div>
