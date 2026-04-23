@@ -186,7 +186,7 @@ const HomePage = () => {
               Everything Creators need to earn from Fans
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-              FansFollowMe helps fitness creators, martial artists, athletes and public figures grow revenue through subscriptions, paid interactions and premium content.
+              FansFollowMe helps Fitness Creators, Martial Artists, Athletes and Public Figures grow revenue through subscriptions, paid interactions and premium content.
             </p>
           </div>
 
