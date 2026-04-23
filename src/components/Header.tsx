@@ -22,6 +22,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'For Creators', href: '/creators' },
+    { name: 'For Fans', href: '/fans' },
     { name: 'Celebrities', href: '/celebrities' },
     { name: 'Explore', href: '/explore' }
   ]
