@@ -128,15 +128,17 @@ const HomePage = () => {
             {/* Left side - Text content */}
             <div className="mb-8 lg:mb-0 text-left">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
-                FansFollow - Where Fans Become Friends
-                <span className="block text-transparent bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-xs sm:text-sm lg:text-lg mt-1 sm:mt-2">
-                #1 Global Fitness & Martial Arts Platform
-                </span>
+                FansFollow — Where Fans Become Friends
               </h1>
-              
-              <p className="text-xs sm:text-sm text-gray-200 mb-4 sm:mb-6 leading-relaxed max-w-lg" aria-label="Platform description">
-                For all things fitness, bodybuilders, nutrition, martial arts & combat sports experts. 21+ revenue streams. Our founder starred in "The Last Kumite," "Bloodstorm," and "Order of the Dragon" - now casting creators for films.
-              </p>
+
+              <div className="mb-4 sm:mb-6">
+                <p className="text-orange-400 font-semibold text-sm sm:text-base mb-3">
+                  For fitness, bodybuilding and martial arts creators
+                </p>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-lg" aria-label="Platform description">
+                  Built for fitness coaches, bodybuilders, nutrition experts, martial artists and combat sports creators to earn from fans worldwide through content, coaching and direct fan access.
+                </p>
+              </div>
 
               {/* Quick Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
