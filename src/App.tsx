@@ -9,6 +9,7 @@ import AuthGuard from './components/AuthGuard'
 import HomePage from './pages/HomePage'
 import CelebrityPage from './pages/CelebrityPage'
 import CreatorsPage from './pages/CreatorsPage'
+import FansPage from './pages/FansPage'
 import LoginPage from './pages/LoginPage'
 import SupportPage from './pages/SupportPage'
 import BusinessPage from './pages/BusinessPage'
@@ -89,6 +90,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/celebrities" element={<CelebrityPage />} />
             <Route path="/creators" element={<CreatorsPage />} />
+            <Route path="/fans" element={<FansPage />} />
             <Route path="/support" element={<SupportPage />} />
             <Route path="/business" element={<BusinessPage />} />
             <Route path="/casting" element={<CastingPage />} />  
