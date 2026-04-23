@@ -183,10 +183,10 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">
-              For Creators: Turn Your Expertise Into Worldwide Income
+              What FansFollow Lets You Do
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-              Built for fitness, bodybuilding, nutrition, martial arts, and combat sports creators worldwide. <strong className="text-white">Keep 80%+ of everything you earn.</strong>
+              FansFollow is built for fitness, bodybuilding, nutrition, martial arts and combat sports creators to earn from fans through direct access, premium content and paid interactions.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ const HomePage = () => {
                 Keep 80%+ Revenue
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Industry-leading revenue share. VIP creators with large followings can negotiate custom rates even higher.
+                Keep more of what you earn with a creator-first revenue share designed to reward growth.
               </p>
             </div>
 
@@ -214,7 +214,7 @@ const HomePage = () => {
                 17+ Revenue Streams
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Personal coaching, content sales, live sessions, digital products, text coaching, video consultations, and more.
+                Earn through coaching, premium content, subscriptions, video calls, digital products and more.
               </p>
             </div>
 
@@ -224,10 +224,10 @@ const HomePage = () => {
                 <Globe size={28} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                Global Crypto Payments
+                Global Payments
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Accept BTC, ETH, USDT, SOL from fans worldwide. Get paid via bank transfer, PayPal, or crypto with no banking restrictions.
+                Accept payments from fans worldwide with flexible payment options including crypto and traditional methods.
               </p>
             </div>
 
@@ -240,7 +240,7 @@ const HomePage = () => {
                 Direct Fan Connection
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Paid phone calls, text coaching, personalized training programs, and exclusive content.
+                Build stronger fan relationships through private messaging, paid interactions and exclusive access.
               </p>
             </div>
 
@@ -253,20 +253,20 @@ const HomePage = () => {
                 Professional Creator Tools
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Analytics dashboard to track earnings and growth, encrypted communications, automatic billing, dedicated support.
+                Use creator tools to manage earnings, content, communication and audience growth in one place.
               </p>
             </div>
 
-            {/* Card 6: Earn FFM Reward Tokens */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg text-2xl">
-                🪙
+            {/* Card 6: Personal Video Messages */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
+                <Video size={28} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-                Earn FFM Reward Tokens
+                Personal Video Messages
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
-                Creators earn reward tokens which can be converted to the FFM token.
+                Offer paid personal video messages, shoutouts and fan requests as another direct revenue stream.
               </p>
             </div>
           </div>
