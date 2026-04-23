@@ -190,7 +190,7 @@ const HomePage = () => {
           </div>
 
           {/* 7 Creator Benefit Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {/* Card 1: Keep 80%+ Revenue */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
@@ -279,6 +279,19 @@ const HomePage = () => {
               </h3>
               <p className="text-sm sm:text-base text-gray-300">
                 Go live to your audience from any device.
+              </p>
+            </div>
+
+            {/* Card 8: All-In-One Creator Hub */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
+                <TrendingUp size={28} className="text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                All-In-One Creator Hub
+              </h3>
+              <p className="text-sm sm:text-base text-gray-300">
+                Manage content, earnings and fan relationships in one place.
               </p>
             </div>
           </div>
