@@ -22,7 +22,7 @@ const Footer = () => {
   const footerLinks = {
     'For Creators': [
       { name: 'Getting Started', href: '/signup' },
-      { name: 'Movie Casting', href: '/casting' },
+      { name: 'Personal Video Messages', href: '/creators' },
     ],
     'Revenue Streams': [
       { name: 'Content Monetization', href: '/creators' },

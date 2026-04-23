@@ -2,22 +2,20 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-                <h3 class="font-semibold text-lg mb-4">Platform</h3>
+                <h3 class="font-semibold text-lg mb-4">For Creators</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('home') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Home</a></li>
-                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">For Creators</a></li>
-                    <li><a href="{{ route('explore') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Explore</a></li>
-                    <li><a href="{{ route('celebrities') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Celebrities</a></li>
+                    <li><a href="{{ route('register') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Getting Started</a></li>
+                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Personal Video Messages</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="font-semibold text-lg mb-4">Features</h3>
+                <h3 class="font-semibold text-lg mb-4">Revenue Streams</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('live') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Live Streams</a></li>
-                    <li><a href="{{ route('business') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Business</a></li>
-                    <li><a href="{{ route('casting') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Casting</a></li>
-                    <li><a href="{{ route('group-coaching') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Group Coaching</a></li>
+                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Content Monetization</a></li>
+                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Live Streams</a></li>
+                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Group Coaching</a></li>
+                    <li><a href="{{ route('creators') }}" class="text-gray-400 hover:text-orange-400 transition-colors">Video Consultations</a></li>
                 </ul>
             </div>
 
