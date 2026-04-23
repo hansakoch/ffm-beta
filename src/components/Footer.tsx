@@ -56,24 +56,6 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
             {/* Logo and Description - Takes full width */}
             <div className="lg:col-span-12 text-center">
-              <div className="flex justify-center mb-4 sm:mb-6">
-                <div className="relative">
-                  <img
-                    src="/artboard_1_copy_2.png"
-                    alt="FansFollow - #1 Global Content Creator Platform for Fitness, Martial Arts & Combat Sports"
-                    title="The world's leading platform for fitness, nutrition, bodybuilding, martial arts and combat sports creators. Our founder starred in &quot;The Last Kumite,&quot; &quot;Bloodstorm,&quot; &quot;Elite Target,&quot; and &quot;Order of the Dragon&quot; with Steven Seagal - with more films in production. David Kurzhal is co-directing films and creating casting opportunities for creators."
-                    className="h-12 sm:h-16 lg:h-20 w-auto"
-                    width="200"
-                    height="80"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              
-              <p className="text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 max-w-3xl mx-auto px-4" aria-label="Platform description">
-                The world's leading platform for fitness, nutrition, bodybuilding, martial arts and combat sports creators. Our founder starred in "The Last Kumite," "Bloodstorm," "Elite Target," and "Order of the Dragon" with Steven Seagal - with more films in production. David Kurzhal is co-directing films and creating casting opportunities for creators.
-              </p>
-
             </div>
           </div>
         </div>
