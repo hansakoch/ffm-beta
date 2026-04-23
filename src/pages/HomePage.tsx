@@ -358,39 +358,53 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-12 relative overflow-hidden">
-        {/* Martial arts/gym background */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/background-1718534992 copy.jpeg')`
-        }}></div>
+      {/* Creator CTA Section */}
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
 
-        <div className="relative max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
-          <h2 className="text-xl sm:text-2xl lg:text-4xl font-black text-white mb-4 sm:mb-6 drop-shadow-2xl">
-            Ready to Start Earning From Fans Worldwide with Crypto Payments?
-          </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 drop-shadow-xl" aria-label="Global earning potential">
-            Start monetizing your expertise with fans from every country
+        <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
+          {/* Small FFM Logo */}
+          <div className="flex justify-center mb-8 sm:mb-10">
+            <img
+              src="/fans-foloow-me-logo-final-file--png-version.png"
+              alt="FansFollowMe Logo"
+              className="h-16 sm:h-20 lg:h-24 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+
+          {/* About FFM Paragraph */}
+          <p className="text-sm sm:text-base lg:text-lg text-gray-200 mb-10 sm:mb-14 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+            FansFollowMe is built for fitness, combat sports and performance creators. The founding team has decades of experience in action films and combat sports, and actively creates casting and media opportunities for FFM creators worldwide.
           </p>
 
-          <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/signup"
-              className="relative inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-sm sm:text-base shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:scale-110 hover:-translate-y-2 group overflow-hidden"
-              onClick={(e) => {
-                e.preventDefault()
-                window.location.href = '/signup'
-              }}
-            >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400/20 to-purple-500/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
-              <span className="relative z-10">Sign Up as Creator</span>
-            </Link>
-            <Link
-              to="/how-it-works"
-              className="bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-2xl text-sm sm:text-base hover:scale-110 hover:-translate-y-2"
-            >
-              <span>How It Works</span>
-            </Link>
+          {/* Orange CTA Box */}
+          <div className="bg-gradient-to-br from-orange-500/30 to-orange-600/20 backdrop-blur-lg rounded-2xl p-8 sm:p-10 lg:p-12 border border-orange-500/50 shadow-2xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 sm:mb-6 drop-shadow-xl">
+              Ready to start as a creator?
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-100 mb-8 sm:mb-10 leading-relaxed drop-shadow-lg">
+              Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Link
+                to="/signup"
+                className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+                onClick={(e) => {
+                  e.preventDefault()
+                  window.location.href = '/signup'
+                }}
+              >
+                <span>Get Started as Creator</span>
+              </Link>
+            </div>
+
+            {/* Email line */}
+            <p className="text-xs sm:text-sm text-gray-300">
+              Questions? Email us at <a href="mailto:support@fansfollow.me" className="text-white hover:text-gray-100 font-semibold transition-colors">support@fansfollow.me</a>
+            </p>
           </div>
         </div>
       </section>
