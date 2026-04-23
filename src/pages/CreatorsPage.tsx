@@ -136,60 +136,7 @@ const CreatorsPage = () => {
         </div>
       </section>
 
-      {/* Revenue Potential */}
-      <section className="py-16 bg-gradient-to-br from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-3xl p-8 max-w-5xl mx-auto border-2 border-orange-500/40 backdrop-blur-md shadow-2xl">
-            <h3 className="text-4xl font-black mb-6 text-center">
-              <span className="bg-gradient-to-r from-orange-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Total Revenue Potential
-              </span>
-            </h3>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-              <div className="text-center pt-2 bg-white/5 rounded-xl p-3 hover:bg-white/10 transition-colors duration-300">
-                <div className="text-xl font-black text-white mb-1">$5K-20K</div>
-                <div className="text-orange-300 font-bold mb-1 text-sm">Small Creator</div>
-                <div className="text-gray-300 text-xs">1K-5K followers</div>
-              </div>
-
-              <div className="text-center relative pt-12 bg-white/5 rounded-xl p-3 hover:bg-white/10 transition-colors duration-300">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 shadow-lg">
-                  <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">COMMON</span>
-                </div>
-                <div className="text-xl font-black text-white mb-1">$20K-75K</div>
-                <div className="text-orange-300 font-bold mb-1 text-sm">Growing Creator</div>
-                <div className="text-gray-300 text-xs">5K-50K followers</div>
-              </div>
-
-              <div className="text-center pt-2 bg-white/5 rounded-xl p-3 hover:bg-white/10 transition-colors duration-300">
-                <div className="text-xl font-black text-white mb-1">$50K-200K+</div>
-                <div className="text-orange-300 font-bold mb-1 text-sm">Established Creator</div>
-                <div className="text-gray-300 text-xs">100K+ followers</div>
-              </div>
-
-              <div className="text-center relative pt-12 bg-white/5 rounded-xl p-3 hover:bg-white/10 transition-colors duration-300">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 shadow-lg">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">CELEBRITY</span>
-                </div>
-                <div className="text-xl font-black text-white mb-1">$150K-20M+</div>
-                <div className="text-orange-300 font-bold mb-1 text-sm">Celebrity/Influencer</div>
-                <div className="text-gray-300 text-xs">1M+ followers</div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <p className="text-base text-gray-300 font-medium leading-relaxed">
-                Shop feature alone: $5K-50K+ monthly from supplements & equipment sales.
-                Combined with all 21 streams, top creators earn $150K-20M+ monthly.
-                Our revenue streams maximize celebrity earning potential.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
+{/* Final CTA */}
       <section className="py-16 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
