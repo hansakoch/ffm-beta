@@ -133,7 +133,7 @@ const HomePage = () => {
 
               <div className="mb-4 sm:mb-6">
                 <p className="text-orange-400 font-semibold text-sm sm:text-base mb-3">
-                  For fitness, bodybuilding and martial arts creators
+                  For Fitness, Bodybuilding and Martial Arts creators
                 </p>
                 <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-lg" aria-label="Platform description">
                   Built for fitness coaches, bodybuilders, nutrition experts, martial artists and combat sports creators to earn from fans worldwide through content, coaching and direct fan access.
