@@ -270,39 +270,6 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-
-          {/* Earning Potential Chart */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/10 hover:shadow-orange-500/30 hover:border-orange-500/30 transition-all duration-500">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Earning Potential</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center py-3 px-4 bg-white/5 rounded-lg border border-white/10 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-purple-500/20 transition-all duration-300 hover:shadow-md">
-                  <span className="text-gray-300 font-medium">Small Creator (1K-5K)</span>
-                  <span className="font-bold text-white text-lg">$5K-20K/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 px-4 bg-white/5 rounded-lg border border-white/10 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-purple-500/20 transition-all duration-300 hover:shadow-md">
-                  <span className="text-gray-300 font-medium">Growing Creator (5K-50K)</span>
-                  <span className="font-bold text-white text-lg">$20K-75K/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 px-4 bg-white/5 rounded-lg border border-white/10 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-purple-500/20 transition-all duration-300 hover:shadow-md">
-                  <span className="text-gray-300 font-medium">Established (100K+)</span>
-                  <span className="font-bold text-white text-lg">$50K-200K+/month</span>
-                </div>
-              </div>
-
-              {/* Single CTA */}
-              <div className="text-center mt-6">
-                <Link
-                  to="/signup"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1"
-                >
-                  <UserPlus size={20} />
-                  <span>Get Started as Creator</span>
-                  <ArrowRight size={20} />
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
