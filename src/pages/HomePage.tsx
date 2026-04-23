@@ -178,7 +178,7 @@ const HomePage = () => {
       </section>
 
       {/* For Creators Section - Merged */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-16 pb-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
@@ -274,7 +274,7 @@ const HomePage = () => {
       </section>
 
       {/* For Fans/Members Section */}
-      <section className="py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
         <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 sm:mb-8">
