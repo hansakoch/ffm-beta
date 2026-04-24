@@ -328,9 +328,9 @@ const CastingPage = () => {
       </div>
 
       {/* 5) SOCIAL / FOLLOW SECTION */}
-      <div className="bg-gradient-to-r from-gray-800/80 to-gray-900/80 border-t border-gray-700/50 py-12">
+      <div className="bg-gradient-to-r from-gray-800/80 to-gray-900/80 border-t border-gray-700/50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <p className="text-gray-300 text-sm">
                 Follow <span className="text-orange-400 font-bold">David Kurzhal (Viking Samurai)</span> for behind-the-scenes updates and casting announcements.
