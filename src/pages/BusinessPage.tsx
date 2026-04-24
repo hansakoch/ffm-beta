@@ -129,9 +129,9 @@ const BusinessPage = () => {
       </div>
 
       {/* PARTNERSHIP MODELS SECTION */}
-      <div id="opportunities" className="pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+      <div id="opportunities" className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-2">Partnership Models</h2>
             <p className="text-gray-300 text-lg">Choose the opportunity that aligns with your business goals</p>
           </div>
