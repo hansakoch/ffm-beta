@@ -134,22 +134,22 @@ const SupportPage = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border-2 border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-2xl hover:shadow-blue-500/30">
-                <Mail size={24} className="text-blue-400 mx-auto mb-2 drop-shadow-lg" />
-                <div className="text-white font-bold">Email Support</div>
-                <div className="text-gray-300 text-sm">support@fansfollow.me</div>
+              <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur rounded-2xl p-6 border-2 border-gray-700/50 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-xl hover:shadow-orange-500/20">
+                <Mail size={24} className="text-orange-400 mx-auto mb-3" />
+                <div className="text-white font-bold text-center">Email Support</div>
+                <div className="text-gray-300 text-sm text-center">support@fansfollow.me</div>
               </div>
 
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border-2 border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-2xl hover:shadow-green-500/30">
-                <Phone size={24} className="text-green-400 mx-auto mb-2 drop-shadow-lg" />
-                <div className="text-white font-bold">Phone Support</div>
-                <div className="text-gray-300 text-sm">Email for availability</div>
+              <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur rounded-2xl p-6 border-2 border-gray-700/50 hover:border-purple-500/40 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-xl hover:shadow-purple-500/20">
+                <Phone size={24} className="text-purple-400 mx-auto mb-3" />
+                <div className="text-white font-bold text-center">Phone Support</div>
+                <div className="text-gray-300 text-sm text-center">Email for availability</div>
               </div>
 
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-4 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
-                <Users size={24} className="text-purple-400 mx-auto mb-2 drop-shadow-lg" />
-                <div className="text-white font-bold">Creator Community</div>
-                <div className="text-gray-300 text-sm">Join our Discord</div>
+              <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/40 backdrop-blur rounded-2xl p-6 border-2 border-gray-700/50 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-xl hover:shadow-orange-500/20">
+                <Users size={24} className="text-orange-400 mx-auto mb-3" />
+                <div className="text-white font-bold text-center">Creator Community</div>
+                <div className="text-gray-300 text-sm text-center">Join our Discord</div>
               </div>
             </div>
             
