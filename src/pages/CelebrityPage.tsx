@@ -105,7 +105,7 @@ const CelebrityPage = () => {
       <CelebrityHero />
 
       {/* FFM Founder Accolades Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-2 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 pointer-events-none"></div>
         <div className="text-center mb-12 relative z-10">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -152,7 +152,7 @@ const CelebrityPage = () => {
       </div>
 
       {/* Featured Films Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 pointer-events-none"></div>
         <div className="text-center mb-12 relative z-10">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -235,7 +235,7 @@ const CelebrityPage = () => {
       </div>
 
       {/* Celebrity Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 pointer-events-none"></div>
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border-2 border-white/10 shadow-2xl hover:shadow-orange-500/20 hover:border-orange-500/30 transition-all duration-500 hover:scale-[1.01] relative z-10">
           <div className="text-center">
