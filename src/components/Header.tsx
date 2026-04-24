@@ -28,13 +28,13 @@ const Header = () => {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 h-[72px] ${
+    <header className={`fixed top-0 left-0 right-0 z-50 h-[72px] min-h-[72px] ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl border-b border-gray-700' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
           {/* Logo */}
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
+          <Link to="/" className="flex items-center h-full hover:opacity-80 transition-opacity flex-shrink-0">
             <img
               src="/artboard_1_copy.png"
               alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
