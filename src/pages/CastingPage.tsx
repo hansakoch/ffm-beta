@@ -31,20 +31,16 @@ const CastingPage = () => {
         ]}
       />
 
-      {/* Header Navigation */}
-      <div className="bg-gray-900/50 border-b border-gray-700/50 sticky top-0 z-40 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            to="/"
-            className="flex items-center text-orange-400 hover:text-orange-300 transition-colors"
-            onClick={(e) => {
-              e.preventDefault()
-              navigate('/')
-            }}
+      {/* Breadcrumb Navigation */}
+      <div className="fixed top-24 left-0 right-0 z-20 pointer-events-none">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <button
+            className="flex items-center text-orange-400 hover:text-orange-300 transition-colors text-sm font-semibold pointer-events-auto"
+            onClick={() => navigate('/')}
           >
-            <ArrowLeft size={20} className="mr-2" />
-            Back to Home
-          </Link>
+            <ArrowLeft size={16} className="mr-1.5" />
+            Back
+          </button>
         </div>
       </div>
 
