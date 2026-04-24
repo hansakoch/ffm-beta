@@ -100,10 +100,17 @@ const SettingsLayout: React.FC<SettingsLayoutProps> = ({ children }) => {
         <div className="max-w-full px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 sm:space-x-4">
-              <Link to="/feed" className="flex items-center space-x-2">
-                <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
-                  FFM
-                </div>
+              <Link to="/feed" className="flex items-center hover:opacity-80 transition-opacity min-h-[48px] min-w-[50px] z-50 relative">
+                <img
+                  src="/artboard_1_copy.png"
+                  alt="FansFollowMe"
+                  className="h-8 sm:h-10 w-auto hidden sm:block"
+                />
+                <img
+                  src="/celebhero.png"
+                  alt="FFM"
+                  className="h-8 w-auto sm:hidden"
+                />
               </Link>
               <h1 className="text-lg sm:text-xl font-bold text-[#e2e8f0] hidden md:block">Settings</h1>
             </div>

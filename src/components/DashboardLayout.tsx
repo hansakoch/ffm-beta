@@ -65,10 +65,17 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       <header className="sticky top-0 z-50 bg-[#1e293b] border-b border-[#334155]">
         <div className="flex items-center justify-between px-6 py-3">
           {/* Left: Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
-              FFM
-            </div>
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity min-h-[48px] min-w-[50px] z-50 relative">
+            <img
+              src="/artboard_1_copy.png"
+              alt="FansFollowMe"
+              className="h-10 w-auto hidden sm:block"
+            />
+            <img
+              src="/celebhero.png"
+              alt="FFM"
+              className="h-10 w-auto sm:hidden"
+            />
           </Link>
 
           {/* Center: Search */}
