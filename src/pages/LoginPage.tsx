@@ -59,11 +59,11 @@ const LoginPage = () => {
         <div className="absolute inset-0 backdrop-blur-sm"></div>
       </div>
 
-      <div className="max-w-md w-full mx-4 relative z-10">
+      <div className="max-w-md w-full mx-4 relative z-20">
         {/* Back Button */}
         <button
           onClick={() => navigate('/')}
-          className="flex items-center text-orange-400 hover:text-orange-300 mb-6 transition-all duration-300 hover:scale-105 hover:-translate-x-1"
+          className="flex items-center text-orange-400 hover:text-orange-300 mb-6 transition-all duration-300 hover:scale-105 hover:-translate-x-1 relative z-50"
         >
           <ArrowLeft size={20} className="mr-2" />
           Back to Home
