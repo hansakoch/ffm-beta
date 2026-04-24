@@ -87,6 +87,29 @@ const BusinessPage = () => {
         </div>
       </div>
 
+      {/* WHO WE ARE & VISION SECTION */}
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-8 text-center">
+            <div>
+              <h2 className="text-3xl font-black text-white mb-4">Who We Are</h2>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                FansFollow connects fitness, combat-sports and film talent with paying fans through a safe, professional platform built for long-term careers, not quick hits. The team combines experience in filmmaking, martial arts, and digital platforms to create sustainable opportunities for creators, brands and investors.
+              </p>
+            </div>
+
+            <div className="h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"></div>
+
+            <div>
+              <h2 className="text-3xl font-black text-white mb-4">Why This Vision</h2>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Most creator platforms treat talent as disposable and keep the economics and data for themselves. FansFollow is built on a different vision: creators should keep more of what they earn, participate in the value they help create, and work with partners who care about brand safety, reputation and real-world opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* THREE-COLUMN OPPORTUNITY CARDS */}
       <div id="opportunities" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
