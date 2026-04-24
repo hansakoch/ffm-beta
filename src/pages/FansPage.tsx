@@ -65,21 +65,21 @@ const FansPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 overflow-hidden min-h-screen flex items-center">
+      <section className="relative pt-24 pb-16 overflow-hidden min-h-screen flex items-center justify-start">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/pexels-gustavo-fring-3984342.jpg')`
+            backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(15, 23, 42, 0.5) 50%, rgba(15, 23, 42, 0.3) 100%), url('/pexels-gustavo-fring-3984342.jpg')`
           }}
         ></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl pt-20">
             <h1 className="text-4xl lg:text-6xl font-black text-white mb-8 leading-tight">
               Discover and connect with your favourite fitness creators
             </h1>
 
-            <p className="text-xl text-gray-200 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-200 mb-12 leading-relaxed">
               Find fighters, coaches, bodybuilders and fitness influencers in one place and get closer access through chats, exclusive content, calls and video sessions.
             </p>
 
@@ -106,7 +106,8 @@ const FansPage = () => {
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             {/* Left Column - Ways to Connect */}
             <div className="lg:col-span-2">
-              <h2 className="text-4xl font-black text-white mb-12">Ways to connect with creators</h2>
+              <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">For Fans</p>
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-8">Ways to connect with creators</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
                 {fanBenefits.map((benefit, index) => {
@@ -207,7 +208,7 @@ const FansPage = () => {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-12 pt-6 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(15, 23, 42, 1), rgba(15, 23, 42, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
+      <section className="py-8 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(10, 15, 30, 1), rgba(10, 15, 30, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -220,12 +221,12 @@ const FansPage = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}}></div>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight drop-shadow-2xl">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 flex flex-col items-center">
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-3 leading-tight drop-shadow-2xl">
             Ready to support your favourite creators?
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-200 mb-8 drop-shadow-xl">
+          <p className="text-base md:text-lg text-gray-200 mb-6 drop-shadow-xl max-w-2xl">
             Create your free fan account today and start connecting with fighters, coaches and fitness creators worldwide.
           </p>
 
