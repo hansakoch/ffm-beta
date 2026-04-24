@@ -47,8 +47,19 @@ const LoginPage = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
-      <div className="max-w-md w-full mx-4">
+    <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Premium Fitness Background */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(31, 41, 55, 0.85) 50%, rgba(15, 23, 42, 0.9) 100%), url('https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+          }}
+        ></div>
+        <div className="absolute inset-0 backdrop-blur-md"></div>
+      </div>
+
+      <div className="max-w-md w-full mx-4 relative z-10">
         {/* Back Button */}
         <button
           onClick={() => navigate('/')}
@@ -59,7 +70,7 @@ const LoginPage = () => {
         </button>
 
         {/* Form Card */}
-        <div className="bg-gray-800/60 backdrop-blur-lg rounded-3xl p-8 border-2 border-gray-700/50 shadow-2xl hover:shadow-orange-500/20 transition-all duration-500">
+        <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/50 backdrop-blur-lg rounded-3xl p-8 border-2 border-gray-700/40 shadow-2xl hover:shadow-orange-500/30 transition-all duration-500">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-black text-white mb-2 drop-shadow-lg">Login to continue</h1>
             <p className="text-gray-300">Welcome back to FansFollow</p>
