@@ -65,11 +65,11 @@ const CastingPage = () => {
           </div>
 
           <h1 className="text-5xl lg:text-7xl font-black text-white mb-6 leading-tight">
-            Where martial artists move into film
+            Where creators and performers move into film
           </h1>
 
           <p className="text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We're developing martial arts film projects and building casting opportunities for talented fighters, stunt performers and actors with real on-screen potential.
+            We're developing film projects and creating opportunities for athletes, models, martial artists, actors and performers with real on-screen potential.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
