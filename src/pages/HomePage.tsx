@@ -364,28 +364,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Creator Brand Info Section */}
-      <section className="py-4 sm:py-5 lg:py-6 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 to-purple-500/3"></div>
-
-        <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
-          {/* Small FFM Logo */}
-          <div className="flex justify-center mb-3 sm:mb-3">
-            <img
-              src="/fans-foloow-me-logo-final-file--png-version.png"
-              alt="FansFollowMe Logo"
-              className="h-12 sm:h-14 lg:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
-            />
-          </div>
-
-          {/* About FFM Paragraph - Informational Block */}
-          <p className="text-xs sm:text-sm lg:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            FansFollowMe is built for fitness, combat sports and performance creators. The founding team has decades of experience in action films and combat sports, and actively creates casting and media opportunities for FFM creators worldwide.
-          </p>
-        </div>
-      </section>
-
-      {/* Creator CTA Section - Distinct Card */}
+{/* Creator CTA Section - Distinct Card */}
       <section className="py-6 sm:py-7 lg:py-8 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900"></div>
