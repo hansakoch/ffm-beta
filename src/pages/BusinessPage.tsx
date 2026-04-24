@@ -88,7 +88,7 @@ const BusinessPage = () => {
       </div>
 
       {/* WHY PARTNER SECTION */}
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Partner with FansFollow</h2>
@@ -129,7 +129,7 @@ const BusinessPage = () => {
       </div>
 
       {/* PARTNERSHIP MODELS SECTION */}
-      <div id="opportunities" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div id="opportunities" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-2">Partnership Models</h2>
@@ -264,7 +264,7 @@ const BusinessPage = () => {
       </div>
 
       {/* PAYMENT INFRASTRUCTURE SECTION */}
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/40 to-gray-900/60">
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/40 to-gray-900/60">
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-3xl border-2 border-orange-500/30 p-12 overflow-hidden shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -338,7 +338,7 @@ const BusinessPage = () => {
       </div>
 
       {/* FAQ SECTION */}
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-2">Common Questions</h2>
@@ -376,7 +376,7 @@ const BusinessPage = () => {
       </div>
 
       {/* CONTACT FORM SECTION */}
-      <div id="contact-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/40 to-gray-900/60">
+      <div id="contact-form" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/40 to-gray-900/60">
         <div className="max-w-2xl mx-auto">
           <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-3xl border-2 border-gray-700/50 p-12 shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
