@@ -145,7 +145,7 @@ const FansPage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <section className="py-12 pb-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '8s'}}></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
@@ -207,7 +207,7 @@ const FansPage = () => {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-12 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(15, 23, 42, 1), rgba(15, 23, 42, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
+      <section className="py-12 pt-6 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(15, 23, 42, 1), rgba(15, 23, 42, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
