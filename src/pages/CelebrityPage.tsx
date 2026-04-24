@@ -41,21 +41,21 @@ const CelebrityPage = () => {
       title: 'Order of the Dragon',
       year: 'In Post-Production',
       role: 'Jean Pierre (Co-starring Steven Seagal)',
-      image: '/pexels-gustavo-fring-3984342.jpg'
+      image: '/Order_of_the_dragon.png'
     },
     {
       id: 'hard-redemption',
       title: 'Hard Redemption',
       year: 'In Post-Production',
       role: 'Solomon',
-      image: '/powerful-back-workout-intense-fitness-training-gym-free-photo.jpg'
+      image: '/Hard_redemption.png'
     },
     {
       id: 'warrior-island',
       title: 'Warrior Island',
       year: 'In Post-Production',
       role: 'Viking Samurai',
-      image: '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
+      image: '/Warrior_island.png'
     }
   ]
 
