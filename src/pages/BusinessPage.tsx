@@ -65,7 +65,7 @@ const BusinessPage = () => {
           </h1>
 
           <p className="text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Partner with FansFollow to reach high-intent audiences across fitness, combat sports and film through a premium creator platform built for long-term value.
+            Partner with FansFollowMe to reach high-intent audiences across fitness, combat sports and film through a premium creator platform built for long-term value.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
