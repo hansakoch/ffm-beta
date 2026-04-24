@@ -180,11 +180,11 @@ const CastingPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left Column - Criteria */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 flex flex-col">
               <h2 className="text-2xl font-black text-white mb-6">Who We Want To Work With</h2>
 
               {/* 5 Criteria in 2-Column Grid */}
-              <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-3 mb-6 flex-grow">
                 {/* Card 1 */}
                 <div className="group">
                   <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-xl border border-orange-500/30 p-4 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 overflow-hidden h-full">
@@ -254,6 +254,13 @@ const CastingPage = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Bottom Left - Additional Info */}
+              <div className="mt-auto pt-6 border-t border-gray-700/30">
+                <p className="text-gray-400 text-xs leading-relaxed">
+                  <span className="text-orange-400 font-semibold">Ready to audition?</span> Submit your information on the right and we'll review your profile. The best talent gets contacted directly.
+                </p>
               </div>
             </div>
 
