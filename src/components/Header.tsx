@@ -99,13 +99,13 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3 flex-shrink-0 h-full">
+          <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
             {isAuthenticated ? (
-              <div className="flex items-center space-x-3 h-full">
+              <div className="flex items-center space-x-3">
                 {/* Notification Bell */}
                 <NotificationSystem userId={user?.id || ''} userType="creator" />
 
-                <div className="relative group h-full flex items-center">
+                <div className="relative group flex items-center">
                 <Link
                   to="/dashboard"
                   className="flex items-center justify-center w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
@@ -138,7 +138,7 @@ const Header = () => {
               </div>
               </div>
             ) : (
-              <div className="flex items-center space-x-3 h-full">
+              <div className="flex items-center space-x-3">
                 <Link
                   to="/signup"
                   className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold px-6 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow-pulse whitespace-nowrap h-[44px] flex items-center"
