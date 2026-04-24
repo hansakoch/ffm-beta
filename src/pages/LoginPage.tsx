@@ -53,10 +53,10 @@ const LoginPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(31, 41, 55, 0.85) 50%, rgba(15, 23, 42, 0.9) 100%), url('https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/ffmherobackground.jpg')`
           }}
         ></div>
-        <div className="absolute inset-0 backdrop-blur-md"></div>
+        <div className="absolute inset-0 backdrop-blur-sm"></div>
       </div>
 
       <div className="max-w-md w-full mx-4 relative z-10">
