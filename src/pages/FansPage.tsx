@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MessageCircle, Video, Gift, Dumbbell, Apple, ShoppingBag } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 
@@ -9,27 +9,33 @@ const FansPage = () => {
   const fanBenefits = [
     {
       title: 'Private Chats',
-      description: 'Message creators directly and get personal replies.'
+      description: 'Message creators directly and get personal replies.',
+      icon: MessageCircle
     },
     {
       title: 'Exclusive Videos & Streams',
-      description: 'Unlock members‑only videos and live events.'
+      description: 'Unlock members‑only videos and live events.',
+      icon: Video
     },
     {
       title: 'Tips & Support',
-      description: 'Tip your favourite athletes and show extra support.'
+      description: 'Tip your favourite athletes and show extra support.',
+      icon: Gift
     },
     {
       title: 'Training Programs',
-      description: 'Access structured plans from trusted coaches.'
+      description: 'Access structured plans from trusted coaches.',
+      icon: Dumbbell
     },
     {
       title: 'Meal Plans',
-      description: 'Get nutrition plans tailored by fitness experts.'
+      description: 'Get nutrition plans tailored by fitness experts.',
+      icon: Apple
     },
     {
       title: 'Merch & Products',
-      description: 'Buy branded gear, supplements and digital downloads.'
+      description: 'Buy branded gear, supplements and digital downloads.',
+      icon: ShoppingBag
     }
   ]
 
@@ -102,28 +108,32 @@ const FansPage = () => {
             <div className="lg:col-span-2">
               <h2 className="text-4xl font-black text-white mb-12">Ways to connect with creators</h2>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {fanBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl">
-                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
-                  </div>
-                ))}
+              <div className="grid md:grid-cols-3 gap-4">
+                {fanBenefits.map((benefit, index) => {
+                  const Icon = benefit.icon
+                  return (
+                    <div key={index} className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/30 hover:border-orange-500/50 transition-all duration-300 shadow-lg">
+                      <Icon className="w-8 h-8 text-orange-400 mb-3" />
+                      <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                    </div>
+                  )
+                })}
               </div>
             </div>
 
             {/* Right Column - Why Fans Love */}
             <div className="lg:col-span-1">
-              <div className="sticky top-32 bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div className="sticky top-32 bg-gray-800/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/40">
                 <h2 className="text-2xl font-bold text-white mb-8">Why fans love FansFollowMe</h2>
 
-                <ul className="space-y-6">
+                <ul className="space-y-5">
                   {whyFansLove.map((item, index) => (
                     <li key={index} className="flex items-start space-x-3">
-                      <span className="text-orange-400 font-bold text-lg mt-1">•</span>
+                      <span className="text-orange-400 font-bold text-lg mt-1 flex-shrink-0">•</span>
                       <div>
-                        <p className="text-white font-semibold">{item.title}</p>
-                        <p className="text-gray-300 text-sm">{item.description}</p>
+                        <p className="text-white font-semibold text-sm">{item.title}</p>
+                        <p className="text-gray-300 text-xs leading-relaxed mt-1">{item.description}</p>
                       </div>
                     </li>
                   ))}
@@ -197,7 +207,7 @@ const FansPage = () => {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-12 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(15, 23, 42, 1), rgba(15, 23, 42, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -211,17 +221,17 @@ const FansPage = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h2 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight drop-shadow-2xl">
             Ready to support your favourite creators?
           </h2>
 
-          <p className="text-2xl text-gray-200 mb-12 drop-shadow-xl">
+          <p className="text-lg md:text-xl text-gray-200 mb-8 drop-shadow-xl">
             Create your free fan account today and start connecting with fighters, coaches and fitness creators worldwide.
           </p>
 
           <button
             onClick={() => navigate('/signup')}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:scale-110 hover:-translate-y-2 group relative overflow-hidden"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:scale-105 hover:-translate-y-2 group relative overflow-hidden"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400/20 to-purple-500/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
             <span className="relative z-10">Sign Up as Fan – It's Free</span>
