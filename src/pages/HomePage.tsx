@@ -386,27 +386,27 @@ const HomePage = () => {
       </section>
 
       {/* Creator CTA Section - Distinct Card */}
-      <section className="py-10 sm:py-12 lg:py-16 relative overflow-hidden">
+      <section className="py-6 sm:py-7 lg:py-8 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/4 to-purple-500/4"></div>
 
         <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
           {/* CTA Card - Premium Elevation */}
-          <div className="bg-gradient-to-br from-slate-800/60 to-slate-700/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 lg:p-12 border border-slate-700/60 shadow-2xl shadow-orange-500/15 hover:shadow-orange-500/25 transition-all duration-300 hover:scale-[1.01] hover:border-slate-700/80 group">
+          <div className="bg-gradient-to-br from-slate-800/60 to-slate-700/40 backdrop-blur-xl rounded-3xl p-5 sm:p-6 lg:p-8 border border-slate-700/60 shadow-2xl shadow-orange-500/15 hover:shadow-orange-500/25 transition-all duration-300 hover:scale-[1.01] hover:border-slate-700/80 group">
 
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent mb-4 sm:mb-5 drop-shadow-xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent mb-2 sm:mb-3 drop-shadow-xl">
               Ready to start as a creator?
             </h2>
 
-            <p className="text-base sm:text-lg lg:text-lg text-gray-200 mb-7 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-base text-gray-200 mb-4 sm:mb-5 leading-relaxed max-w-2xl mx-auto">
               Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
               <Link
                 to="/signup"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-4 px-8 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-3 px-6 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1"
                 onClick={(e) => {
                   e.preventDefault()
                   window.location.href = '/signup'
