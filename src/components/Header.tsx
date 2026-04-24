@@ -32,7 +32,7 @@ const Header = () => {
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl border-b border-gray-700' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 min-h-[60px]">
+        <div className="flex justify-between items-center h-[72px]">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
             <img
