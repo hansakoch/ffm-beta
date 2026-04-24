@@ -59,7 +59,7 @@ const LoginPage = () => {
         <div className="absolute inset-0 backdrop-blur-sm"></div>
       </div>
 
-      <div className="max-w-md w-full mx-4 relative z-20">
+      <div className="max-w-md w-full mx-4 relative z-20 pt-20">
         {/* Back Button */}
         <button
           onClick={() => navigate('/')}
