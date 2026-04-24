@@ -198,7 +198,7 @@ const CelebrityPage = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
               <Camera className="w-10 h-10 text-purple-400 mx-auto mb-3" />
               <h3 className="text-lg font-bold text-white mb-2">Martial Arts Expert</h3>
-              <p className="text-gray-300 text-sm">Viking Samurai</p>
+              <p className="text-gray-300 text-sm">5th Dan Black Belt, Viking Samurai</p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105">
               <Clapperboard className="w-10 h-10 text-orange-400 mx-auto mb-3" />
@@ -213,7 +213,7 @@ const CelebrityPage = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:scale-105">
               <Users className="w-10 h-10 text-orange-400 mx-auto mb-3" />
               <h3 className="text-lg font-bold text-white mb-2">Celebrity Boxer</h3>
-              <p className="text-gray-300 text-sm">Fought Sugar Shane Mosley</p>
+              <p className="text-gray-300 text-sm">Injured, in talks with big names</p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
               <Heart className="w-10 h-10 text-purple-400 mx-auto mb-3" />
