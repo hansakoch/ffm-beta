@@ -41,21 +41,21 @@ const CelebrityPage = () => {
       title: 'Order of the Dragon',
       year: 'In Post-Production',
       role: 'Jean Pierre (Co-starring Steven Seagal)',
-      image: '/1000011998 copy.jpg'
+      image: '/pexels-gustavo-fring-3984342.jpg'
     },
     {
       id: 'hard-redemption',
       title: 'Hard Redemption',
       year: 'In Post-Production',
       role: 'Solomon',
-      image: '/1000011998 copy copy.jpg'
+      image: '/powerful-back-workout-intense-fitness-training-gym-free-photo.jpg'
     },
     {
       id: 'warrior-island',
       title: 'Warrior Island',
       year: 'In Post-Production',
       role: 'Viking Samurai',
-      image: '/1000011998 copy copy copy.jpg'
+      image: '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
     }
   ]
 
@@ -65,21 +65,21 @@ const CelebrityPage = () => {
       title: 'Guardian Peacemaker',
       year: 'In Pre-Production',
       role: 'General Garroz',
-      image: '/WhatsApp Image 2025-06-27 at 09.13.34_0853d715.jpg'
+      image: '/jakob-owens-xKfS7Hll0Ck-unsplash.jpg'
     },
     {
       id: 'warrior-island-2',
       title: 'Warrior Island: Darker Days',
       year: 'In Pre-Production',
       role: 'Viking Samurai',
-      image: '/WhatsApp Image 2025-06-27 at 09.13.34_0853d715 copy.jpg'
+      image: '/pexels-gustavo-fring-3984342.jpg'
     },
     {
       id: 'magnetic-fighters',
       title: 'The Magnetic Fighters',
       year: 'Upcoming (2026)',
       role: 'Samurai Hayate',
-      image: '/1000011998.jpg'
+      image: '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
     }
   ]
 
