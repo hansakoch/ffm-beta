@@ -48,7 +48,7 @@ const CastingPage = () => {
       <div
         className="relative min-h-[90vh] flex items-center justify-center py-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(15, 23, 42, 0.6)), url('/jakob-owens-xKfS7Hll0Ck-unsplash.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(15, 23, 42, 0.6)), url('/travis-colbert-fz2Am8mQfEw-unsplash.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
