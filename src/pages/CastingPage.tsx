@@ -92,7 +92,7 @@ const CastingPage = () => {
       </div>
 
       {/* 2) FOUNDER / CREDIBILITY SECTION - ENHANCED */}
-      <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-y border-orange-500/20 py-20">
+      <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-y border-orange-500/20 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Image with styling */}
@@ -143,7 +143,7 @@ const CastingPage = () => {
       </div>
 
       {/* 3) CURRENT CASTING STATUS */}
-      <div id="current-status" className="py-20">
+      <div id="current-status" className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-white mb-4">Current Casting Status</h2>
@@ -177,7 +177,7 @@ const CastingPage = () => {
       </div>
 
       {/* 4) WHO WE'RE LOOKING FOR - GRID WITH BETTER FLOW */}
-      <div className="bg-gradient-to-b from-gray-800/40 to-gray-900/60 border-y border-gray-700/50 py-20">
+      <div className="bg-gradient-to-b from-gray-800/40 to-gray-900/60 border-y border-gray-700/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black text-white mb-4">Who We Want To Work With</h2>
@@ -236,7 +236,7 @@ const CastingPage = () => {
       </div>
 
       {/* Waitlist Form Section */}
-      <div id="waitlist-form" className="py-20">
+      <div id="waitlist-form" className="py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-lg rounded-3xl border-2 border-gray-700/50 p-12 shadow-2xl">
             <h2 className="text-3xl font-black text-white mb-2 text-center">Join the Casting Waitlist</h2>
