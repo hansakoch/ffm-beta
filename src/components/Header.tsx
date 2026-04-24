@@ -31,15 +31,15 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl border-b border-gray-700' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3 md:py-4 gap-2 md:gap-4">
           {/* Logo */}
-          <div className="flex items-center z-50 relative">
-            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity min-h-[48px] min-w-[180px] flex items-center">
+          <div className="flex items-center z-50 relative flex-shrink-0">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity min-h-[48px]">
               <img
                 src="/artboard_1_copy.png"
                 alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
-                className="h-12 w-auto"
+                className="h-10 md:h-12 w-auto"
                 width="180"
                 height="48"
               />
@@ -159,12 +159,12 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`md:hidden p-2 rounded-lg transition-colors flex-shrink-0 ${
               isScrolled ? 'text-gray-300' : 'text-white'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
