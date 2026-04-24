@@ -403,7 +403,7 @@ const HomePage = () => {
               Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/signup"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-3 px-6 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1"
@@ -415,12 +415,6 @@ const HomePage = () => {
                 <span>Get Started</span>
               </Link>
             </div>
-
-            {/* Email line */}
-            <p className="text-xs sm:text-sm text-gray-400 flex items-center justify-center gap-2">
-              <Mail size={16} className="text-orange-500" />
-              <a href="mailto:support@fansfollow.me" className="text-gray-300 hover:text-orange-300 transition-colors">support@fansfollow.me</a>
-            </p>
           </div>
         </div>
       </section>
