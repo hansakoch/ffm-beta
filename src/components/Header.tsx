@@ -141,15 +141,15 @@ const Header = () => {
               </div>
             ) : (
               <div className="flex items-center space-x-3">
-                <Link 
+                <Link
                   to="/signup"
-                  className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold px-5 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow-pulse whitespace-nowrap"
+                  className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold px-6 py-3 md:py-2 lg:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow-pulse whitespace-nowrap min-h-[44px] flex items-center"
                 >
                   Get Started
                 </Link>
-                <Link 
+                <Link
                   to="/login"
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 text-white hover:bg-white/20 font-bold px-4 py-2 rounded-xl transition-all duration-300 hover:border-white/40 whitespace-nowrap"
+                  className="bg-white/10 backdrop-blur-lg border border-white/20 text-white hover:bg-white/20 font-bold px-6 py-3 md:py-2 lg:py-3 rounded-xl transition-all duration-300 hover:border-white/40 whitespace-nowrap min-h-[44px] flex items-center"
                 >
                   Login
                 </Link>
@@ -252,9 +252,9 @@ const Header = () => {
                   >
                     Sign In
                   </Link>
-                  <Link 
-                    to="/signup" 
-                    className="block w-full bg-gradient-to-r from-orange-500 to-purple-600 text-white font-bold py-2 px-4 rounded-lg text-center"
+                  <Link
+                    to="/signup"
+                    className="block w-full bg-gradient-to-r from-orange-500 to-purple-600 text-white font-bold py-3 px-4 rounded-lg text-center min-h-[44px] flex items-center justify-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Started

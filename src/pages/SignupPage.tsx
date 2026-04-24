@@ -105,29 +105,29 @@ const SignupPage = () => {
           <button
             type="button"
             onClick={() => setFormData(prev => ({ ...prev, userType: 'fan' }))}
-            className={`p-4 rounded-xl border transition-all ${
+            className={`p-4 md:p-5 rounded-xl border transition-all min-h-[100px] md:min-h-[120px] flex flex-col items-center justify-center ${
               formData.userType === 'fan'
                 ? 'border-purple-500 bg-purple-500/10 text-purple-400'
                 : 'border-gray-600 text-gray-300 hover:border-gray-500'
             }`}
           >
-            <div className="text-2xl mb-2">👤</div>
-            <div className="font-bold">Fan</div>
-            <div className="text-sm opacity-75">Connect with creators</div>
+            <div className="text-3xl md:text-4xl mb-2">👤</div>
+            <div className="font-bold text-base md:text-lg">Fan</div>
+            <div className="text-xs md:text-sm opacity-75 text-center">Connect with creators</div>
           </button>
-          
+
           <button
             type="button"
             onClick={() => setFormData(prev => ({ ...prev, userType: 'creator' }))}
-            className={`p-4 rounded-xl border transition-all ${
+            className={`p-4 md:p-5 rounded-xl border transition-all min-h-[100px] md:min-h-[120px] flex flex-col items-center justify-center ${
               formData.userType === 'creator'
                 ? 'border-orange-500 bg-orange-500/10 text-orange-400'
                 : 'border-gray-600 text-gray-300 hover:border-gray-500'
             }`}
           >
-            <div className="text-2xl mb-2">⭐</div>
-            <div className="font-bold">Creator</div>
-            <div className="text-sm opacity-75">Start earning money</div>
+            <div className="text-3xl md:text-4xl mb-2">⭐</div>
+            <div className="font-bold text-base md:text-lg">Creator</div>
+            <div className="text-xs md:text-sm opacity-75 text-center">Start earning money</div>
           </button>
         </div>
       </div>
@@ -143,7 +143,7 @@ const SignupPage = () => {
           name="fullName"
           value={formData.fullName}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
+          className="w-full px-4 py-3 min-h-[44px] bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
           placeholder="Your full name"
           required
         />
@@ -164,7 +164,7 @@ const SignupPage = () => {
             name="username"
             value={formData.username}
             onChange={handleInputChange}
-            className="flex-1 px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-r-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
+            className="flex-1 px-4 py-3 min-h-[44px] bg-gray-700/50 border border-gray-600 rounded-r-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
             placeholder="Choose a username"
             required
           />
@@ -182,7 +182,7 @@ const SignupPage = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
+          className="w-full px-4 py-3 min-h-[44px] bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400"
           placeholder="Your email address"
           required
         />
@@ -200,7 +200,7 @@ const SignupPage = () => {
             name="password"
             value={formData.password}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 pr-12"
+            className="w-full px-4 py-3 min-h-[44px] bg-gray-700/50 border border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 pr-12"
             placeholder="Create a password"
             required
           />
@@ -218,17 +218,17 @@ const SignupPage = () => {
       </div>
 
       {/* Terms Agreement */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-start space-x-3 min-h-[44px]">
         <input
           type="checkbox"
           id="agreeTerms"
           name="agreeTerms"
           checked={formData.agreeTerms}
           onChange={handleInputChange}
-          className="w-4 h-4 text-orange-500 bg-gray-700 border-gray-600 rounded focus:ring-orange-500 focus:ring-2"
+          className="w-5 h-5 text-orange-500 bg-gray-700 border-gray-600 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer mt-1"
           required
         />
-        <label htmlFor="agreeTerms" className="text-sm text-gray-300">
+        <label htmlFor="agreeTerms" className="text-base text-gray-300 cursor-pointer">
           I agree to the <a href="#" className="text-orange-400 hover:text-orange-300">Terms of Service</a> and <a href="#" className="text-orange-400 hover:text-orange-300">Privacy Policy</a>
         </label>
       </div>
@@ -237,7 +237,7 @@ const SignupPage = () => {
       <button
         type="submit"
         disabled={loading || !formData.agreeTerms}
-        className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
+        className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl min-h-[44px] flex items-center justify-center"
       >
         {loading ? (
           <div className="flex items-center justify-center">

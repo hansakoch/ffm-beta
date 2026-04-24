@@ -98,7 +98,7 @@ const LoginPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 shadow-lg hover:border-orange-500/50 transition-all duration-300"
+                className="w-full px-4 py-3 min-h-[44px] bg-gray-700/50 border-2 border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 shadow-lg hover:border-orange-500/50 transition-all duration-300"
                 placeholder="Your email address"
                 required
               />
@@ -116,7 +116,7 @@ const LoginPage = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border-2 border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 pr-12 shadow-lg hover:border-orange-500/50 transition-all duration-300"
+                  className="w-full px-4 py-3 min-h-[44px] bg-gray-700/50 border-2 border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-white placeholder-gray-400 pr-12 shadow-lg hover:border-orange-500/50 transition-all duration-300"
                   placeholder="Your password"
                   required
                 />
@@ -131,16 +131,16 @@ const LoginPage = () => {
             </div>
 
             {/* Remember Me */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 min-h-[44px]">
               <input
                 type="checkbox"
                 id="rememberMe"
                 name="rememberMe"
                 checked={formData.rememberMe}
                 onChange={handleInputChange}
-                className="w-4 h-4 text-orange-500 bg-gray-700 border-gray-600 rounded focus:ring-orange-500 focus:ring-2"
+                className="w-5 h-5 text-orange-500 bg-gray-700 border-gray-600 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
               />
-              <label htmlFor="rememberMe" className="text-sm text-gray-300">
+              <label htmlFor="rememberMe" className="text-base text-gray-300 cursor-pointer">
                 Remember me
               </label>
             </div>
@@ -149,7 +149,7 @@ const LoginPage = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60"
+              className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 min-h-[44px] flex items-center justify-center"
             >
               {loading ? (
                 <div className="flex items-center justify-center">
