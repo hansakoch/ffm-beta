@@ -142,181 +142,179 @@ const CastingPage = () => {
         </div>
       </div>
 
-      {/* 3) CURRENT CASTING STATUS */}
-      <div id="current-status" className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-white mb-4">Current Casting Status</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">We're actively developing multiple martial arts film projects</p>
-          </div>
+      {/* 3) CURRENT CASTING STATUS + PRE-PRODUCTION PHASE - COMBINED TOP SECTION */}
+      <div id="current-status" className="py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800/80">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Left side - Status info */}
+            <div className="flex-1">
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">Current Casting Status</h2>
+              <p className="text-gray-300 mb-4">We're actively developing multiple martial arts film projects.</p>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-lg rounded-3xl border-2 border-gray-700/50 p-12 shadow-2xl hover:shadow-orange-500/20 transition-all duration-500">
-              <div className="flex items-center justify-center mb-8">
-                <div className="inline-block bg-gradient-to-r from-purple-500/30 to-blue-500/30 border-2 border-purple-500/50 rounded-full px-8 py-3">
-                  <span className="text-purple-300 font-bold text-sm uppercase tracking-wider">Pre-production Phase</span>
-                </div>
+              {/* Pre-production Badge */}
+              <div className="inline-block bg-gradient-to-r from-purple-500/30 to-blue-500/30 border border-purple-500/50 rounded-full px-4 py-2 mb-4">
+                <span className="text-purple-300 font-bold text-xs uppercase tracking-wider">Pre-production Phase</span>
               </div>
 
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 text-center max-w-xl mx-auto">
-                We're currently in pre-production on multiple martial arts film projects. Casting calls will open soon. Be the first to know when opportunities become available by joining our waitlist.
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Casting calls will open soon. Be the first to know when opportunities become available.
               </p>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => scrollToSection('waitlist-form')}
-                  className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 flex items-center justify-center gap-2"
-                >
-                  <Bell className="w-5 h-5" />
-                  Join Casting Waitlist
-                </button>
-              </div>
+            {/* Right side - CTA Button */}
+            <div className="flex-shrink-0 w-full lg:w-auto">
+              <button
+                onClick={() => scrollToSection('waitlist-form')}
+                className="w-full lg:w-auto bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 flex items-center justify-center gap-2 text-sm"
+              >
+                <Bell className="w-4 h-4" />
+                Join Casting Waitlist
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 4) WHO WE'RE LOOKING FOR - CLEAN GRID */}
-      <div className="bg-gradient-to-b from-gray-800/40 to-gray-900/60 border-y border-gray-700/50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-white mb-4">Who We Want To Work With</h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Talented martial artists, actors and stunt performers who bring authenticity and professionalism to action cinema.
-            </p>
-          </div>
+      {/* 4) WHO WE'RE LOOKING FOR + FORM - TWO COLUMN LAYOUT */}
+      <div className="py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/80 to-gray-900 border-y border-gray-700/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Left Column - Criteria */}
+            <div className="lg:col-span-1">
+              <h2 className="text-2xl font-black text-white mb-6">Who We Want To Work With</h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto auto-rows-max">
-            {/* Card 1 - Large */}
-            <div className="sm:col-span-2 lg:row-span-2 group">
-              <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-1 flex flex-col justify-between h-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-xl p-4 w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Zap size={32} className="text-orange-400" />
+              {/* 5 Criteria in 2-Column Grid */}
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                {/* Card 1 */}
+                <div className="group">
+                  <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-xl border border-orange-500/30 p-4 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-lg p-2 w-fit mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Zap size={18} className="text-orange-400" />
+                      </div>
+                      <h3 className="font-bold text-white text-sm mb-1">Martial Arts Skills</h3>
+                      <p className="text-gray-400 text-xs">Years of training</p>
+                    </div>
                   </div>
-                  <h3 className="font-black text-white text-xl mb-2">Authentic Martial Arts Skills</h3>
-                  <p className="text-gray-400 text-sm">With on-screen potential and years of training</p>
+                </div>
+
+                {/* Card 2 */}
+                <div className="group">
+                  <div className="relative bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-xl border border-purple-500/30 p-4 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-lg p-2 w-fit mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Heart size={18} className="text-purple-400" />
+                      </div>
+                      <h3 className="font-bold text-white text-sm mb-1">Acting Ability</h3>
+                      <p className="text-gray-400 text-xs">Convey emotion</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="group">
+                  <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-xl border border-orange-500/30 p-4 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-lg p-2 w-fit mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Award size={18} className="text-orange-400" />
+                      </div>
+                      <h3 className="font-bold text-white text-sm mb-1">Physically Fit</h3>
+                      <p className="text-gray-400 text-xs">Learn choreography</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 4 */}
+                <div className="group">
+                  <div className="relative bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-xl border border-purple-500/30 p-4 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-lg p-2 w-fit mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Briefcase size={18} className="text-purple-400" />
+                      </div>
+                      <h3 className="font-bold text-white text-sm mb-1">Professional</h3>
+                      <p className="text-gray-400 text-xs">Reliable on set</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 5 - Full Width */}
+                <div className="col-span-2 group">
+                  <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-xl border border-orange-500/30 p-4 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-lg p-2 w-fit mb-2 group-hover:scale-110 transition-transform duration-300">
+                        <Shield size={18} className="text-orange-400" />
+                      </div>
+                      <h3 className="font-bold text-white text-sm mb-1">Committed to Action</h3>
+                      <p className="text-gray-400 text-xs">Long-term film growth</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="group">
-              <div className="relative bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1 overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            {/* Right Column - Waitlist Form (Sticky on Desktop) */}
+            <div className="lg:col-span-2 lg:sticky lg:top-24 lg:h-fit">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-2xl border border-gray-700/50 p-8 shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Heart size={24} className="text-purple-400" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Real Acting Ability</h3>
-                  <p className="text-gray-400 text-sm">Convey emotion and character</p>
+                  <h2 className="text-2xl font-black text-white mb-1 text-center">Join the Casting Waitlist</h2>
+                  <p className="text-gray-400 text-center text-sm mb-6">Be notified when casting calls open</p>
+
+                  <form id="waitlist-form" className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-300 mb-1.5">Full Name</label>
+                      <input
+                        type="text"
+                        placeholder="Your name"
+                        className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-300 mb-1.5">Email Address</label>
+                      <input
+                        type="email"
+                        placeholder="your@email.com"
+                        className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-300 mb-1.5">Specialty</label>
+                      <input
+                        type="text"
+                        placeholder="e.g., Martial Artist, Stunt Performer"
+                        className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-300 mb-1.5">Tell us about yourself</label>
+                      <textarea
+                        placeholder="Your experience, skills..."
+                        rows={3}
+                        className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl shadow-orange-500/40 text-sm"
+                    >
+                      Join Waitlist
+                    </button>
+
+                    <p className="text-gray-500 text-xs text-center">
+                      No spam, just opportunities.
+                    </p>
+                  </form>
                 </div>
               </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group">
-              <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-1 overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Award size={24} className="text-orange-400" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Physically Prepared</h3>
-                  <p className="text-gray-400 text-sm">Fit and learn choreography</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group">
-              <div className="relative bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1 overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Briefcase size={24} className="text-purple-400" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Professional On Set</h3>
-                  <p className="text-gray-400 text-sm">Reliable and fast-paced</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="sm:col-span-2 group">
-              <div className="relative bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-1 overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-orange-500/30 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Shield size={24} className="text-orange-400" />
-                  </div>
-                  <h3 className="font-bold text-white text-base mb-2">Committed to Authentic Action</h3>
-                  <p className="text-gray-400 text-sm">Focused on long-term growth in film</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Waitlist Form Section */}
-      <div id="waitlist-form" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-800/40 to-gray-900/60">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-3xl border-2 border-gray-700/50 p-12 shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-            <div className="relative">
-              <h2 className="text-3xl font-black text-white mb-2 text-center">Join the Casting Waitlist</h2>
-              <p className="text-gray-400 text-center mb-8">Be notified the moment casting calls open for our next projects</p>
-
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">Specialty / What You Do</label>
-                  <input
-                    type="text"
-                    placeholder="e.g., Martial Artist, Stunt Performer, Actor"
-                    className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">Tell us about yourself (optional)</label>
-                  <textarea
-                    placeholder="Your experience, skills, or why you're interested in FFM casting..."
-                    rows={4}
-                    className="w-full bg-gray-700/50 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-orange-500/40"
-                >
-                  Join Waitlist
-                </button>
-
-                <p className="text-gray-500 text-xs text-center">
-                  We'll notify you when casting calls open. No spam, just opportunities.
-                </p>
-              </form>
             </div>
           </div>
         </div>
