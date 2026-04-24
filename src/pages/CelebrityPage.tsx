@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Star, Users, MessageCircle, Phone, Video, Clapperboard, Camera, Film, Heart } from 'lucide-react'
+import { Star, Users, MessageCircle, Phone, Video, Clapperboard, Camera, Film, Heart, Zap, Award, Clock } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import CelebrityHero from '../components/CelebrityHero'
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -103,6 +103,52 @@ const CelebrityPage = () => {
       
       {/* Hero Section */}
       <CelebrityHero />
+
+      {/* Why Celebrities Choose FansFollow Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 relative">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-2">Why Celebrities Choose FansFollow</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Card 1: Real Connections */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <Users size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Real connections</h3>
+            <p className="text-gray-300 leading-relaxed">Build genuine, positive relationships with fans through fitness, training and combat-sports content in a fully brand-safe environment.</p>
+          </div>
+
+          {/* Card 2: Premium Benefits */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <Award size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Premium benefits</h3>
+            <p className="text-gray-300 leading-relaxed">Keep 80%+ of your earnings with clear reporting, VIP rates for high-volume talent, and terms that work for you and your team.</p>
+          </div>
+
+          {/* Card 3: Your Schedule */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <Clock size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Your schedule, your rules</h3>
+            <p className="text-gray-300 leading-relaxed">Set your own rates, availability and interaction preferences so every engagement fits your time, boundaries and sponsors.</p>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            onClick={() => navigate('/signup')}
+            className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 relative overflow-hidden group"
+          >
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400/20 to-purple-500/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
+            <span className="relative z-10">Apply for Celebrity Status</span>
+          </button>
+        </div>
+      </div>
 
       {/* FFM Founder Accolades Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-2 relative">
@@ -231,50 +277,6 @@ const CelebrityPage = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Celebrity Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 pointer-events-none"></div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border-2 border-white/10 shadow-2xl hover:shadow-orange-500/20 hover:border-orange-500/30 transition-all duration-500 hover:scale-[1.01] relative z-10">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-white mb-8 drop-shadow-lg">Why Celebrities Love FansFollow</h3>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-orange-500/30 hover:scale-110 hover:rotate-3 transition-all duration-300">
-                  <Users size={32} className="text-white drop-shadow-lg" />
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Real Connections</h4>
-                <p className="text-gray-300">Build genuine friendships with fans who become part of your inner circle</p>
-              </div>
-
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-orange-500/30 hover:scale-110 hover:rotate-3 transition-all duration-300">
-                  <Star size={32} className="text-white drop-shadow-lg" />
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Premium Benefits</h4>
-                <p className="text-gray-300">Keep 80%+ of earnings with VIP rates available. Earn FFM Reward tokens and negotiate custom terms.</p>
-              </div>
-
-              <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-2xl shadow-orange-500/30 hover:scale-110 hover:rotate-3 transition-all duration-300">
-                  <MessageCircle size={32} className="text-white drop-shadow-lg" />
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Your Schedule</h4>
-                <p className="text-gray-300">Set your own rates, availability, and interaction preferences</p>
-              </div>
-            </div>
-
-            <button
-              onClick={() => navigate('/signup')}
-              className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 relative overflow-hidden group"
-            >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-400/20 to-purple-500/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></span>
-              <span className="relative z-10">Apply for Celebrity Status</span>
-            </button>
-          </div>
         </div>
       </div>
 
