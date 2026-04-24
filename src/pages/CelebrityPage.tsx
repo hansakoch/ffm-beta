@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Star, Users, MessageCircle, Phone, Video, Clapperboard, Camera, Film, Heart, Zap, Award, Clock } from 'lucide-react'
+import { Star, Users, MessageCircle, Phone, Video, Clapperboard, Camera, Film, Heart, Zap, Award, Clock, Shield, TrendingUp, Briefcase } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import CelebrityHero from '../components/CelebrityHero'
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -136,6 +136,33 @@ const CelebrityPage = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Your schedule, your rules</h3>
             <p className="text-gray-300 leading-relaxed">Set your own rates, availability and interaction preferences so every engagement fits your time, boundaries and sponsors.</p>
+          </div>
+
+          {/* Card 4: Brand-safe by design */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <Shield size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Brand-safe by design</h3>
+            <p className="text-gray-300 leading-relaxed">A professional, non-adult platform built for athletes, entertainers and influencers who work with sponsors and mainstream media.</p>
+          </div>
+
+          {/* Card 5: High-quality audience */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <TrendingUp size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">High-quality audience</h3>
+            <p className="text-gray-300 leading-relaxed">Reach verified, paying fans who value your work, not bots or low-intent followers.</p>
+          </div>
+
+          {/* Card 6: Built with industry experience */}
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
+              <Briefcase size={32} className="text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Built with industry experience</h3>
+            <p className="text-gray-300 leading-relaxed">Created by a founder with multiple film and media credits who understands how to protect long-term reputation and endorsements.</p>
           </div>
         </div>
 
