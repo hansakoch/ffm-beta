@@ -38,7 +38,7 @@ const Header = () => {
             <img
               src="/artboard_1_copy.png"
               alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
-              className="h-10 md:h-12 w-auto"
+              className="h-12 w-auto"
               width="180"
               height="48"
             />
