@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CelebrityHero = () => {
   return (
-    <section className="relative pt-16 pb-16 overflow-hidden min-h-[85vh]">
+    <section className="relative pt-[72px] pb-16 overflow-hidden min-h-[85vh]">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <div
