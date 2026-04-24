@@ -310,7 +310,7 @@ const SignupPage = () => {
             )}
             
             <h1 className="text-3xl font-black text-white mb-2">
-              {step === 1 ? (creatorData ? 'Create Account & Subscribe' : 'Create your account') : 'Almost there!'}
+              {step === 1 ? (creatorData ? 'Create account & subscribe' : 'Create your account') : 'Almost there!'}
             </h1>
             {step === 1 && (
               <p className="text-gray-300">

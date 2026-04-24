@@ -91,7 +91,7 @@ const BusinessPage = () => {
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Partner with FansFollow</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Why partner with FansFollow</h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
               FansFollow connects fitness, combat-sports and film talent with paying fans through a safe, professional platform built for long-term careers. We combine filmmaking, martial arts and digital platform expertise to create sustainable opportunities for creators, brands and partners.
             </p>
@@ -132,7 +132,7 @@ const BusinessPage = () => {
       <div id="opportunities" className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-2">Partnership Models</h2>
+            <h2 className="text-4xl font-bold text-white mb-2">Partnership models</h2>
             <p className="text-gray-300 text-lg">Choose the opportunity that aligns with your business goals</p>
           </div>
 
@@ -341,7 +341,7 @@ const BusinessPage = () => {
       <div className="pt-16 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-2">Common Questions</h2>
+            <h2 className="text-4xl font-bold text-white mb-2">Common questions</h2>
             <p className="text-gray-300 text-lg">Everything you need to know about partnering with FansFollow</p>
           </div>
 
@@ -382,7 +382,7 @@ const BusinessPage = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
 
             <div className="relative">
-              <h2 className="text-3xl font-bold text-white mb-2 text-center">Ready to Partner?</h2>
+              <h2 className="text-3xl font-bold text-white mb-2 text-center">Ready to partner?</h2>
               <p className="text-gray-400 text-center mb-8">Tell us about your business and let's explore how we can grow together.</p>
 
               <form className="space-y-6">

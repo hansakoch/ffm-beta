@@ -148,7 +148,7 @@ const CastingPage = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Left side - Status info */}
             <div className="flex-1">
-              <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">Current Casting Status</h2>
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">Current casting status</h2>
               <p className="text-gray-300 mb-4">We're actively developing multiple martial arts film projects.</p>
 
               {/* Pre-production Badge */}
@@ -181,7 +181,7 @@ const CastingPage = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left Column - Criteria */}
             <div className="lg:col-span-1 flex flex-col">
-              <h2 className="text-2xl font-black text-white mb-6">Who We Want To Work With</h2>
+              <h2 className="text-2xl font-black text-white mb-6">Who we want to work with</h2>
 
               {/* 5 Criteria in 2-Column Grid */}
               <div className="grid grid-cols-2 gap-3 mb-6 flex-grow">
@@ -269,7 +269,7 @@ const CastingPage = () => {
               <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-lg rounded-2xl border border-gray-700/50 p-8 shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
                 <div className="relative">
-                  <h2 className="text-2xl font-black text-white mb-1 text-center">Join the Casting Waitlist</h2>
+                  <h2 className="text-2xl font-black text-white mb-1 text-center">Join the casting waitlist</h2>
                   <p className="text-gray-400 text-center text-sm mb-6">Be notified when casting calls open</p>
 
                   <form id="waitlist-form" className="space-y-4">

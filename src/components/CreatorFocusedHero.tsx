@@ -116,7 +116,7 @@ const CreatorFocusedHero = () => {
           {/* Right Content - Why Creators Choose Us */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h2 className="text-2xl font-bold text-white mb-6">Why Creators Choose Us</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">Why creators choose us</h2>
               
               <div className="space-y-6">
                 {/* Keep 80%+ of Earnings */}

@@ -127,7 +127,7 @@ const HomePage = () => {
             {/* Left side - Text content */}
             <div className="mb-8 lg:mb-0 text-left">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
-                FansFollowMe — Where Fans Become Friends
+                FansFollowMe — where fans become friends
               </h1>
 
               <div className="mb-4 sm:mb-6">

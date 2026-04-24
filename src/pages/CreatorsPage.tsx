@@ -38,7 +38,7 @@ const CreatorsPage = () => {
           {/* Title and Subtitle */}
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
-              How It Works
+              How it works
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Get started in three simple steps and turn your fitness, nutrition, martial arts or combat sports expertise into paid content and fan relationships.
@@ -151,7 +151,7 @@ const CreatorsPage = () => {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <h2 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
-            Ready to Start Earning?
+            Ready to start earning?
           </h2>
 
           <p className="text-2xl text-gray-200 mb-12 drop-shadow-xl">
