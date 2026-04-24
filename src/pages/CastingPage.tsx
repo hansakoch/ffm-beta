@@ -176,59 +176,61 @@ const CastingPage = () => {
         </div>
       </div>
 
-      {/* 4) WHO WE'RE LOOKING FOR - GRID WITH BETTER FLOW */}
+      {/* 4) WHO WE'RE LOOKING FOR - CLEAN GRID */}
       <div className="bg-gradient-to-b from-gray-800/40 to-gray-900/60 border-y border-gray-700/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-white mb-4">Who We Want To Work With</h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              FFM Studios is looking for talented martial artists, actors and stunt performers who bring authenticity and professionalism to action cinema.
+              Talented martial artists, actors and stunt performers who bring authenticity and professionalism to action cinema.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-            {/* Card 1 */}
-            <div className="lg:col-span-2 md:row-span-2 bg-gradient-to-br from-orange-500/10 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 group">
-              <div className="bg-gradient-to-br from-orange-500/20 to-orange-500/10 rounded-xl p-4 w-fit mb-4 group-hover:scale-110 transition-transform">
-                <Zap size={32} className="text-orange-400" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto auto-rows-max">
+            {/* Card 1 - Large */}
+            <div className="sm:col-span-2 lg:row-span-2 bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 flex flex-col justify-between group h-full">
+              <div>
+                <div className="bg-gradient-to-br from-orange-500/25 to-orange-500/10 rounded-xl p-4 w-fit mb-4 group-hover:scale-110 transition-transform">
+                  <Zap size={32} className="text-orange-400" />
+                </div>
+                <h3 className="font-black text-white text-xl mb-2">Authentic Martial Arts Skills</h3>
+                <p className="text-gray-400 text-sm">With on-screen potential and years of training</p>
               </div>
-              <h3 className="font-black text-white text-2xl mb-3">Authentic Martial Arts Skills</h3>
-              <p className="text-gray-400">With on-screen potential and years of training</p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group">
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
+            <div className="bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group">
+              <div className="bg-gradient-to-br from-purple-500/25 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
                 <Heart size={24} className="text-purple-400" />
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">Real Acting Ability</h3>
+              <h3 className="font-bold text-white text-base mb-2">Real Acting Ability</h3>
               <p className="text-gray-400 text-sm">Convey emotion and character</p>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 group">
-              <div className="bg-gradient-to-br from-orange-500/20 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
+            <div className="bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 group">
+              <div className="bg-gradient-to-br from-orange-500/25 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
                 <Award size={24} className="text-orange-400" />
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">Physically Prepared</h3>
+              <h3 className="font-bold text-white text-base mb-2">Physically Prepared</h3>
               <p className="text-gray-400 text-sm">Fit and learn choreography</p>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group">
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
+            <div className="bg-gradient-to-br from-purple-500/15 to-purple-500/5 backdrop-blur rounded-2xl border-2 border-purple-500/30 p-6 hover:border-purple-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 group">
+              <div className="bg-gradient-to-br from-purple-500/25 to-purple-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
                 <Briefcase size={24} className="text-purple-400" />
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">Professional On Set</h3>
+              <h3 className="font-bold text-white text-base mb-2">Professional On Set</h3>
               <p className="text-gray-400 text-sm">Reliable and fast-paced</p>
             </div>
 
             {/* Card 5 */}
-            <div className="lg:col-span-2 bg-gradient-to-br from-orange-500/10 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 group">
-              <div className="bg-gradient-to-br from-orange-500/20 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
+            <div className="sm:col-span-2 bg-gradient-to-br from-orange-500/15 to-orange-500/5 backdrop-blur rounded-2xl border-2 border-orange-500/30 p-6 hover:border-orange-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/20 group">
+              <div className="bg-gradient-to-br from-orange-500/25 to-orange-500/10 rounded-xl p-3 w-fit mb-3 group-hover:scale-110 transition-transform">
                 <Shield size={24} className="text-orange-400" />
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">Committed to Authentic Action</h3>
+              <h3 className="font-bold text-white text-base mb-2">Committed to Authentic Action</h3>
               <p className="text-gray-400 text-sm">Focused on long-term growth in film</p>
             </div>
           </div>
