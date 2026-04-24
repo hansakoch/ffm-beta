@@ -31,23 +31,21 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl border-b border-gray-700' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 md:py-4 gap-2 md:gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4 min-h-[60px]">
           {/* Logo */}
-          <div className="flex items-center z-50 relative flex-shrink-0">
-            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity min-h-[48px]">
-              <img
-                src="/artboard_1_copy.png"
-                alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
-                className="h-10 md:h-12 w-auto"
-                width="180"
-                height="48"
-              />
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
+            <img
+              src="/artboard_1_copy.png"
+              alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
+              className="h-10 md:h-12 w-auto"
+              width="180"
+              height="48"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -101,7 +99,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3 ml-6">
+          <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
             {isAuthenticated ? (
               <div className="flex items-center space-x-3">
                 {/* Notification Bell */}
