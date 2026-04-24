@@ -58,34 +58,34 @@ const CastingPage = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-6 animate-pulse">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-8 animate-pulse">
             <Film className="w-5 h-5 text-orange-300 mr-2" />
-            <span className="text-orange-300 font-semibold">FFM STUDIOS</span>
+            <span className="text-orange-300 font-semibold text-sm tracking-wide">FFM STUDIOS</span>
           </div>
 
           <h1 className="text-5xl lg:text-7xl font-black text-white mb-6 leading-tight">
-            Get Cast In Real Action Films
+            Where martial artists move into film
           </h1>
 
-          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We discover and cast talented martial artists, fighters, actors and performers for authentic action movies.
+          <p className="text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+            We're developing martial arts film projects and building casting opportunities for talented fighters, stunt performers and actors with real on-screen potential.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollToSection('waitlist-form')}
-              className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-2xl shadow-orange-500/40 flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <Bell className="w-5 h-5" />
               Join Casting Waitlist
             </button>
             <button
               onClick={() => scrollToSection('current-status')}
-              className="bg-transparent border-2 border-orange-400/50 hover:border-orange-400 text-orange-300 hover:text-orange-200 font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+              className="bg-transparent border-2 border-orange-400/50 hover:border-orange-400 text-orange-300 hover:text-orange-200 font-bold py-4 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <ArrowRight className="w-5 h-5" />
-              See what we're working on
+              See Current Projects
             </button>
           </div>
         </div>
