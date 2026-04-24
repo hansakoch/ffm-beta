@@ -364,15 +364,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Creator CTA Section */}
-      <section className="py-10 sm:py-12 lg:py-14 relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5"></div>
+      {/* Creator Brand Info Section */}
+      <section className="py-14 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 to-purple-500/3"></div>
 
         <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
           {/* Small FFM Logo */}
-          <div className="flex justify-center mb-4 sm:mb-5">
+          <div className="flex justify-center mb-6 sm:mb-8">
             <img
               src="/fans-foloow-me-logo-final-file--png-version.png"
               alt="FansFollowMe Logo"
@@ -380,24 +378,35 @@ const HomePage = () => {
             />
           </div>
 
-          {/* About FFM Paragraph */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-200 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+          {/* About FFM Paragraph - Informational Block */}
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
             FansFollowMe is built for fitness, combat sports and performance creators. The founding team has decades of experience in action films and combat sports, and actively creates casting and media opportunities for FFM creators worldwide.
           </p>
+        </div>
+      </section>
 
-          {/* Orange CTA Box */}
-          <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-8 border border-gray-700/50 shadow-xl shadow-orange-500/10 hover:shadow-orange-500/20 transition-all duration-300">
-            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent mb-3 sm:mb-4 drop-shadow-xl">
+      {/* Creator CTA Section - Distinct Card */}
+      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/4 to-purple-500/4"></div>
+
+        <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
+          {/* CTA Card - Premium Elevation */}
+          <div className="bg-gradient-to-br from-slate-800/60 to-slate-700/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 lg:p-12 border border-slate-700/60 shadow-2xl shadow-orange-500/15 hover:shadow-orange-500/25 transition-all duration-300 hover:scale-[1.01] hover:border-slate-700/80 group">
+
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500 bg-clip-text text-transparent mb-4 sm:mb-5 drop-shadow-xl">
               Ready to start as a creator?
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-orange-300 mb-6 sm:mb-7 leading-relaxed drop-shadow-lg">
+
+            <p className="text-base sm:text-lg lg:text-lg text-gray-200 mb-7 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
               Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollowMe.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-5">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
               <Link
                 to="/signup"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-3 px-6 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-orange-600 hover:to-purple-600 font-bold py-4 px-8 rounded-full transition-all duration-300 text-sm sm:text-base shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1"
                 onClick={(e) => {
                   e.preventDefault()
                   window.location.href = '/signup'
