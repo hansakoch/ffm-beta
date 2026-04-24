@@ -21,7 +21,7 @@ const CelebrityHero = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="flex flex-col items-start h-full pt-12">
+        <div className="flex flex-col items-start pt-12">
           {/* Left Content */}
           <div className="transition-all duration-1000 animate-slide-in-left text-left max-w-md">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-500/30 mb-6">
