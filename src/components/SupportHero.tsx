@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const SupportHero = () => {
   return (
-    <section className="relative pt-24 pb-24 overflow-hidden">
+    <section className="relative pt-24 pb-8 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <div 

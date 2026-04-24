@@ -119,9 +119,9 @@ const SupportPage = () => {
       {/* Hero Section */}
       <SupportHero />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20">
         {/* Contact Form Section */}
-        <div className="mb-20">
+        <div className="mb-12">
           <ContactForm />
         </div>
 
