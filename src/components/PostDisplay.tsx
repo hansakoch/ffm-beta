@@ -249,10 +249,10 @@ const PostDisplay: React.FC<PostDisplayProps> = ({
       {/* Post Header */}
       <div className="p-6 pb-4">
         <div className="flex items-start justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 relative">
             {/* Pin indicator */}
             {post.isPinned && (
-              <div className="absolute -top-2 -left-2 bg-orange-500 text-white p-1 rounded-full">
+              <div className="absolute -top-6 -left-6 bg-orange-500 text-white p-1 rounded-full z-10">
                 📌
               </div>
             )}

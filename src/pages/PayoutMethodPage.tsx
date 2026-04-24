@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import SettingsLayout from '../components/SettingsLayout'
 import { CreditCard, Wallet, Building, Info } from 'lucide-react'
 
-type PayoutMethod = 'paypal' | 'bank' | null
+type PayoutMethod = 'bank' | null
 
 const PayoutMethodPage: React.FC = () => {
   const [selectedMethod, setSelectedMethod] = useState<PayoutMethod>(null)
@@ -54,32 +54,6 @@ const PayoutMethodPage: React.FC = () => {
           <div className="bg-[#1e293b] border border-[#334155] rounded-lg p-6">
             <h3 className="text-lg font-bold text-[#e2e8f0] mb-4">Select Payout Method</h3>
             <div className="space-y-4">
-              {/* PayPal */}
-              <label className="flex items-start space-x-4 p-5 bg-[#0f172a] border-2 border-[#334155] rounded-lg cursor-pointer hover:border-purple-500 transition-colors">
-                <input
-                  type="radio"
-                  name="payoutMethod"
-                  value="paypal"
-                  checked={selectedMethod === 'paypal'}
-                  onChange={(e) => setSelectedMethod(e.target.value as PayoutMethod)}
-                  className="mt-1.5 w-5 h-5"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                      <Wallet size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#e2e8f0] text-lg">PayPal</h4>
-                      <p className="text-sm text-[#9ca3af]">Fast and secure payments</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-yellow-400 font-medium">
-                    * Some processor fees may apply
-                  </p>
-                </div>
-              </label>
-
               {/* Bank Transfer */}
               <label className="flex items-start space-x-4 p-5 bg-[#0f172a] border-2 border-[#334155] rounded-lg cursor-pointer hover:border-purple-500 transition-colors">
                 <input
@@ -109,25 +83,6 @@ const PayoutMethodPage: React.FC = () => {
           </div>
 
           {/* Additional Info */}
-          {selectedMethod === 'paypal' && (
-            <div className="bg-[#1e293b] border border-[#334155] rounded-lg p-6">
-              <h3 className="text-lg font-bold text-[#e2e8f0] mb-4">PayPal Account Details</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-[#e2e8f0] mb-2">
-                    PayPal Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-3 bg-[#0f172a] border border-[#334155] rounded-lg text-[#e2e8f0] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
           {selectedMethod === 'bank' && (
             <div className="bg-[#1e293b] border border-[#334155] rounded-lg p-6">
               <h3 className="text-lg font-bold text-[#e2e8f0] mb-4">Bank Account Details</h3>

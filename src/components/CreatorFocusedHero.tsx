@@ -137,7 +137,7 @@ const CreatorFocusedHero = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-bold text-lg mb-2">Get Paid Your Way</h3>
-                    <p className="text-gray-300">Bank transfer, PayPal or crypto payouts with low fees and fast processing.</p>
+                    <p className="text-gray-300">Bank transfer or crypto payouts with low fees and fast processing.</p>
                   </div>
                 </div>
 

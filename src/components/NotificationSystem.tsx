@@ -246,20 +246,20 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({ userId, userTyp
       {/* Notification Bell */}
       <button
         onClick={() => setShowNotifications(!showNotifications)}
-        className="relative p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-all transform hover:scale-110"
+        className="relative p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-all transform hover:scale-110 min-h-[44px] min-w-[44px]"
       >
         <Bell size={24} />
         {unreadCount > 0 && (
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
+          <div className="absolute top-0 right-0 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
             <span className="text-white text-xs font-bold">
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           </div>
         )}
-        
+
         {/* Subtle notification indicator */}
         {unreadCount === 0 && (
-          <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-bounce-subtle opacity-60"></div>
+          <div className="absolute top-0 right-0 w-2 h-2 bg-orange-400 rounded-full animate-bounce-subtle opacity-60"></div>
         )}
       </button>
 

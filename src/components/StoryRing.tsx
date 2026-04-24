@@ -47,7 +47,7 @@ const StoryRing: React.FC<StoryRingProps> = ({
               </div>
             )}
           </div>
-          <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full flex items-center justify-center border-2 border-gray-800">
+          <div className="absolute bottom-0 right-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full flex items-center justify-center border-2 border-gray-800">
             <Plus size={12} className="text-white" />
           </div>
           <div className="text-center mt-2">

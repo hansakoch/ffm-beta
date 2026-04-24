@@ -324,14 +324,14 @@ const MessagingSystem = () => {
                   </div>
                   {/* Enhanced Online Status */}
                   {conversation.participant.isOnline ? (
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-800 animate-pulse"></div>
+                    <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-800 animate-pulse"></div>
                   ) : (
-                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gray-500 rounded-full border-2 border-gray-800"></div>
+                    <div className="absolute bottom-0 right-0 w-4 h-4 bg-gray-500 rounded-full border-2 border-gray-800"></div>
                   )}
-                  
+
                   {/* Typing Indicator */}
                   {conversation.isTyping && (
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-gray-800 flex items-center justify-center">
+                    <div className="absolute top-0 right-0 w-4 h-4 bg-blue-500 rounded-full border-2 border-gray-800 flex items-center justify-center">
                       <div className="w-1 h-1 bg-white rounded-full animate-bounce"></div>
                     </div>
                   )}

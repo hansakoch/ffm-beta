@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import SettingsLayout from '../components/SettingsLayout'
 import { Wallet, CreditCard, Building } from 'lucide-react'
 
-type PaymentMethod = 'paypal' | 'card' | 'bank'
+type PaymentMethod = 'card' | 'bank'
 
 const WalletPage: React.FC = () => {
   const balance = 23.20
   const [amount, setAmount] = useState('')
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('paypal')
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('card')
   const [transactionFee, setTransactionFee] = useState(0)
   const [total, setTotal] = useState(0)
 
@@ -15,9 +15,7 @@ const WalletPage: React.FC = () => {
     const amountValue = parseFloat(amount) || 0
     let fee = 0
 
-    if (paymentMethod === 'paypal') {
-      fee = (amountValue * 0.054) + 0.45
-    } else if (paymentMethod === 'card') {
+    if (paymentMethod === 'card') {
       fee = amountValue * 0.029
     }
 
@@ -120,25 +118,6 @@ const WalletPage: React.FC = () => {
           <div className="bg-[#1e293b] border border-[#334155] rounded-lg p-6">
             <h3 className="text-lg font-bold text-[#e2e8f0] mb-4">Payment Method</h3>
             <div className="space-y-4">
-              {/* PayPal */}
-              <label className="flex items-start space-x-3 p-4 bg-[#0f172a] border border-[#334155] rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="paypal"
-                  checked={paymentMethod === 'paypal'}
-                  onChange={(e) => setPaymentMethod(e.target.value as PaymentMethod)}
-                  className="mt-1"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <Wallet size={20} className="text-[#e2e8f0]" />
-                    <span className="font-bold text-[#e2e8f0]">PayPal</span>
-                  </div>
-                  <p className="text-sm text-[#9ca3af]">Fee: 5.4% + £0.45</p>
-                </div>
-              </label>
-
               {/* Stripe Card */}
               <label className="flex items-start space-x-3 p-4 bg-[#0f172a] border border-[#334155] rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
