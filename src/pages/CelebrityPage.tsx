@@ -292,6 +292,10 @@ const CelebrityPage = () => {
                   width="400"
                   height="256"
                   loading="lazy"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement
+                    img.src = '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               </div>
