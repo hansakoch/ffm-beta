@@ -94,9 +94,9 @@ const SettingsLayout: React.FC<SettingsLayoutProps> = ({ children }) => {
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-[#0f172a] pt-[72px]">
       {/* HEADER */}
-      <header className="sticky top-0 z-40 bg-[#1e293b] border-b border-[#334155]">
+      <header className="sticky top-[72px] z-40 bg-[#1e293b] border-b border-[#334155]">
         <div className="max-w-full px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 sm:space-x-4">
@@ -141,9 +141,9 @@ const SettingsLayout: React.FC<SettingsLayoutProps> = ({ children }) => {
         {/* LEFT SIDEBAR */}
         <aside
           className={`
-            fixed md:sticky top-0 left-0 md:top-0 h-screen md:h-[calc(100vh-73px)] w-[280px] sm:w-[300px] bg-[#1e293b] border-r border-[#334155] overflow-y-auto z-30
+            fixed md:sticky top-[72px] left-0 md:top-[72px] h-[calc(100vh-72px)] md:h-[calc(100vh-73px-72px)] w-[280px] sm:w-[300px] bg-[#1e293b] border-r border-[#334155] overflow-y-auto z-30
             transition-transform duration-300 ease-in-out
-            ${isMobileMenuOpen ? 'translate-x-0 pt-[73px]' : '-translate-x-full md:translate-x-0 md:pt-0'}
+            ${isMobileMenuOpen ? 'translate-x-0 pt-0' : '-translate-x-full md:translate-x-0 md:pt-0'}
           `}
         >
           <nav className="p-4 sm:p-6">

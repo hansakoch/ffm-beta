@@ -120,9 +120,9 @@ const NotificationsPage: React.FC = () => {
     : notifications.filter(n => n.type === filter || (filter === 'subscriptions' && n.type === 'subscription'))
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-[#0f172a] pt-[72px]">
       {/* HEADER - Using simplified header without full dashboard layout */}
-      <header className="sticky top-0 z-50 bg-[#1e293b] border-b border-[#334155]">
+      <header className="sticky top-[72px] z-50 bg-[#1e293b] border-b border-[#334155]">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/feed" className="flex items-center space-x-2">

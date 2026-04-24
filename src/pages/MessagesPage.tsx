@@ -117,9 +117,9 @@ const MessagesPage: React.FC = () => {
   )
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-[#0f172a] pt-[72px]">
       {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-[#1e293b] border-b border-[#334155]">
+      <header className="sticky top-[72px] z-50 bg-[#1e293b] border-b border-[#334155]">
         <div className="max-w-full px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <Link to="/feed" className="flex items-center space-x-2">
@@ -139,7 +139,7 @@ const MessagesPage: React.FC = () => {
       </header>
 
       {/* MAIN CONTENT - Split Panel Layout */}
-      <div className="flex h-[calc(100vh-73px)]">
+      <div className="flex h-[calc(100vh-72px-73px)]">
         {/* LEFT PANEL - Conversations List */}
         <div className={`w-full md:w-[400px] border-r border-[#334155] bg-[#0f172a] flex flex-col ${
           selectedConversation ? 'hidden md:flex' : 'flex'
