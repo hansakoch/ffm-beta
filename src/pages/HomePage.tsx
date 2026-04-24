@@ -365,7 +365,7 @@ const HomePage = () => {
       </section>
 
       {/* Creator Brand Info Section */}
-      <section className="py-14 sm:py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="py-10 sm:py-12 lg:py-16 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/3 to-purple-500/3"></div>
 
         <div className="relative max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center z-10">
@@ -386,7 +386,7 @@ const HomePage = () => {
       </section>
 
       {/* Creator CTA Section - Distinct Card */}
-      <section className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="py-10 sm:py-12 lg:py-16 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/4 to-purple-500/4"></div>
