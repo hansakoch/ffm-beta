@@ -33,24 +33,24 @@ const ExplorePage = () => {
 
   return (
     <DashboardLayout>
-      <main className="flex-1">
-        <div className="max-w-5xl mx-auto py-8 px-4">
+      <main className="flex-1 w-full overflow-hidden">
+        <div className="w-full py-6 px-4">
           {/* Search Bar */}
-          <div className="mb-10 relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
+          <div className="mb-8 relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
             <input
               type="text"
               placeholder="Search posts, creators, topics..."
-              className="w-full pl-12 pr-4 py-3 bg-[#334155] rounded-xl text-[#e2e8f0] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full pl-12 pr-4 py-3 bg-[#334155] rounded-xl text-[#e2e8f0] placeholder-[#9ca3af] focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
             />
           </div>
 
-          {/* Filter Pills */}
-          <div className="space-y-7 mb-12">
+          {/* Filter Pills - Responsive Grid */}
+          <div className="space-y-6 sm:space-y-7 mb-10 sm:mb-12">
             {/* Role Filters */}
             <div>
-              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">Who They Are</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-3 uppercase tracking-wider">Who They Are</h3>
+              <div className="flex flex-wrap gap-2">
                 {roleFilters.map((filter) => (
                   <button
                     key={filter}
@@ -69,8 +69,8 @@ const ExplorePage = () => {
 
             {/* Availability Filters */}
             <div>
-              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">When They're Active</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-3 uppercase tracking-wider">When They're Active</h3>
+              <div className="flex flex-wrap gap-2">
                 {availabilityFilters.map((filter) => (
                   <button
                     key={filter}
@@ -89,8 +89,8 @@ const ExplorePage = () => {
 
             {/* Niche Filters */}
             <div>
-              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">What They Do</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-3 uppercase tracking-wider">What They Do</h3>
+              <div className="flex flex-wrap gap-2">
                 {nicheFilters.map((filter) => (
                   <button
                     key={filter}
@@ -109,12 +109,12 @@ const ExplorePage = () => {
           </div>
 
           {/* Content Feed */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 w-full">
             {samplePosts.length === 0 ? (
-              <div className="bg-[#1e293b] rounded-2xl border border-[#334155]/50 p-16 text-center">
-                <Search size={64} className="text-[#9ca3af] mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-[#e2e8f0] mb-2">Explore creators and content</h3>
-                <p className="text-[#9ca3af]">Browse fitness coaches, combat sports athletes, nutritionists, and more. Follow creators to see their content in your feed.</p>
+              <div className="bg-[#1e293b] rounded-2xl border border-[#334155]/50 p-8 sm:p-16 text-center">
+                <Search size={48} sm:size={64} className="text-[#9ca3af] mx-auto mb-4" />
+                <h3 className="text-lg sm:text-xl font-bold text-[#e2e8f0] mb-2">Explore creators and content</h3>
+                <p className="text-[#9ca3af] text-sm sm:text-base">Browse fitness coaches, combat sports athletes, nutritionists, and more. Follow creators to see their content in your feed.</p>
               </div>
             ) : (
               samplePosts.map((post) => (

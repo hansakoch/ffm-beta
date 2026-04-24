@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import DashboardLayout from '../components/DashboardLayout'
-import { Radio, Filter } from 'lucide-react'
+import { Radio, Filter, X } from 'lucide-react'
 
 const LivePage = () => {
   const [activeFilter, setActiveFilter] = useState('all')
+  const [showFilters, setShowFilters] = useState(false)
 
   const filters = [
     { id: 'all', label: 'Popular' },
@@ -21,25 +22,46 @@ const LivePage = () => {
 
   return (
     <DashboardLayout>
-      <main className="flex-1">
-        <div className="max-w-7xl mx-auto py-6 px-6">
+      <main className="flex-1 w-full overflow-hidden">
+        <div className="w-full py-4 sm:py-6 px-4 sm:px-6">
           {/* Header */}
           <div className="mb-6">
             <div className="flex items-center space-x-3 mb-4">
-              <Radio size={28} className="text-red-500" />
-              <h1 className="text-3xl font-bold text-[#e2e8f0]">Creators Broadcasting live</h1>
+              <Radio size={24} sm:size={28} className="text-red-500 flex-shrink-0" />
+              <h1 className="text-2xl sm:text-3xl font-bold text-[#e2e8f0]">Creators Broadcasting live</h1>
             </div>
-            <p className="text-[#9ca3af]">
+            <p className="text-[#9ca3af] text-sm sm:text-base">
               Watch live streams from your favorite creators and interact in real-time
             </p>
           </div>
 
-          <div className="flex gap-6">
-            {/* Left Filter Sidebar */}
-            <aside className="w-64 bg-[#1e293b] rounded-xl border border-[#334155] p-4 h-fit">
-              <div className="flex items-center space-x-2 mb-4">
-                <Filter size={20} className="text-[#e2e8f0]" />
-                <h3 className="font-bold text-[#e2e8f0]">Filters</h3>
+          {/* Mobile Filter Toggle */}
+          <div className="md:hidden mb-4 flex gap-2">
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2 px-4 py-2 bg-[#334155] text-[#e2e8f0] rounded-lg hover:bg-[#475569] transition-colors flex-1"
+            >
+              <Filter size={18} />
+              <span>Filters</span>
+            </button>
+          </div>
+
+          <div className="flex gap-4 md:gap-6 flex-col md:flex-row">
+            {/* Left Filter Sidebar - Hidden on mobile, shown in modal */}
+            <aside className={`w-full md:w-64 bg-[#1e293b] rounded-xl border border-[#334155] p-4 h-fit ${
+              showFilters ? 'block' : 'hidden md:block'
+            } md:block fixed md:static inset-0 md:inset-auto top-0 left-0 z-40 md:z-auto max-h-screen md:max-h-fit overflow-y-auto bg-[#0f172a] md:bg-[#1e293b] w-full md:w-64 p-4 md:p-4`}>
+              <div className="flex items-center justify-between space-x-2 mb-4">
+                <div className="flex items-center space-x-2">
+                  <Filter size={20} className="text-[#e2e8f0]" />
+                  <h3 className="font-bold text-[#e2e8f0]">Filters</h3>
+                </div>
+                <button
+                  onClick={() => setShowFilters(false)}
+                  className="md:hidden p-1.5 hover:bg-[#334155] rounded-lg transition-colors"
+                >
+                  <X size={20} className="text-[#e2e8f0]" />
+                </button>
               </div>
               <div className="space-y-2">
                 {filters.map((filter) => (
@@ -59,24 +81,24 @@ const LivePage = () => {
             </aside>
 
             {/* Main Content Area */}
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               {liveStreams.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-20 bg-[#1e293b] rounded-xl border border-[#334155]">
-                  <div className="w-20 h-20 bg-[#334155] rounded-full flex items-center justify-center mb-6">
-                    <Radio size={40} className="text-[#9ca3af]" />
+                <div className="flex flex-col items-center justify-center py-12 sm:py-20 bg-[#1e293b] rounded-xl border border-[#334155] px-4">
+                  <div className="w-16 sm:w-20 h-16 sm:h-20 bg-[#334155] rounded-full flex items-center justify-center mb-6 flex-shrink-0">
+                    <Radio size={32} sm:size={40} className="text-[#9ca3af]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#e2e8f0] mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#e2e8f0] mb-2 text-center">
                     There are no live streams at this time
                   </h3>
-                  <p className="text-[#9ca3af] text-center max-w-md mb-6">
+                  <p className="text-[#9ca3af] text-center max-w-md mb-6 text-sm sm:text-base">
                     Check back later or follow your favorite creators to get notified when they go live!
                   </p>
-                  <button className="bg-gradient-to-r from-[#f97316] to-[#9333ea] hover:opacity-90 text-white font-bold px-6 py-3 rounded-lg transition-opacity">
+                  <button className="bg-gradient-to-r from-[#f97316] to-[#9333ea] hover:opacity-90 text-white font-bold px-6 py-3 rounded-lg transition-opacity text-sm sm:text-base">
                     Explore Creators
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {liveStreams.map((stream) => (
                     <div
                       key={stream.id}
