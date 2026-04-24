@@ -3,16 +3,29 @@ import DashboardLayout from '../components/DashboardLayout'
 import { Search, Lock, Heart, MessageCircle, Crown, Star, Users } from 'lucide-react'
 
 const ExplorePage = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [activeRoleFilters, setActiveRoleFilters] = useState<string[]>([])
+  const [activeAvailabilityFilters, setActiveAvailabilityFilters] = useState<string[]>([])
+  const [activeNicheFilters, setActiveNicheFilters] = useState<string[]>([])
 
-  const filters = [
-    'Elite Creators',
-    'Verified Pros',
-    'Trending Now',
-    'Online Now',
-    'Premium Content',
-    'Quick Responders'
-  ]
+  const roleFilters = ['Athletes', 'Actor / Actress', 'Celebrities']
+  const availabilityFilters = ['Live Now', 'Online Now']
+  const nicheFilters = ['Bodybuilding', 'Fitness / Gym', 'Combat Sports', 'Martial Arts', 'Nutrition']
+
+  const toggleFilter = (filter: string, filterType: 'role' | 'availability' | 'niche') => {
+    if (filterType === 'role') {
+      setActiveRoleFilters(prev =>
+        prev.includes(filter) ? prev.filter(f => f !== filter) : [...prev, filter]
+      )
+    } else if (filterType === 'availability') {
+      setActiveAvailabilityFilters(prev =>
+        prev.includes(filter) ? prev.filter(f => f !== filter) : [...prev, filter]
+      )
+    } else if (filterType === 'niche') {
+      setActiveNicheFilters(prev =>
+        prev.includes(filter) ? prev.filter(f => f !== filter) : [...prev, filter]
+      )
+    }
+  }
 
   const samplePosts: any[] = []
 
@@ -33,20 +46,66 @@ const ExplorePage = () => {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  activeFilter === filter
-                    ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
-                    : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
+          <div className="space-y-4 mb-8">
+            {/* Role Filters */}
+            <div>
+              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">Who They Are</h3>
+              <div className="flex flex-wrap gap-2">
+                {roleFilters.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => toggleFilter(filter, 'role')}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                      activeRoleFilters.includes(filter)
+                        ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
+                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Availability Filters */}
+            <div>
+              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">When They're Active</h3>
+              <div className="flex flex-wrap gap-2">
+                {availabilityFilters.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => toggleFilter(filter, 'availability')}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                      activeAvailabilityFilters.includes(filter)
+                        ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
+                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Niche Filters */}
+            <div>
+              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">What They Do</h3>
+              <div className="flex flex-wrap gap-2">
+                {nicheFilters.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => toggleFilter(filter, 'niche')}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                      activeNicheFilters.includes(filter)
+                        ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
+                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Content Feed */}
@@ -54,8 +113,8 @@ const ExplorePage = () => {
             {samplePosts.length === 0 ? (
               <div className="bg-[#1e293b] rounded-xl border border-[#334155] p-12 text-center">
                 <Search size={64} className="text-[#9ca3af] mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-[#e2e8f0] mb-2">No posts yet</h3>
-                <p className="text-[#9ca3af]">Be the first to create content and share with the community!</p>
+                <h3 className="text-xl font-bold text-[#e2e8f0] mb-2">Explore creators and content</h3>
+                <p className="text-[#9ca3af]">Browse fitness coaches, combat sports athletes, nutritionists, and more. Follow creators to see their content in your feed.</p>
               </div>
             ) : (
               samplePosts.map((post) => (
