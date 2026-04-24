@@ -265,7 +265,7 @@ const SignupPage = () => {
         <div className="absolute inset-0 backdrop-blur-sm"></div>
       </div>
 
-      <div className="max-w-md w-full mx-4 relative z-10">
+      <div className="max-w-md w-full mx-4 relative z-10 pt-20">
         {/* Back Button */}
         <button 
           onClick={() => navigate('/')}
