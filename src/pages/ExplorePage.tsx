@@ -34,9 +34,9 @@ const ExplorePage = () => {
   return (
     <DashboardLayout>
       <main className="flex-1">
-        <div className="max-w-5xl mx-auto py-6">
+        <div className="max-w-5xl mx-auto py-8 px-4">
           {/* Search Bar */}
-          <div className="mb-6 relative">
+          <div className="mb-10 relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
             <input
               type="text"
@@ -46,19 +46,19 @@ const ExplorePage = () => {
           </div>
 
           {/* Filter Pills */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-7 mb-12">
             {/* Role Filters */}
             <div>
-              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">Who They Are</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">Who They Are</h3>
+              <div className="flex flex-wrap gap-3">
                 {roleFilters.map((filter) => (
                   <button
                     key={filter}
                     onClick={() => toggleFilter(filter, 'role')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       activeRoleFilters.includes(filter)
                         ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
-                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                        : 'bg-[#334155]/60 text-[#cbd5e1] hover:bg-[#475569]'
                     }`}
                   >
                     {filter}
@@ -69,16 +69,16 @@ const ExplorePage = () => {
 
             {/* Availability Filters */}
             <div>
-              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">When They're Active</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">When They're Active</h3>
+              <div className="flex flex-wrap gap-3">
                 {availabilityFilters.map((filter) => (
                   <button
                     key={filter}
                     onClick={() => toggleFilter(filter, 'availability')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       activeAvailabilityFilters.includes(filter)
                         ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
-                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                        : 'bg-[#334155]/60 text-[#cbd5e1] hover:bg-[#475569]'
                     }`}
                   >
                     {filter}
@@ -89,16 +89,16 @@ const ExplorePage = () => {
 
             {/* Niche Filters */}
             <div>
-              <h3 className="text-sm font-bold text-[#9ca3af] mb-2 uppercase tracking-wide">What They Do</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xs font-bold text-[#9ca3af] mb-4 uppercase tracking-wider">What They Do</h3>
+              <div className="flex flex-wrap gap-3">
                 {nicheFilters.map((filter) => (
                   <button
                     key={filter}
                     onClick={() => toggleFilter(filter, 'niche')}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       activeNicheFilters.includes(filter)
                         ? 'bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white'
-                        : 'bg-[#334155] text-[#e2e8f0] hover:bg-[#475569]'
+                        : 'bg-[#334155]/60 text-[#cbd5e1] hover:bg-[#475569]'
                     }`}
                   >
                     {filter}
@@ -111,7 +111,7 @@ const ExplorePage = () => {
           {/* Content Feed */}
           <div className="space-y-6">
             {samplePosts.length === 0 ? (
-              <div className="bg-[#1e293b] rounded-xl border border-[#334155] p-12 text-center">
+              <div className="bg-[#1e293b] rounded-2xl border border-[#334155]/50 p-16 text-center">
                 <Search size={64} className="text-[#9ca3af] mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-[#e2e8f0] mb-2">Explore creators and content</h3>
                 <p className="text-[#9ca3af]">Browse fitness coaches, combat sports athletes, nutritionists, and more. Follow creators to see their content in your feed.</p>
@@ -202,39 +202,35 @@ const ExplorePage = () => {
       </main>
 
       {/* Right Sidebar */}
-      <aside className="w-80 h-[calc(100vh-65px)] sticky top-[65px] border-l border-[#334155] bg-[#1e293b] overflow-y-auto p-6">
-        <h3 className="text-lg font-bold text-[#e2e8f0] mb-4">Suggested Creators</h3>
-        <div className="space-y-4">
+      <aside className="w-72 h-[calc(100vh-65px)] sticky top-[65px] border-l border-[#334155]/30 bg-gradient-to-br from-[#1e293b]/50 to-[#0f172a]/30 overflow-y-auto p-6">
+        <h3 className="text-base font-bold text-[#e2e8f0] mb-6">Suggested Creators</h3>
+        <div className="space-y-3">
           {topCreators.length === 0 ? (
-            <div className="text-center py-8">
-              <Users size={48} className="text-[#9ca3af] mx-auto mb-3" />
-              <p className="text-[#9ca3af] text-sm">No creators to suggest yet</p>
+            <div className="text-center py-10">
+              <Users size={40} className="text-[#9ca3af]/50 mx-auto mb-3" />
+              <p className="text-[#9ca3af] text-xs">No creators to suggest yet</p>
             </div>
           ) : (
             topCreators.map((creator, index) => (
-              <div key={index} className="flex items-center space-x-3 p-3 bg-[#0f172a] rounded-lg border border-[#334155] hover:border-purple-500 transition-colors">
+              <div key={index} className="flex items-center space-x-2 p-2.5 bg-[#0f172a]/40 rounded-lg border border-[#334155]/30 hover:border-purple-500/50 transition-colors">
                 <img
                   src={creator.avatar}
                   alt={`${creator.name} - Fitness & Martial Arts Creator Avatar`}
-                  className="w-12 h-12 rounded-full object-cover"
-                  width="48"
-                  height="48"
+                  className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                  width="40"
+                  height="40"
                   loading="lazy"
                 />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center space-x-1">
-                    <h4 className="font-bold text-[#e2e8f0] truncate">{creator.name}</h4>
+                    <h4 className="font-semibold text-[#e2e8f0] truncate text-sm">{creator.name}</h4>
                     {creator.verified && (
-                      <Star size={14} className="text-yellow-400 fill-current flex-shrink-0" />
+                      <Star size={12} className="text-yellow-400 fill-current flex-shrink-0" />
                     )}
                   </div>
-                  <p className="text-sm text-[#9ca3af]">@{creator.username}</p>
-                  <div className="flex items-center space-x-1 text-xs text-[#9ca3af] mt-1">
-                    <Users size={12} />
-                    <span>{creator.followers} followers</span>
-                  </div>
+                  <p className="text-xs text-[#9ca3af]">@{creator.username}</p>
                 </div>
-                <button className="bg-gradient-to-r from-[#f97316] to-[#9333ea] hover:opacity-90 text-white font-bold px-3 py-2 rounded-lg transition-opacity text-sm">
+                <button className="bg-gradient-to-r from-[#f97316] to-[#9333ea] hover:opacity-90 text-white font-bold px-2 py-1.5 rounded-md transition-opacity text-xs flex-shrink-0">
                   Follow
                 </button>
               </div>
@@ -243,13 +239,13 @@ const ExplorePage = () => {
         </div>
 
         {/* Premium Banner */}
-        <div className="mt-6 bg-gradient-to-br from-[#f97316]/20 to-[#9333ea]/20 rounded-xl p-6 border border-[#f97316]/30">
-          <Crown size={32} className="text-[#f97316] mb-3" />
-          <h4 className="font-bold text-[#e2e8f0] mb-2">Unlock Premium</h4>
-          <p className="text-sm text-[#9ca3af] mb-4">
-            Get exclusive access to premium content from top creators
+        <div className="mt-8 bg-gradient-to-br from-[#f97316]/10 to-[#9333ea]/10 rounded-xl p-5 border border-[#f97316]/20">
+          <Crown size={24} className="text-[#f97316]/70 mb-2" />
+          <h4 className="font-semibold text-[#e2e8f0] mb-1.5 text-sm">Unlock Premium</h4>
+          <p className="text-xs text-[#9ca3af] mb-3.5">
+            Get exclusive content from top creators
           </p>
-          <button className="w-full bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white font-bold px-4 py-2 rounded-lg">
+          <button className="w-full bg-gradient-to-r from-[#f97316] to-[#9333ea] text-white font-bold px-3 py-1.5 rounded-lg text-xs">
             Upgrade Now
           </button>
         </div>
