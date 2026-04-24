@@ -14,7 +14,7 @@ const FanFocusedHero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(15, 23, 42, 0.55)), url('https://images.pexels.com/photos/3987047/pexels-photo-3987047.jpeg?auto=compress&cs=tinysrgb&w=1920')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/powerful-back-workout-intense-fitness-training-gym-free-photo.jpg')`
         }}
       ></div>
 

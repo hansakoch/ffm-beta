@@ -69,7 +69,7 @@ const FansPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(15, 23, 42, 0.5) 50%, rgba(15, 23, 42, 0.3) 100%), url('https://images.pexels.com/photos/3987047/pexels-photo-3987047.jpeg?auto=compress&cs=tinysrgb&w=1920')`
+            backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(15, 23, 42, 0.5) 50%, rgba(15, 23, 42, 0.3) 100%), url('/powerful-back-workout-intense-fitness-training-gym-free-photo.jpg')`
           }}
         ></div>
 
@@ -212,7 +212,7 @@ const FansPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('https://images.pexels.com/photos/3987047/pexels-photo-3987047.jpeg?auto=compress&cs=tinysrgb&w=1920')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/powerful-back-workout-intense-fitness-training-gym-free-photo.jpg')`
           }}
         ></div>
 
