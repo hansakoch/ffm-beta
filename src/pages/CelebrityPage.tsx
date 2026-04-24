@@ -65,21 +65,23 @@ const CelebrityPage = () => {
       title: 'Guardian Peacemaker',
       year: 'In Pre-Production',
       role: 'General Garroz',
-      image: '/jakob-owens-xKfS7Hll0Ck-unsplash.jpg'
+      image: null,
+      mainActor: 'David Kurzhal',
+      mainActress: 'Shaina West'
     },
     {
       id: 'warrior-island-2',
       title: 'Warrior Island: Darker Days',
       year: 'In Pre-Production',
       role: 'Viking Samurai',
-      image: '/pexels-gustavo-fring-3984342.jpg'
+      image: '/Warrior_island_darker_days.png'
     },
     {
       id: 'magnetic-fighters',
       title: 'The Magnetic Fighters',
       year: 'Upcoming (2026)',
       role: 'Samurai Hayate',
-      image: '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
+      image: '/Magnetic_fighters.png'
     }
   ]
 
@@ -283,28 +285,44 @@ const CelebrityPage = () => {
               key={movie.id}
               className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20"
             >
-              {/* Movie Image */}
-              <div className="relative h-64 overflow-hidden bg-black">
-                <img
-                  src={movie.image}
-                  alt={`${movie.title} - ${movie.role} - Action Film featuring David Kurzhal (${movie.year})`}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  width="400"
-                  height="256"
-                  loading="lazy"
-                  onError={(e) => {
-                    const img = e.target as HTMLImageElement
-                    img.src = '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-              </div>
+              {/* Movie Image or Placeholder */}
+              {movie.image ? (
+                <div className="relative h-64 overflow-hidden bg-black">
+                  <img
+                    src={movie.image}
+                    alt={`${movie.title} - ${movie.role} - Action Film featuring David Kurzhal (${movie.year})`}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    width="400"
+                    height="256"
+                    loading="lazy"
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement
+                      img.src = '/travis-colbert-fz2Am8mQfEw-unsplash.jpg'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+              ) : (
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center p-6">
+                  <div className="text-center">
+                    <Clapperboard size={48} className="text-orange-500 mx-auto mb-4" />
+                    <p className="text-gray-400 text-sm mb-3">Coming Soon</p>
+                  </div>
+                </div>
+              )}
 
               {/* Movie Info */}
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-2">{movie.title}</h3>
                 <p className="text-orange-400 font-semibold mb-3">{movie.year}</p>
-                <p className="text-gray-300 text-lg">Role: <span className="text-purple-300 font-semibold">{movie.role}</span></p>
+                {movie.mainActor || movie.mainActress ? (
+                  <div className="space-y-2">
+                    {movie.mainActor && <p className="text-gray-300"><span className="text-gray-400">Main Actor:</span> <span className="text-purple-300 font-semibold">{movie.mainActor}</span></p>}
+                    {movie.mainActress && <p className="text-gray-300"><span className="text-gray-400">Main Actress:</span> <span className="text-purple-300 font-semibold">{movie.mainActress}</span></p>}
+                  </div>
+                ) : (
+                  <p className="text-gray-300 text-lg">Role: <span className="text-purple-300 font-semibold">{movie.role}</span></p>
+                )}
               </div>
             </div>
           ))}
