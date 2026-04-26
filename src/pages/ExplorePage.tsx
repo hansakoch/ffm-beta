@@ -202,7 +202,7 @@ const ExplorePage = () => {
       </main>
 
       {/* Right Sidebar */}
-      <aside className="w-72 h-[calc(100vh-65px)] sticky top-[65px] border-l border-[#334155]/30 bg-gradient-to-br from-[#1e293b]/50 to-[#0f172a]/30 overflow-y-auto p-6">
+      <aside className="hidden lg:block w-72 h-[calc(100vh-65px)] sticky top-[65px] border-l border-[#334155]/30 bg-gradient-to-br from-[#1e293b]/50 to-[#0f172a]/30 overflow-y-auto p-6">
         <h3 className="text-base font-bold text-[#e2e8f0] mb-6">Suggested Creators</h3>
         <div className="space-y-3">
           {topCreators.length === 0 ? (
