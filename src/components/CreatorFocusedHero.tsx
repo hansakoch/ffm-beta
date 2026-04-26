@@ -9,7 +9,7 @@ const CreatorFocusedHero = () => {
   }, [])
 
   return (
-    <section className="relative pt-24 pb-16 overflow-hidden min-h-screen flex items-center">
+    <section className="relative pt-24 pb-2 sm:pb-16 overflow-hidden min-h-screen flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
