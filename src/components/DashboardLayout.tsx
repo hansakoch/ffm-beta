@@ -275,7 +275,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       {/* MAIN CONTENT - Layout with Sidebar */}
       <div className="flex">
         {/* LEFT SIDEBAR - Fixed */}
-        <aside className="hidden lg:block w-64 h-[calc(100vh-65px)] sticky top-[65px] border-r border-[#334155] bg-[#1e293b] overflow-y-auto">
+        <aside className="w-64 h-[calc(100vh-65px)] sticky top-[65px] border-r border-[#334155] bg-[#1e293b] overflow-y-auto">
           <nav className="p-4 space-y-1">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path
