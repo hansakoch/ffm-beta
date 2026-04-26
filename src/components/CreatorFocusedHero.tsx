@@ -101,7 +101,7 @@ const CreatorFocusedHero = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-0 sm:mb-8">
               <button
                 className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 group relative overflow-hidden"
                 onClick={() => window.location.href = '/signup'}
@@ -114,7 +114,7 @@ const CreatorFocusedHero = () => {
           </div>
 
           {/* Right Content - Why Creators Choose Us */}
-          <div className="space-y-6 mt-2 sm:mt-0">
+          <div className="space-y-6 -mt-4 sm:mt-0">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <h2 className="text-2xl font-bold text-white mb-6">Why creators choose us</h2>
               
