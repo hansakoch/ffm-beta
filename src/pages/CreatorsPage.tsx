@@ -121,7 +121,7 @@ const CreatorsPage = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-0">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center -mb-20 sm:mb-0">
             <button
               onClick={() => navigate('/signup')}
               className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 group"
@@ -137,7 +137,7 @@ const CreatorsPage = () => {
       </section>
 
 {/* Final CTA */}
-      <section className="py-2 sm:py-16 relative overflow-hidden">
+      <section className="py-0 sm:py-16 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
