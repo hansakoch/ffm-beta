@@ -96,18 +96,18 @@ const FansPage = () => {
       </section>
 
       {/* Two Column Section: Ways to Connect + Why Fans Love */}
-      <section className="py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-6 sm:py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '8s'}}></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-12 items-start">
             {/* Left Column - Ways to Connect */}
             <div className="lg:col-span-2">
               <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">For Fans</p>
-              <h2 className="text-3xl lg:text-4xl font-black text-white mb-8">Ways to connect with creators</h2>
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-4 sm:mb-8">Ways to connect with creators</h2>
 
               <div className="grid md:grid-cols-3 gap-4">
                 {fanBenefits.map((benefit, index) => {
@@ -146,7 +146,7 @@ const FansPage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-10 pb-2 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <section className="py-6 sm:py-10 pb-2 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '8s'}}></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
@@ -154,7 +154,7 @@ const FansPage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Title and Subtitle */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               How it works for fans
             </h2>
@@ -164,7 +164,7 @@ const FansPage = () => {
           </div>
 
           {/* Numbered Steps */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-8 sm:mb-16">
             {/* Step 1 */}
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-black text-2xl shadow-2xl border-4 border-gray-900 z-10">
@@ -208,7 +208,7 @@ const FansPage = () => {
       </section>
 
       {/* Final CTA Strip */}
-      <section className="py-8 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(10, 15, 30, 1), rgba(10, 15, 30, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
+      <section className="py-6 sm:py-8 relative overflow-hidden border-t-2 border-t-transparent bg-clip-padding" style={{backgroundImage: `linear-gradient(rgba(10, 15, 30, 1), rgba(10, 15, 30, 1)), linear-gradient(135deg, rgba(249, 115, 22, 0.3) 0%, rgba(147, 51, 234, 0.3) 100%)`, backgroundClip: `padding-box, border-box`, backgroundOrigin: `padding-box, border-box`}}>
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
