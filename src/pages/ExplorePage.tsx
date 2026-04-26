@@ -33,7 +33,7 @@ const ExplorePage = () => {
 
   return (
     <DashboardLayout>
-      <main className="flex-1 w-full overflow-hidden">
+      <main className="flex-1 w-full overflow-y-auto">
         <div className="w-full py-6 px-4">
           {/* Search Bar */}
           <div className="mb-8 relative">
