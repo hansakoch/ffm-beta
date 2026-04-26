@@ -28,7 +28,7 @@ const CreatorsPage = () => {
       <CreatorFocusedHero />
 
       {/* How It Works Section */}
-      <section className="py-8 sm:py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <section className="py-6 sm:py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '8s'}}></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
@@ -36,7 +36,7 @@ const CreatorsPage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Title and Subtitle */}
-          <div className="text-center mb-8 sm:mb-16">
+          <div className="text-center mb-4 sm:mb-16">
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               How it works
             </h2>
@@ -46,7 +46,7 @@ const CreatorsPage = () => {
           </div>
 
           {/* Stat Badges */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8 sm:mb-20">
+          <div className="grid md:grid-cols-3 gap-6 mb-4 sm:mb-20">
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl min-h-[200px] flex flex-col justify-center">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -79,7 +79,7 @@ const CreatorsPage = () => {
           </div>
 
           {/* Numbered Steps */}
-          <div className="grid md:grid-cols-3 gap-8 mb-8 sm:mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-4 sm:mb-16">
             {/* Step 1 */}
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-black text-2xl shadow-2xl border-4 border-gray-900 z-10">
