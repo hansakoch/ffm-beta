@@ -72,14 +72,14 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
               className="h-10 w-auto hidden sm:block"
             />
             <img
-              src="/celebhero.png"
-              alt="FFM"
+              src="/artboard_1_copy.png"
+              alt="FansFollowMe"
               className="h-10 w-auto sm:hidden"
             />
           </Link>
 
           {/* Center: Search */}
-          <div className="flex-1 max-w-2xl mx-2 sm:mx-8 hidden sm:block">
+          <div className="flex-1 max-w-2xl mx-8">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
               <input
@@ -275,7 +275,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       {/* MAIN CONTENT - Layout with Sidebar */}
       <div className="flex">
         {/* LEFT SIDEBAR - Fixed */}
-        <aside className="hidden md:block w-64 h-[calc(100vh-65px)] sticky top-[65px] border-r border-[#334155] bg-[#1e293b] overflow-y-auto">
+        <aside className="w-64 h-[calc(100vh-65px)] sticky top-[65px] border-r border-[#334155] bg-[#1e293b] overflow-y-auto">
           <nav className="p-4 space-y-1">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path
