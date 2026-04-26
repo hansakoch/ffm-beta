@@ -137,7 +137,7 @@ const CreatorsPage = () => {
       </section>
 
 {/* Final CTA */}
-      <section className="py-4 sm:py-16 relative overflow-hidden">
+      <section className="py-2 sm:py-16 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -150,11 +150,11 @@ const CreatorsPage = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}}></div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <h2 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
+          <h2 className="text-4xl lg:text-6xl font-black text-white mb-2 sm:mb-6 leading-tight drop-shadow-2xl">
             Ready to start earning?
           </h2>
 
-          <p className="text-2xl text-gray-200 mb-6 sm:mb-12 drop-shadow-xl">
+          <p className="text-2xl text-gray-200 mb-4 sm:mb-12 drop-shadow-xl">
             Join thousands of creators already making money on FansFollow
           </p>
 
