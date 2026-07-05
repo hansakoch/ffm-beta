@@ -10,12 +10,46 @@ const ProfilePage = () => {
   const [showContactModal, setShowContactModal] = useState(false)
   const navigate = useNavigate()
 
-  // Mock profile data - in real app this would come from API
-  const profile = {
+  const profiles: Record<string, any> = {
+    HansKoch: {
+      id: '2',
+      name: 'Hans Koch',
+      username: 'HansKoch',
+      avatar: 'HK',
+      avatarBg: 'from-orange-500 to-red-600',
+      avatarPhoto: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1',
+      verified: true,
+      isCreator: true,
+      bio: 'Professional Kickboxing Champion 🥋 | 15+ years in combat sports | Elite strength & conditioning coach helping fighters and athletes reach their peak — whether you\'re stepping into the ring for the first time or training for a world title.',
+      location: 'Hamburg, Germany',
+      website: 'https://hanskoch.fit',
+      joinDate: 'March 2024',
+      followers: 47300,
+      following: 112,
+      posts: 189,
+      subscriptionPrice: '£14.99',
+      isSubscribed: false,
+      personalChatRate: '£4/message',
+      phoneCallRate: '£12/minute',
+      videoCallRate: '£40/session',
+      responseTime: '< 3 hours',
+      categories: ['Kickboxing', 'Strength & Conditioning', 'Fight Prep'],
+      stats: {
+        totalEarnings: '£28,750',
+        monthlySubscribers: 843,
+        averageRating: 4.8,
+        totalReviews: 312
+      }
+    }
+  }
+
+  const defaultProfile = {
     id: '1',
     name: 'Marcus "The Beast" Johnson',
     username: 'marcus_beast',
     avatar: 'MJ',
+    avatarBg: 'from-blue-500 to-purple-600',
+    avatarPhoto: null,
     verified: true,
     isCreator: true,
     bio: 'UFC Heavyweight Champion 🥊 | Personal Training & Nutrition Coaching | Building champions inside and outside the octagon',
@@ -40,7 +74,82 @@ const ProfilePage = () => {
     }
   }
 
-  const posts = [
+  const profile = (username && profiles[username]) ? profiles[username] : defaultProfile
+
+  const postsByProfile: Record<string, any[]> = {
+    HansKoch: [
+      {
+        id: '1',
+        type: 'video',
+        title: 'Low Kick Masterclass — Technique Breakdown',
+        thumbnail: '🦵',
+        visibility: 'subscribers',
+        price: null,
+        views: 3421,
+        likes: 214,
+        comments: 47,
+        timestamp: '1 day ago',
+        isPinned: true
+      },
+      {
+        id: '2',
+        type: 'image',
+        title: 'Morning Conditioning Routine (Open Access)',
+        thumbnail: '🏃',
+        visibility: 'public',
+        price: null,
+        views: 5812,
+        likes: 389,
+        comments: 73,
+        timestamp: '3 days ago',
+        isPinned: false
+      },
+      {
+        id: '3',
+        type: 'text',
+        title: 'Full 8-Week Fight Camp Training Plan',
+        thumbnail: '📋',
+        visibility: 'ppv',
+        price: '£7.99',
+        views: 1204,
+        likes: 98,
+        comments: 19,
+        timestamp: '1 week ago',
+        isPinned: false
+      }
+    ]
+  }
+
+  const reviewsByProfile: Record<string, any[]> = {
+    HansKoch: [
+      {
+        id: '1',
+        author: 'Tim B.',
+        rating: 5,
+        comment: 'Hans completely changed my footwork in 4 weeks of coaching calls. Absolute wealth of knowledge — and he actually replies himself, not some assistant.',
+        date: '3 weeks ago',
+        verified: true
+      },
+      {
+        id: '2',
+        author: 'Laura W.',
+        rating: 5,
+        comment: 'Best kickboxing content on any platform. His training plans are detailed, progressive, and actually work. Worth every penny.',
+        date: '1 month ago',
+        verified: true
+      },
+      {
+        id: '3',
+        author: 'Markus S.',
+        rating: 4,
+        comment: 'Great coach, very responsive. The group coaching sessions are fantastic value. Would love more nutrition content.',
+        date: '2 months ago',
+        verified: true
+      }
+    ]
+  }
+
+  const defaultPosts = [
     {
       id: '1',
       type: 'video',
@@ -82,7 +191,7 @@ const ProfilePage = () => {
     }
   ]
 
-  const reviews = [
+  const defaultReviews = [
     {
       id: '1',
       author: 'Alex M.',
@@ -100,6 +209,9 @@ const ProfilePage = () => {
       verified: true
     }
   ]
+
+  const posts = (username && postsByProfile[username]) ? postsByProfile[username] : defaultPosts
+  const reviews = (username && reviewsByProfile[username]) ? reviewsByProfile[username] : defaultReviews
 
   const getVisibilityIcon = (visibility: string) => {
     switch (visibility) {
@@ -286,17 +398,13 @@ const ProfilePage = () => {
       {/* Header */}
       <div className="bg-gray-800/50 backdrop-blur-lg border-b border-gray-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
-            to="/dashboard" 
+          <button
+            onClick={() => navigate(-1)}
             className="flex items-center text-orange-400 hover:text-orange-300"
-            onClick={(e) => {
-              e.preventDefault()
-              navigate('/dashboard')
-            }}
           >
             <ArrowLeft size={20} className="mr-2" />
             Back
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -306,9 +414,17 @@ const ProfilePage = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-8">
             {/* Avatar */}
             <div className="relative">
-              <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-4xl text-white font-bold shadow-xl">
-                {profile.avatar}
-              </div>
+              {profile.avatarPhoto ? (
+                <img
+                  src={profile.avatarPhoto}
+                  alt={profile.name}
+                  className="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-gray-700"
+                />
+              ) : (
+                <div className={`w-32 h-32 bg-gradient-to-br ${profile.avatarBg || 'from-blue-500 to-purple-600'} rounded-full flex items-center justify-center text-4xl text-white font-bold shadow-xl`}>
+                  {profile.avatar}
+                </div>
+              )}
               {profile.verified && (
                 <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center border-4 border-gray-800">
                   <Star size={20} className="text-white fill-current" />
