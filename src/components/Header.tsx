@@ -106,36 +106,39 @@ const Header = () => {
                 <NotificationSystem userId={user?.id || ''} userType="creator" />
 
                 <div className="relative group flex items-center">
-                <Link
-                  to="/dashboard"
-                  className="flex items-center justify-center w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-                >
-                  {user?.user_metadata?.full_name?.split(' ').map((n: string) => n[0]).join('') || 'U'}
-                </Link>
-                <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link to="/dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                      Dashboard
-                    </Link>
-                    <Link to="/profile/edit" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                      Profile Settings
-                    </Link>
-                    <Link to="/creator-dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                      Creator Dashboard
-                    </Link>
-                    <div className="border-t border-gray-700 my-1"></div>
-                    <button
-                      onClick={() => {
-                        logout();
-                        navigate('/');
-                      }}
-                      className="block w-full text-left px-4 py-2 text-red-400 hover:bg-gray-800/50 transition-colors"
-                    >
-                      Logout
-                    </button>
+                  <Link
+                    to="/dashboard"
+                    className="flex items-center justify-center w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+                  >
+                    {user?.user_metadata?.full_name?.split(' ').map((n: string) => n[0]).join('') || 'U'}
+                  </Link>
+                  <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      <Link to="/dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
+                        Dashboard
+                      </Link>
+                      <Link to="/profile/edit" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
+                        Profile Settings
+                      </Link>
+                      <Link to="/creator-dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
+                        Creator Dashboard
+                      </Link>
+                      <div className="border-t border-gray-700 my-1"></div>
+                      <button
+                        onClick={() => { logout(); navigate('/'); }}
+                        className="block w-full text-left px-4 py-2 text-red-400 hover:bg-gray-800/50 transition-colors"
+                      >
+                        Logout
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <button
+                  onClick={() => { logout(); navigate('/'); }}
+                  className="text-sm font-semibold text-red-400 hover:text-red-300 border border-red-400/40 hover:border-red-300/60 px-3 py-1.5 rounded-lg transition-all duration-200"
+                >
+                  Logout
+                </button>
               </div>
             ) : (
               <div className="flex items-center space-x-3">
