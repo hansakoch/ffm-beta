@@ -38,10 +38,7 @@ User-agent: Googlebot-Mobile
 Allow: /
 
 # Sitemap location
-Sitemap: https://fansfollow.me/sitemap.xml
-Sitemap: https://fansfollow.me/news-sitemap.xml
-Sitemap: https://fansfollow.me/video-sitemap.xml
-Sitemap: https://fansfollow.me/image-sitemap.xml
+Sitemap: https://fansfollowme.com/sitemap.xml
 
 # Allow all bots to access all content
 User-agent: Googlebot
