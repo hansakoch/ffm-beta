@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowLeft, Star, Users, Eye, Heart, MessageCircle, Phone, Video, Gift, Share, Flag, MoreHorizontal, Calendar, MapPin, Link as LinkIcon, Crown, Globe, Lock } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import Footer from '../components/Footer'
 
 const ProfilePage = () => {
   const { username } = useParams()
@@ -555,7 +554,9 @@ const ProfilePage = () => {
         />
       )}
 
-      <Footer />
+      <div className="border-t border-gray-700/50 mt-12 py-6 text-center text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} FansFollowMe
+      </div>
     </div>
   )
 }

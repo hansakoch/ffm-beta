@@ -339,6 +339,9 @@ function App() {
               <ProfilePage />
             } />
 
+            {/* Root-level username routes — must be last before 404 */}
+            <Route path="/:username" element={<ProfilePage />} />
+
             {/* 404 Catch-all route */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
