@@ -1,6 +1,12 @@
 import React from 'react'
-import { Facebook, Instagram, Youtube, Mail } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Facebook, Instagram, Youtube } from 'lucide-react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+
+const MARKETING_PATHS = new Set([
+  '/', '/creators', '/fans', '/celebrities', '/casting', '/business',
+  '/support', '/faq', '/privacy', '/terms', '/cookies', '/login', '/signup',
+  '/live-streams', '/explore-creators', '/group-coaching',
+])
 
 // Custom TikTok Icon Component
 const TikTokIcon = ({ size = 16 }) => (
@@ -11,6 +17,19 @@ const TikTokIcon = ({ size = 16 }) => (
 
 const Footer = () => {
   const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  const isMarketing = MARKETING_PATHS.has(pathname) || pathname.startsWith('/profile/')
+
+  if (!isMarketing) {
+    return (
+      <footer className="border-t border-gray-800 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 py-3 text-center text-xs text-gray-500">
+          © 2026 FansFollow.me
+        </div>
+      </footer>
+    )
+  }
 
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100089966703593', label: 'Facebook' },
