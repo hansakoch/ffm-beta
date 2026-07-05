@@ -46,6 +46,16 @@ const LoginPage = () => {
   }
 
 
+  const handleDemoLogin = async () => {
+    try {
+      setError(null)
+      await login('demo@fansfollowme.com', 'demo1234')
+      navigate('/dashboard')
+    } catch (err: any) {
+      setError(err.message || 'Demo login failed.')
+    }
+  }
+
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Premium Fitness Background */}
@@ -161,6 +171,22 @@ const LoginPage = () => {
               )}
             </button>
           </form>
+
+          {/* Demo Access */}
+          <div className="mt-4">
+            <div className="relative flex items-center">
+              <div className="flex-grow border-t border-gray-700"></div>
+              <span className="mx-3 text-gray-500 text-xs">or</span>
+              <div className="flex-grow border-t border-gray-700"></div>
+            </div>
+            <button
+              type="button"
+              onClick={handleDemoLogin}
+              className="mt-4 w-full py-3 px-6 rounded-xl border-2 border-orange-500/50 text-orange-400 font-bold hover:bg-orange-500/10 transition-all duration-300 min-h-[44px]"
+            >
+              Enter as Demo User
+            </button>
+          </div>
 
           {/* Sign Up Link */}
           <div className="text-center mt-6">
