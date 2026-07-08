@@ -141,7 +141,7 @@ const CreatorsPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(15, 23, 42, 0.5)), url('/background-1718534992.jpeg')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(15, 23, 42, 0.25)), url('/background-1718534992.jpeg')`
           }}
         ></div>
 
