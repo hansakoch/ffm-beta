@@ -229,22 +229,22 @@ const CelebrityPage = () => {
       {/* Featured Films Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-2 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 pointer-events-none"></div>
-        <div className="text-center mb-12 relative z-10">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        <div className="text-center mb-6 relative z-10">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full border border-orange-500/30 mb-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <Film className="w-5 h-5 text-orange-400 mr-2" />
             <span className="text-orange-300 font-semibold">NOW SHOWING: FFM FOUNDER'S FEATURED FILMS</span>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-2">
             From Martial Arts Champion to Hollywood Action Star
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-4">
             David Kurzhal's complete filmography - from released blockbusters to upcoming projects.
             Now we're creating opportunities for FFM creators to star in martial arts films.
           </p>
 
           {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
             <button
               onClick={() => setActiveTab('released')}
               className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
@@ -287,7 +287,7 @@ const CelebrityPage = () => {
             >
               {/* Movie Image or Placeholder */}
               {movie.image ? (
-                <div className="relative h-64 overflow-hidden bg-black">
+                <div className="relative h-48 overflow-hidden bg-black">
                   <img
                     src={movie.image}
                     alt={`${movie.title} - ${movie.role} - Action Film featuring David Kurzhal (${movie.year})`}
@@ -303,7 +303,7 @@ const CelebrityPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
               ) : (
-                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center p-6">
+                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-900 to-black flex flex-col items-center justify-center p-6">
                   <div className="text-center">
                     <Clapperboard size={48} className="text-orange-500 mx-auto mb-4" />
                     <p className="text-gray-400 text-sm mb-3">Coming Soon</p>
@@ -312,9 +312,9 @@ const CelebrityPage = () => {
               )}
 
               {/* Movie Info */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{movie.title}</h3>
-                <p className="text-orange-400 font-semibold mb-3">{movie.year}</p>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-white mb-1">{movie.title}</h3>
+                <p className="text-orange-400 font-semibold mb-2">{movie.year}</p>
                 {movie.mainActor || movie.mainActress ? (
                   <div className="space-y-2">
                     {movie.mainActor && <p className="text-gray-300"><span className="text-gray-400">Main Actor:</span> <span className="text-purple-300 font-semibold">{movie.mainActor}</span></p>}
