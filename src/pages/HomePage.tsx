@@ -184,7 +184,7 @@ const HomePage = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 sm:mb-3">
               One home for fitness creators and their fans
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-5xl mx-auto">
               FansFollowMe brings fighters, coaches, fitness influencers, sports professionals and actors with fitness-based content together on one platform, so fans can find them in one place and creators can build real relationships, add new revenue streams and unlock bigger opportunities.
             </p>
           </div>
