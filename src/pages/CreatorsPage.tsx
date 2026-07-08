@@ -28,7 +28,7 @@ const CreatorsPage = () => {
       <CreatorFocusedHero />
 
       {/* How It Works Section */}
-      <section className="py-6 sm:py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <section className="py-6 sm:py-10 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '8s'}}></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
@@ -36,8 +36,8 @@ const CreatorsPage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Title and Subtitle */}
-          <div className="text-center mb-4 sm:mb-16">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+          <div className="text-center mb-3 sm:mb-6">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-3">
               How it works
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -46,48 +46,48 @@ const CreatorsPage = () => {
           </div>
 
           {/* Stat Badges */}
-          <div className="grid md:grid-cols-3 gap-6 mb-4 sm:mb-20">
-            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl min-h-[200px] flex flex-col justify-center">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+          <div className="grid md:grid-cols-3 gap-4 mb-4 sm:mb-6">
+            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-4 border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl flex flex-col justify-center">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg text-center leading-tight">24-48h</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2 text-center">Start Earning</h3>
+              <h3 className="text-lg font-bold text-white mb-1 text-center">Start Earning</h3>
               <p className="text-gray-300 text-center text-sm leading-relaxed">Most creators see first earnings</p>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl min-h-[200px] flex flex-col justify-center">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-4 border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl flex flex-col justify-center">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg text-center leading-tight">80%+</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2 text-center">You Keep</h3>
+              <h3 className="text-lg font-bold text-white mb-1 text-center">You Keep</h3>
               <p className="text-gray-300 text-center text-sm leading-relaxed">Industry-leading revenue share</p>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl min-h-[200px] flex flex-col justify-center">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-4 border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 transform hover:-translate-y-2 shadow-xl flex flex-col justify-center">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg text-center leading-tight">21+</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2 text-center">Revenue Streams</h3>
+              <h3 className="text-lg font-bold text-white mb-1 text-center">Revenue Streams</h3>
               <p className="text-gray-300 text-center text-sm leading-relaxed px-2">More ways to earn than any platform</p>
             </div>
           </div>
 
           {/* Numbered Steps */}
-          <div className="grid md:grid-cols-3 gap-8 mb-4 sm:mb-16">
+          <div className="grid md:grid-cols-3 gap-6 mb-4 sm:mb-8">
             {/* Step 1 */}
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-black text-2xl shadow-2xl border-4 border-gray-900 z-10">
                 1
               </div>
-              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Sign Up & Create Your Profile</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
+              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-5 pt-10 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
+                <h3 className="text-xl font-bold text-white mb-2">Sign Up & Create Your Profile</h3>
+                <p className="text-gray-300 text-base leading-relaxed">
                   Create your professional creator profile in under 5 minutes with links, photos and your offer types.
                 </p>
               </div>
@@ -98,9 +98,9 @@ const CreatorsPage = () => {
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-black text-2xl shadow-2xl border-4 border-gray-900 z-10">
                 2
               </div>
-              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Launch Your Offers</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
+              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-5 pt-10 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
+                <h3 className="text-xl font-bold text-white mb-2">Launch Your Offers</h3>
+                <p className="text-gray-300 text-base leading-relaxed">
                   Add paid chats, video sessions, programs, meal plans or products using simple templates.
                 </p>
               </div>
@@ -111,9 +111,9 @@ const CreatorsPage = () => {
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-full flex items-center justify-center text-white font-black text-2xl shadow-2xl border-4 border-gray-900 z-10">
                 3
               </div>
-              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-8 pt-12 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
-                <h3 className="text-2xl font-bold text-white mb-4">Grow Your Community</h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
+              <div className="bg-gray-800/70 backdrop-blur-lg rounded-2xl p-5 pt-10 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-300 transform hover:-translate-y-2 shadow-xl h-full">
+                <h3 className="text-xl font-bold text-white mb-2">Grow Your Community</h3>
+                <p className="text-gray-300 text-base leading-relaxed">
                   Share your link, use QR codes at events and convert fans into long-term clients on one platform.
                 </p>
               </div>
@@ -121,7 +121,7 @@ const CreatorsPage = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center -mb-20 sm:mb-0">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center -mb-20 sm:mb-0">
             <button
               onClick={() => navigate('/signup')}
               className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 group"
