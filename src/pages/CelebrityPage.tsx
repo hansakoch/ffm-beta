@@ -107,64 +107,64 @@ const CelebrityPage = () => {
       <CelebrityHero />
 
       {/* Why Celebrities Choose FansFollow Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative">
-        <div className="text-center mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 relative">
+        <div className="text-center mb-6">
           <h2 className="text-4xl font-bold text-white mb-2">Why Celebrities Choose FansFollow</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 mb-6">
           {/* Card 1: Real Connections */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <Users size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <Users size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Real connections</h3>
-            <p className="text-gray-300 leading-relaxed">Build genuine, positive relationships with fans through fitness, training and combat-sports content in a fully brand-safe environment.</p>
+            <h3 className="text-lg font-bold text-white mb-2">Real connections</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">Build genuine, positive relationships with fans through fitness, training and combat-sports content in a fully brand-safe environment.</p>
           </div>
 
           {/* Card 2: Premium Benefits */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <Award size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <Award size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Premium benefits</h3>
-            <p className="text-gray-300 leading-relaxed">Keep 80%+ of your earnings with clear reporting, VIP rates for high-volume talent, and terms that work for you and your team.</p>
+            <h3 className="text-lg font-bold text-white mb-2">Premium benefits</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">Keep 80%+ of your earnings with clear reporting, VIP rates for high-volume talent, and terms that work for you and your team.</p>
           </div>
 
           {/* Card 3: Your Schedule */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <Clock size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <Clock size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Your schedule, your rules</h3>
-            <p className="text-gray-300 leading-relaxed">Set your own rates, availability and interaction preferences so every engagement fits your time, boundaries and sponsors.</p>
+            <h3 className="text-lg font-bold text-white mb-2">Your schedule, your rules</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">Set your own rates, availability and interaction preferences so every engagement fits your time, boundaries and sponsors.</p>
           </div>
 
           {/* Card 4: Brand-safe by design */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <Shield size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <Shield size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Brand-safe by design</h3>
-            <p className="text-gray-300 leading-relaxed">A professional, non-adult platform built for athletes, entertainers and influencers who work with sponsors and mainstream media.</p>
+            <h3 className="text-lg font-bold text-white mb-2">Brand-safe by design</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">A professional, non-adult platform built for athletes, entertainers and influencers who work with sponsors and mainstream media.</p>
           </div>
 
           {/* Card 5: High-quality audience */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <TrendingUp size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-orange-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <TrendingUp size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">High-quality audience</h3>
-            <p className="text-gray-300 leading-relaxed">Reach verified, paying fans who value your work, not bots or low-intent followers.</p>
+            <h3 className="text-lg font-bold text-white mb-2">High-quality audience</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">Reach verified, paying fans who value your work, not bots or low-intent followers.</p>
           </div>
 
           {/* Card 6: Built with industry experience */}
-          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/30">
-              <Briefcase size={32} className="text-white" />
+          <div className="bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border-2 border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-2xl hover:shadow-purple-500/30">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-2xl shadow-orange-500/30">
+              <Briefcase size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Built with industry experience</h3>
-            <p className="text-gray-300 leading-relaxed">Created by a founder with multiple film and media credits who understands how to protect long-term reputation and endorsements.</p>
+            <h3 className="text-lg font-bold text-white mb-2">Built with industry experience</h3>
+            <p className="text-gray-300 leading-relaxed text-sm">Created by a founder with multiple film and media credits who understands how to protect long-term reputation and endorsements.</p>
           </div>
         </div>
 
