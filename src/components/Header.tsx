@@ -1,15 +1,27 @@
-import React, { useState } from 'react'
-import { Menu, X, Bell } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Menu, X, Search, UserPlus, Film, Radio, Briefcase, MessageSquare } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import NotificationSystem from './NotificationSystem'
-import QRCodeScannerModal from './QRCodeScannerModal'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isQRModalOpen, setIsQRModalOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const { isAuthenticated, user, logout } = useAuth()
-  const navigate = useNavigate()
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [isMenuOpen])
 
   const navItems = [
     { name: 'For Creators', href: '/creators' },
@@ -18,240 +30,213 @@ const Header = () => {
     { name: 'Explore', href: '/explore' }
   ]
 
-  return (
-    <header className="relative z-50 h-[72px] bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <div className="flex justify-between items-center h-[72px]">
-          {/* Logo */}
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
-            <img
-              src="/artboard_1_copy.png"
-              alt="FansFollowMe - Global Fitness & Martial Arts Creator Platform Logo"
-              className="h-8 w-auto"
-              width="180"
-              height="48"
-            />
-          </Link>
+  const moreItems = [
+    { name: 'Movie Casting', href: '/casting', icon: Film },
+    { name: 'Live Streams', href: '/live-streams', icon: Radio },
+    { name: 'Business', href: '/business', icon: Briefcase },
+    { name: 'Support', href: '/support', icon: MessageSquare }
+  ]
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 flex-1 justify-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-className="font-semibold transition-colors duration-200 whitespace-nowrap text-white hover:text-orange-400"
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            {/* Dropdown for More Options */}
-            <div className="relative group">
-              <button className="font-semibold transition-colors duration-200 flex items-center whitespace-nowrap text-white hover:text-orange-400">
-                More
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
-                  <Link to="/casting" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                    🎬 Movie Casting
-                  </Link>
-                  <Link to="/live" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                    🔴 Live Streams
-                  </Link>
-                  <Link to="/business" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                    💼 Business
-                  </Link>
-                  <button
-                    onClick={() => setIsQRModalOpen(true)}
-                    className="block w-full text-left px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors"
-                  >
-                    📱 Scan Creator Code
-                  </button>
-                  <Link to="/support" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                    💬 Support
-                  </Link>
+  return (
+    <>
+      <header
+        className={`sticky top-0 z-40 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-[rgba(11,15,26,0.82)] backdrop-blur-[18px] border-b border-white/[0.06] shadow-[0_4px_16px_rgba(0,0,0,0.15)]'
+            : 'bg-transparent border-b border-transparent'
+        }`}
+      >
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-4 min-h-[72px]">
+            {/* Logo */}
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
+              <img
+                src="/fans-foloow-me-logo-final-file--png-version.png"
+                alt="FansFollow.me"
+                className="h-[30px] w-auto"
+              />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center flex-wrap gap-[0.15rem]">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="px-[0.7rem] py-2 rounded-[10px] font-bold text-[0.9rem] text-[#cbd5e1] hover:text-[#fb923c] transition-all duration-150 hover:-translate-y-px"
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* More dropdown */}
+              <div className="relative group">
+                <button className="px-[0.7rem] py-2 rounded-[10px] font-bold text-[0.9rem] text-[#cbd5e1] hover:text-[#fb923c] transition-all duration-150 hover:-translate-y-px flex items-center">
+                  More
+                  <svg className="w-3.5 h-3.5 ml-1 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <div className="absolute top-full left-0 mt-[0.55rem] min-w-[220px] p-[0.45rem] bg-[#151b2c] border border-white/[0.08] rounded-2xl shadow-[0_18px_54px_rgba(0,0,0,0.36)] grid gap-[0.15rem] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {moreItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="px-3 py-[0.7rem] rounded-xl font-semibold text-[#e5e7eb] hover:bg-white/[0.08] hover:text-white transition-colors flex items-center gap-[0.6rem]"
+                    >
+                      <item.icon size={16} className="text-[#fb923c] flex-shrink-0" />
+                      {item.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
-            </div>
-          </nav>
+            </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3 flex-shrink-0">
-            {isAuthenticated ? (
-              <div className="flex items-center space-x-3">
-                {/* Notification Bell */}
-                <NotificationSystem userId={user?.id || ''} userType="creator" />
-
-                <div className="relative group flex items-center">
+            {/* Desktop CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-[0.6rem] flex-shrink-0">
+              {isAuthenticated ? (
+                <div className="flex items-center gap-3">
                   <Link
                     to="/dashboard"
-                    className="flex items-center justify-center w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+                    className="flex items-center justify-center w-9 h-9 rounded-full text-white font-bold text-sm bg-gradient-to-br from-blue-500 to-purple-600"
                   >
                     {user?.user_metadata?.full_name?.split(' ').map((n: string) => n[0]).join('') || 'U'}
                   </Link>
-                  <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900/95 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      <Link to="/dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                        Dashboard
-                      </Link>
-                      <Link to="/profile/edit" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                        Profile Settings
-                      </Link>
-                      <Link to="/creator-dashboard" className="block px-4 py-2 text-gray-300 hover:text-orange-400 hover:bg-gray-800/50 transition-colors">
-                        Creator Dashboard
-                      </Link>
-                      <div className="border-t border-gray-700 my-1"></div>
-                      <button
-                        onClick={() => { logout(); navigate('/'); }}
-                        className="block w-full text-left px-4 py-2 text-red-400 hover:bg-gray-800/50 transition-colors"
-                      >
-                        Logout
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => { logout(); navigate('/'); }}
-                  className="text-sm font-semibold text-red-400 hover:text-red-300 border border-red-400/40 hover:border-red-300/60 px-3 py-1.5 rounded-lg transition-all duration-200"
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-3">
-                <Link
-                  to="/signup"
-                  className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white font-bold px-6 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow-pulse whitespace-nowrap h-[44px] flex items-center"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  to="/login"
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 text-white hover:bg-white/20 font-bold px-6 py-2 rounded-xl transition-all duration-300 hover:border-white/40 whitespace-nowrap h-[44px] flex items-center"
-                >
-                  Login
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-className="md:hidden p-2 rounded-lg transition-colors flex-shrink-0 text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl mt-2 py-4 border border-gray-700/50 max-h-[80vh] overflow-y-auto z-50 absolute left-4 right-4">
-            <div className="px-4 py-2 text-xs text-gray-500 uppercase font-semibold">Navigation</div>
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="block px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            <div className="px-4 py-2 text-xs text-gray-500 uppercase font-semibold border-t border-gray-700 mt-2">More</div>
-            <Link
-              to="/casting"
-              className="block px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              🎬 Movie Casting
-            </Link>
-            <Link
-              to="/live"
-              className="block px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              🔴 Live Streams
-            </Link>
-            <Link
-              to="/business"
-              className="block px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              💼 Business
-            </Link>
-            <button
-              onClick={() => {
-                setIsQRModalOpen(true)
-                setIsMenuOpen(false)
-              }}
-              className="block w-full text-left px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-            >
-              📱 Scan Creator Code
-            </button>
-            <Link
-              to="/support"
-              className="block px-4 py-3 text-gray-300 hover:text-orange-400 hover:bg-gray-800 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              💬 Support
-            </Link>
-            
-            <div className="px-4 py-3 border-t border-gray-700 mt-2">
-              {isAuthenticated ? (
-                <>
-                  <Link 
-                    to="/dashboard" 
-                    className="block w-full text-left text-gray-300 hover:text-orange-400 mb-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
                   <button
-                    onClick={() => {
-                      logout();
-                      setIsMenuOpen(false);
-                      navigate('/');
-                    }}
-                    className="w-full text-left text-red-400 hover:text-red-300 mb-2"
+                    onClick={() => logout()}
+                    className="text-sm font-semibold text-red-400 hover:text-red-300 border border-red-400/40 hover:border-red-300/60 px-3 py-1.5 rounded-lg transition-all"
                   >
                     Logout
                   </button>
-                </>
+                </div>
               ) : (
-                <div>
-                  <Link 
-                    to="/login" 
-                    className="block w-full text-left text-gray-300 hover:text-orange-400 mb-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Sign In
-                  </Link>
+                <>
                   <Link
                     to="/signup"
-                    className="block w-full bg-gradient-to-r from-orange-500 to-purple-600 text-white font-bold py-3 px-4 rounded-lg text-center min-h-[44px] flex items-center justify-center"
-                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-xl font-bold text-[0.9rem] min-h-[42px] px-[1.1rem] py-[0.65rem] flex items-center text-white border border-transparent transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'linear-gradient(135deg, #f97316 0%, #ec4899 48%, #a855f7 100%)',
+                      boxShadow: '0 14px 28px rgba(249, 115, 22, 0.24)'
+                    }}
                   >
                     Get Started
                   </Link>
-                </div>
+                  <Link
+                    to="/login"
+                    className="rounded-xl font-bold text-[0.9rem] min-h-[42px] px-[1.1rem] py-[0.65rem] flex items-center text-[#e5e7eb] bg-[rgba(30,41,59,0.9)] border-none hover:bg-[rgba(51,65,85,0.9)] hover:text-white transition-all duration-300"
+                  >
+                    Login
+                  </Link>
+                </>
               )}
             </div>
-          </div>
-        )}
-      </div>
 
-      {/* QR Code Scanner Modal */}
-      <QRCodeScannerModal
-        isOpen={isQRModalOpen}
-        onClose={() => setIsQRModalOpen(false)}
-      />
-    </header>
+            {/* Mobile hamburger */}
+            <button
+              className="lg:hidden flex items-center justify-center min-w-[44px] min-h-[44px] p-2 text-[#e5e7eb] cursor-pointer"
+              onClick={() => setIsMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile menu overlay */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm lg:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile menu panel */}
+      <div
+        className={`fixed top-0 right-0 bottom-0 z-[101] w-[min(85vw,360px)] bg-gradient-to-b from-[#151b2c] to-[#0f172a] border-l border-white/[0.08] overflow-y-auto flex flex-col p-6 transition-transform duration-300 lg:hidden ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}
+      >
+        {/* Close button */}
+        <div className="flex justify-end mb-4">
+          <button
+            className="flex items-center justify-center min-w-[44px] min-h-[44px] p-2 text-[#e5e7eb] cursor-pointer"
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
+        </div>
+
+        {/* Navigation section */}
+        <div className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-[#64748b] py-[0.6rem]">Navigation</div>
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className="block py-3 text-[#e5e7eb] text-[1.05rem] font-semibold hover:text-[#fb923c] transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.name}
+          </Link>
+        ))}
+
+        {/* More section */}
+        <div className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-[#64748b] py-[0.6rem] mt-2">More</div>
+        {moreItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className="block py-3 text-[#e5e7eb] text-[1.05rem] font-semibold hover:text-[#fb923c] transition-colors flex items-center gap-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <item.icon size={20} className="text-[#fb923c]" />
+            {item.name}
+          </Link>
+        ))}
+
+        {/* CTA */}
+        <div className="mt-auto pt-6">
+          {isAuthenticated ? (
+            <Link
+              to="/dashboard"
+              className="block w-full py-4 rounded-xl font-extrabold text-[1rem] text-center text-white min-h-[56px] flex items-center justify-center"
+              style={{ background: 'linear-gradient(135deg, #f97316 0%, #ec4899 48%, #a855f7 100%)' }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Dashboard
+            </Link>
+          ) : (
+            <>
+              <Link
+                to="/signup"
+                className="block w-full py-4 rounded-xl font-extrabold text-[1rem] text-center text-white min-h-[56px] flex items-center justify-center mb-3"
+                style={{
+                  background: 'linear-gradient(135deg, #f97316 0%, #ec4899 48%, #a855f7 100%)',
+                  boxShadow: '0 14px 28px rgba(249, 115, 22, 0.24)'
+                }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/login"
+                className="block w-full py-3 rounded-xl font-bold text-[1rem] text-center text-[#e5e7eb] bg-[rgba(30,41,59,0.9)]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Login
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
+    </>
   )
 }
 

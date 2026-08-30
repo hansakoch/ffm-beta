@@ -8,8 +8,7 @@ const MARKETING_PATHS = new Set([
   '/live-streams', '/explore-creators', '/group-coaching',
 ])
 
-// Custom TikTok Icon Component
-const TikTokIcon = ({ size = 16 }) => (
+const TikTokIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-.1z"/>
   </svg>
@@ -21,9 +20,7 @@ const Footer = () => {
 
   const isMarketing = MARKETING_PATHS.has(pathname) || pathname.startsWith('/profile/')
 
-  if (!isMarketing) {
-    return null
-  }
+  if (!isMarketing) return null
 
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100089966703593', label: 'Facebook' },
@@ -46,7 +43,7 @@ const Footer = () => {
     'Support': [
       { name: 'Help Center', href: '/support' },
       { name: 'Contact Us', href: '/support' },
-      { name: 'Creator Resources', href: '/support' },
+      { name: 'Creator Resources', href: '/creators' },
       { name: 'Community', href: '/support' },
     ],
     'Advanced': [
@@ -55,142 +52,114 @@ const Footer = () => {
     ]
   }
 
+  const handleNav = (e: React.MouseEvent, href: string) => {
+    e.preventDefault()
+    if (href.startsWith('/')) {
+      navigate(href)
+    } else {
+      window.location.href = href
+    }
+  }
+
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden border-t border-gray-800">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDuration: '15s'}}></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDuration: '20s', animationDelay: '5s'}}></div>
-      </div>
+    <footer
+      className="relative overflow-hidden"
+      style={{
+        padding: '1.5rem 0 1.2rem',
+        color: '#94a3b8',
+        background: 'linear-gradient(135deg, #111827, #1f2937, #111827)',
+        borderTop: '1px solid #1f293b'
+      }}
+    >
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top gradient line */}
+        <div className="ffm-footer-line mb-4" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-4 sm:py-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-            {/* Logo and Description - Takes full width */}
-            <div className="lg:col-span-12 text-center">
-            </div>
-          </div>
-        </div>
-
-        {/* Footer Links Section - Now at bottom */}
-        <div className="relative pt-4 sm:pt-4 pb-8 sm:pb-8">
-          {/* Premium Tapered Divider Line */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-80"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400 to-transparent blur-sm"></div>
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" style={{clipPath: 'polygon(0% 100%, 50% 0%, 100% 100%)'}}></div>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {Object.entries(footerLinks).map(([category, links]) => (
-              <div key={category}>
-                <h3 className="text-sm sm:text-base font-bold mb-3 sm:mb-5 text-white relative">
-                  {category}
-                  <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full"></div>
-                </h3>
-                <ul className="space-y-1 sm:space-y-2">
-                  {links.map((link) => (
-                    <li key={link.name}>
-                      <Link 
-                        to={link.href}
-                        onClick={(e) => {
-                          e.preventDefault()
-                          if (link.href.startsWith('/')) {
-                            navigate(link.href)
-                          } else {
-                            window.location.href = link.href
-                          }
-                        }}
-                        className="text-gray-400 hover:text-orange-400 transition-all duration-200 text-xs sm:text-sm hover:translate-x-1 transform inline-block"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="relative pt-2 pb-3 sm:pt-2 sm:pb-3">
-          {/* Premium Tapered Divider Line */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-80"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400 to-transparent blur-sm"></div>
-            <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" style={{clipPath: 'polygon(0% 100%, 50% 0%, 100% 100%)'}}></div>
-          </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-4">
-            <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-3 text-center lg:text-left text-xs">
-              <div className="text-gray-400">
-                © 2026 FansFollow.me. All rights reserved.
-              </div>
-              <div className="flex items-center text-gray-400">
-                <span className="bg-gray-800 px-2.5 py-0.5 rounded-full">
-                  <span className="text-orange-400">₿</span> <span className="text-white font-medium">BTC/ETH/USDT/SOL Accepted</span>
-                </span>
-              </div>
-              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-1.5 lg:gap-2 text-gray-400">
-                <Link
-                  to="/privacy"
-                  className="hover:text-orange-400 transition-colors hover:underline whitespace-nowrap"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    navigate('/privacy')
+        {/* Footer link grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6">
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3
+                className="m-0 mb-3 font-bold text-white relative pb-3"
+                style={{ fontSize: '1rem' }}
+              >
+                {category}
+                <span
+                  className="absolute bottom-0 left-0 h-[2px] rounded-full"
+                  style={{
+                    width: '32px',
+                    background: 'linear-gradient(135deg, #f97316 0%, #ec4899 48%, #a855f7 100%)'
                   }}
-                >
-                  Privacy Policy
-                </Link>
-                <span>•</span>
-                <Link
-                  to="/terms"
-                  className="hover:text-orange-400 transition-colors hover:underline whitespace-nowrap"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    navigate('/terms')
-                  }}
-                >
-                  Terms of Service
-                </Link>
-                <span>•</span>
-                <Link
-                  to="/cookies"
-                  className="hover:text-orange-400 transition-colors hover:underline whitespace-nowrap"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    navigate('/cookies')
-                  }}
-                >
-                  Cookie Policy
-                </Link>
-                <span>•</span>
-                <Link
-                  to="/faq"
-                  className="hover:text-orange-400 transition-colors hover:underline whitespace-nowrap"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    navigate('/faq')
-                  }}
-                >
-                  FAQ
-                </Link>
+                />
+              </h3>
+              <div>
+                {links.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={(e) => handleNav(e, link.href)}
+                    className="block py-[0.15rem] text-[#9ca3af] hover:text-white transition-colors"
+                    style={{ fontSize: '0.9rem' }}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-2">
-              <span className="text-gray-400 text-xs">Follow us:</span>
+        {/* Bottom gradient line */}
+        <div className="ffm-footer-line mt-6 mb-3" />
+
+        {/* Bottom bar */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-3 py-3">
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <span className="text-[#94a3b8]" style={{ fontSize: '0.85rem' }}>
+              &copy; 2026 FansFollow.me. All rights reserved.
+            </span>
+            <span className="text-[#94a3b8]" style={{ fontSize: '0.85rem' }}>
+              <span className="text-[#f97316] font-extrabold">&#8383;</span>{' '}
+              <strong className="text-white font-bold">BTC/ETH/USDT/SOL Accepted</strong>
+            </span>
+            <div className="flex items-center gap-1.5 flex-wrap justify-center">
+              <Link to="/privacy" onClick={(e) => handleNav(e, '/privacy')} className="text-[#94a3b8] hover:text-white transition-colors whitespace-nowrap" style={{ fontSize: '0.85rem' }}>
+                Privacy Policy
+              </Link>
+              <span className="text-[#4b5563]">&bull;</span>
+              <Link to="/terms" onClick={(e) => handleNav(e, '/terms')} className="text-[#94a3b8] hover:text-white transition-colors whitespace-nowrap" style={{ fontSize: '0.85rem' }}>
+                Terms of Service
+              </Link>
+              <span className="text-[#4b5563]">&bull;</span>
+              <Link to="/cookies" onClick={(e) => handleNav(e, '/cookies')} className="text-[#94a3b8] hover:text-white transition-colors whitespace-nowrap" style={{ fontSize: '0.85rem' }}>
+                Cookie Policy
+              </Link>
+              <span className="text-[#4b5563]">&bull;</span>
+              <Link to="/faq" onClick={(e) => handleNav(e, '/faq')} className="text-[#94a3b8] hover:text-white transition-colors whitespace-nowrap" style={{ fontSize: '0.85rem' }}>
+                FAQ
+              </Link>
+            </div>
+          </div>
+
+          {/* Social links */}
+          <div className="flex items-center gap-2">
+            <span className="text-[#94a3b8]" style={{ fontSize: '0.85rem' }}>Follow us:</span>
+            <div className="flex gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-7 h-7 sm:w-8 sm:h-8 bg-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-purple-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-500 transform hover:scale-110 shadow-lg hover:shadow-xl hover:rotate-12"
+                  className="flex items-center justify-center rounded-full text-[#9ca3af] border border-white/[0.08] hover:text-white transition-all duration-300"
+                  style={{
+                    width: '28px',
+                    height: '28px',
+                    background: '#1f2937'
+                  }}
                   aria-label={social.label}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <social.icon size={14} className="sm:w-4 sm:h-4" />
+                  <social.icon size={14} />
                 </a>
               ))}
             </div>
