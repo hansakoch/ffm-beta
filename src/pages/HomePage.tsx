@@ -41,57 +41,121 @@ const HomePage = () => {
       {/* ===== HERO SECTION ===== */}
       <section
         id="celebrities"
-        className="relative overflow-hidden flex items-center min-h-[calc(100svh+76px)] -mt-[76px] pt-[76px]"
         style={{
-          background: 'linear-gradient(rgba(0,0,0,0.45), rgba(15,23,42,0.35)), url("/ffmherobackground.jpg") center/cover no-repeat'
+          position: 'relative',
+          overflow: 'hidden',
+          background: 'linear-gradient(rgba(0,0,0,.45), rgba(15,23,42,.35)), url("/ffmherobackground.jpg") center/cover no-repeat',
+          color: '#e5e7eb',
+          minHeight: 'calc(100svh + 76px)',
+          display: 'flex',
+          alignItems: 'center',
+          marginTop: '-76px',
+          paddingTop: '76px'
         }}
       >
-        <div className="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] gap-6 items-center py-20 lg:py-16">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)]"
+            style={{
+              position: 'relative',
+              zIndex: 1,
+              gap: '1.5rem',
+              alignItems: 'center',
+              padding: '5rem 0 4rem',
+              maxWidth: '72rem',
+              margin: '0 auto',
+              textAlign: 'left'
+            }}
+          >
             {/* Left - Text */}
-            <div className="text-left">
+            <div>
               <h1
-                className="text-white m-0 mb-2 leading-[1.25] tracking-[-0.025em] max-w-[32ch]"
-                style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900 }}
+                style={{
+                  fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)',
+                  lineHeight: '1.25',
+                  margin: '0 0 .5rem',
+                  letterSpacing: '-.025em',
+                  maxWidth: '32ch',
+                  color: '#fff',
+                  fontWeight: 900
+                }}
               >
                 FansFollow.me — where fans become friends
               </h1>
-              <div className="inline-flex items-center gap-[0.45rem] text-[#fb923c] text-[0.8rem] font-semibold mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '.45rem',
+                  color: '#fb923c',
+                  fontSize: '0.8rem',
+                  fontWeight: 600,
+                  marginBottom: '0.75rem',
+                  textShadow: '0 1px 4px rgba(0,0,0,.6)'
+                }}
+              >
                 For Fitness, Bodybuilding and Martial Arts Creators
               </div>
               <p
-                className="text-[#f1f5f9] max-w-[32rem] leading-[1.75] font-medium m-0"
-                style={{ fontSize: '0.875rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
+                style={{
+                  color: '#f1f5f9',
+                  maxWidth: '32rem',
+                  fontSize: '0.875rem',
+                  fontWeight: 500,
+                  textShadow: '0 1px 3px rgba(0,0,0,.5)',
+                  lineHeight: '1.75',
+                  margin: 0
+                }}
               >
                 Built for fitness coaches, bodybuilders, nutrition experts, martial artists and combat sports creators to earn from fans worldwide through content, coaching and direct fan access.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-3 mt-4">
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1rem' }}>
                 <Link
                   to="/explore"
-                  className="inline-flex items-center gap-2 rounded-xl font-bold text-white border border-transparent transition-all duration-300 hover:scale-105"
                   style={{
-                    background: 'linear-gradient(135deg, #f97316 0%, #a855f7 100%)',
+                    borderRadius: '12px',
+                    fontWeight: 700,
                     minHeight: '44px',
-                    padding: '0.75rem 1.5rem',
+                    padding: '.75rem 1.5rem',
+                    letterSpacing: '-0.01em',
+                    borderWidth: '1px',
                     fontSize: '0.875rem',
-                    boxShadow: '0 10px 20px rgba(249, 115, 22, 0.3)'
+                    transition: 'all .3s ease',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    background: 'linear-gradient(135deg, #f97316 0%, #a855f7 100%)',
+                    borderColor: 'transparent',
+                    color: '#fff',
+                    boxShadow: '0 10px 20px rgba(249, 115, 22, .3)'
                   }}
+                  className="hover:scale-105 transition-transform"
                 >
                   <Search size={18} />
                   Explore Creators
                 </Link>
                 <Link
                   to="/signup"
-                  className="inline-flex items-center gap-2 rounded-xl font-bold text-[#e2e8f0] border transition-all duration-300 hover:scale-105"
                   style={{
-                    background: 'rgba(30,41,59,0.8)',
-                    border: '1px solid rgba(255,255,255,0.15)',
+                    borderRadius: '12px',
+                    fontWeight: 700,
                     minHeight: '44px',
-                    padding: '0.75rem 1.5rem',
-                    fontSize: '0.875rem'
+                    padding: '.75rem 1.5rem',
+                    letterSpacing: '-0.01em',
+                    borderWidth: '1px',
+                    fontSize: '0.875rem',
+                    transition: 'all .3s ease',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    background: 'rgba(30,41,59,.8)',
+                    border: '1px solid rgba(255,255,255,.15)',
+                    color: '#e2e8f0',
+                    boxShadow: 'none'
                   }}
+                  className="hover:scale-105 transition-transform"
                 >
                   <UserPlus size={18} />
                   Get Started
@@ -100,13 +164,24 @@ const HomePage = () => {
             </div>
 
             {/* Right - Logo */}
-            <div className="flex justify-center items-end self-end justify-self-center mt-8 lg:mt-0 opacity-95" style={{ width: '75%', maxWidth: '400px', margin: '2rem auto 0' }}>
+            <div
+              style={{
+                width: '75%',
+                maxWidth: '400px',
+                margin: '2rem 0 0',
+                alignSelf: 'end',
+                justifySelf: 'center',
+                opacity: '.95'
+              }}
+            >
               <img
                 src="/fans-foloow-me-logo-final-file--png-version.png"
                 alt="FansFollow.me logo"
-                className="block w-full h-auto"
                 style={{
-                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))',
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,.3))',
                   animation: 'heroFloat 6s ease-in-out infinite'
                 }}
                 loading="eager"
@@ -118,31 +193,75 @@ const HomePage = () => {
       </section>
 
       {/* ===== SECTION 2: FEATURE CARDS ===== */}
-      <section className="py-16 bg-transparent">
+      <section style={{ padding: '4rem 0', background: 'transparent' }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8" style={{ marginBottom: '2rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2
-              className="text-white text-center m-0 mb-2 leading-[1.25]"
-              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900 }}
+              style={{
+                fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+                fontWeight: 900,
+                color: '#fff',
+                textAlign: 'center',
+                marginBottom: '.5rem',
+                lineHeight: '1.25',
+                margin: '0 0 .5rem 0'
+              }}
             >
               One home for fitness creators and their fans
             </h2>
             <p
-              className="text-[#d1d5db] max-w-[48rem] mx-auto m-0"
-              style={{ fontSize: '0.95rem', lineHeight: 1.75, marginBottom: '2rem' }}
+              className="section-sub"
+              style={{
+                textAlign: 'center',
+                color: '#d1d5db',
+                maxWidth: '48rem',
+                margin: '0 auto 2rem',
+                fontSize: '.95rem',
+                lineHeight: '1.75'
+              }}
             >
               FansFollow.me brings fighters, coaches, fitness influencers, sports professionals and actors with fitness-based content together on one platform, so fans can find them in one place and creators can build real relationships, add new revenue streams and unlock bigger opportunities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+            style={{ display: 'grid', gap: '1rem' }}
+          >
             {featureCards.map((card, i) => (
-              <div key={i} className="ffm-card p-6 h-full">
-                <div className="ffm-feature-icon">
+              <div
+                key={i}
+                style={{
+                  background: 'rgba(255,255,255,.05)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(255,255,255,.1)',
+                  borderRadius: '16px',
+                  padding: '1.5rem',
+                  height: '100%',
+                  transition: 'all .3s ease'
+                }}
+                className="ffm-card-hover"
+              >
+                <div
+                  style={{
+                    width: '56px',
+                    height: '56px',
+                    borderRadius: '12px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1rem',
+                    background: 'linear-gradient(135deg, #f97316 0%, #a855f7 100%)',
+                    color: '#fff',
+                    fontSize: '1.25rem',
+                    transition: 'transform .3s ease'
+                  }}
+                >
                   <card.icon size={20} className="text-white" />
                 </div>
-                <h3 className="m-0 mb-[0.4rem] text-[1rem] font-bold text-white">{card.title}</h3>
-                <p className="text-[#d1d5db] m-0" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>{card.text}</p>
+                <h3 style={{ margin: '0 0 .4rem', fontSize: '1rem', fontWeight: 700, color: '#fff' }}>{card.title}</h3>
+                <p style={{ color: '#d1d5db', lineHeight: '1.65', marginBottom: 0, fontSize: '.9rem', margin: 0 }}>{card.text}</p>
               </div>
             ))}
           </div>
@@ -152,52 +271,101 @@ const HomePage = () => {
       {/* ===== SECTION 3: FOR FANS ===== */}
       <section
         id="fans"
-        className="relative overflow-hidden"
         style={{
-          background: 'linear-gradient(180deg, rgba(11,15,26,0.92), rgba(21,27,44,0.88)), url("/ffmherobackground.jpg") center/cover no-repeat',
+          background: 'linear-gradient(180deg, rgba(11,15,26,.92), rgba(21,27,44,.88)), url("/ffmherobackground.jpg") center/cover no-repeat',
           paddingBottom: 0
         }}
       >
-        <div className="max-w-[64rem] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center" style={{ marginBottom: '1.5rem' }}>
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '3rem 1rem' }}>
+            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '.5rem',
+                  padding: '.5rem 1rem',
+                  borderRadius: '999px',
+                  background: 'rgba(249,115,22,.2)',
+                  border: '1px solid rgba(249,115,22,.3)',
+                  marginBottom: '1rem'
+                }}
+              >
+                <Users size={16} className="text-[#fb923c]" />
+                <span style={{ color: '#fdba74', fontWeight: 600, fontSize: '.75rem' }}>For Fans Globally | Pay with BTC/ETH/USDT/SOL</span>
+              </div>
+              <h2
+                style={{
+                  fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+                  fontWeight: 900,
+                  color: '#fff',
+                  textAlign: 'center',
+                  marginBottom: '.5rem',
+                  lineHeight: '1.25',
+                  margin: '0 0 .5rem 0'
+                }}
+              >
+                Get closer access to your favourite athletes &amp; creators
+              </h2>
+              <p
+                style={{
+                  textAlign: 'center',
+                  color: '#d1d5db',
+                  maxWidth: '48rem',
+                  margin: '0 auto 2rem',
+                  fontSize: '.95rem',
+                  lineHeight: '1.75'
+                }}
+              >
+                FansFollow.me lets you build real connections with UFC fighters, bodybuilders, martial artists, fitness models and other creators through private chats, exclusive content, calls and video sessions.
+              </p>
+            </div>
+
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4"
               style={{
-                background: 'rgba(249,115,22,0.2)',
-                border: '1px solid rgba(249,115,22,0.3)',
-                marginBottom: '1rem'
+                background: 'rgba(255,255,255,.05)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                borderRadius: '16px',
+                padding: '1.25rem',
+                border: '1px solid rgba(255,255,255,.1)'
               }}
             >
-              <Users size={16} className="text-[#fb923c]" />
-              <span className="text-[#fdba74] font-semibold text-[0.75rem]">For Fans Globally | Pay with BTC/ETH/USDT/SOL</span>
-            </div>
-            <h2
-              className="text-white text-center m-0 mb-2 leading-[1.25]"
-              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900 }}
-            >
-              Get closer access to your favourite athletes &amp; creators
-            </h2>
-            <p
-              className="text-[#d1d5db] max-w-[48rem] mx-auto m-0"
-              style={{ fontSize: '0.95rem', lineHeight: 1.75 }}
-            >
-              FansFollow.me lets you build real connections with UFC fighters, bodybuilders, martial artists, fitness models and other creators through private chats, exclusive content, calls and video sessions.
-            </p>
-          </div>
-
-          <div className="ffm-card p-5 rounded-2xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {fanCards.map((card, i) => (
-                <div key={i} className="ffm-fan-card">
-                  <card.icon
-                    size={24}
-                    className={i % 2 === 0 ? 'text-[#fb923c]' : 'text-[#a78bfa]'}
-                    style={{ display: 'block', margin: '0 auto 0.5rem' }}
-                  />
-                  <h4 className="text-white font-bold text-[0.95rem] mb-1 m-0">{card.title}</h4>
-                  <p className="text-[#d1d5db] text-[0.85rem] m-0">{card.text}</p>
-                </div>
-              ))}
+              <div
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                style={{ display: 'grid', gap: '1rem' }}
+              >
+                {fanCards.map((card, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(249,115,22,.2), rgba(168,85,247,.2))',
+                      borderRadius: '12px',
+                      padding: '1rem',
+                      textAlign: 'center',
+                      border: i % 2 === 0
+                        ? '1px solid rgba(249,115,22,.3)'
+                        : '1px solid rgba(168,85,247,.3)',
+                      transition: 'all .3s'
+                    }}
+                  >
+                    <card.icon
+                      size={24}
+                      style={{
+                        width: '1.5rem',
+                        height: '1.5rem',
+                        marginBottom: '.5rem',
+                        display: 'block',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        color: i % 2 === 0 ? '#fb923c' : '#a78bfa'
+                      }}
+                    />
+                    <h4 style={{ fontWeight: 700, color: '#fff', fontSize: '.95rem', marginBottom: '.25rem', margin: '0 0 .25rem 0' }}>{card.title}</h4>
+                    <p style={{ color: '#d1d5db', fontSize: '.85rem', margin: 0 }}>{card.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -206,28 +374,55 @@ const HomePage = () => {
       {/* ===== SECTION 4: CTA ===== */}
       <section
         id="business"
-        className="relative overflow-hidden text-center py-20"
         style={{
-          background: 'linear-gradient(rgba(0,0,0,0.5), rgba(15,23,42,0.5)), url("/ffmherobackground.jpg") center/cover no-repeat'
+          position: 'relative',
+          overflow: 'hidden',
+          background: 'linear-gradient(rgba(0,0,0,.5), rgba(15,23,42,.5)), url("/ffmherobackground.jpg") center/cover no-repeat',
+          padding: '5rem 0',
+          textAlign: 'center'
         }}
       >
         <div id="scan" style={{ position: 'relative', top: '-90px', height: 0 }} />
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-white m-0 mb-2 leading-[1.25]"
-            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 900 }}
+            style={{
+              fontSize: 'clamp(1.8rem, 3vw, 2.5rem)',
+              fontWeight: 900,
+              color: '#fff',
+              marginBottom: '.5rem',
+              margin: '0 0 .5rem 0'
+            }}
           >
             Ready to start as a creator?
           </h2>
           <p
-            className="text-[#d1d5db] mx-auto m-0"
-            style={{ fontSize: '1rem', maxWidth: '500px', lineHeight: 1.7, marginBottom: '2rem' }}
+            style={{
+              color: '#d1d5db',
+              fontSize: '1rem',
+              maxWidth: '500px',
+              margin: '0 auto 2rem',
+              lineHeight: '1.7'
+            }}
           >
             Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollow.me.
           </p>
           <Link
             to="/signup"
-            className="ffm-cta-btn inline-flex"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '.5rem',
+              padding: '.75rem 1.75rem',
+              borderRadius: '12px',
+              background: 'linear-gradient(135deg, #f97316 0%, #a855f7 100%)',
+              color: '#fff',
+              fontWeight: 700,
+              fontSize: '1rem',
+              textDecoration: 'none',
+              transition: 'all .3s',
+              boxShadow: '0 14px 28px rgba(249,115,22,.3)'
+            }}
+            className="hover:scale-105 transition-transform"
           >
             Get Started Now
             <ArrowRight size={16} />

@@ -47,7 +47,7 @@ const Header = () => {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4 min-h-[76px]">
+          <div className="flex items-center justify-between gap-4 min-h-[72px]">
             {/* Logo */}
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0" aria-label="FansFollow.me">
               <img

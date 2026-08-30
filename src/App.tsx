@@ -82,7 +82,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="min-h-screen bg-[#020617] overflow-x-hidden">
+        <div className="min-h-screen bg-[#0b0f1a] overflow-x-hidden">
           <SEOOptimizer />
           <ScrollToTop />
           <Header />
