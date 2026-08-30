@@ -177,119 +177,119 @@ const HomePage = () => {
       </section>
 
       {/* Creator Benefits Section */}
-      <section className="py-12 bg-[#080d1a] relative overflow-hidden">
+      <section className="py-8 sm:py-10 bg-[#080d1a] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 leading-tight">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2 leading-tight">
               One home for fitness creators and their fans
             </h2>
-            <p className="text-base leading-relaxed text-slate-300 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base leading-relaxed text-slate-300 max-w-3xl mx-auto">
               FansFollow.me brings fighters, coaches, fitness influencers, sports professionals and actors with fitness-based content together on one platform, so fans can find them in one place and creators can build real relationships, add new revenue streams and unlock bigger opportunities.
             </p>
           </div>
 
           {/* 7 Creator Benefit Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {/* Card 1: Keep 80%+ Revenue */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <DollarSign size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <DollarSign size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Keep 80%+ Revenue
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Keep more of what you earn with a creator-first revenue share.
               </p>
             </div>
 
             {/* Card 2: 17+ Revenue Streams */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <Zap size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <Zap size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 17+ Revenue Streams
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Earn through subscriptions, coaching, premium content, calls, tips and more.
               </p>
             </div>
 
             {/* Card 3: Global Payments */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <Globe size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <Globe size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Global Payments
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Accept payments from fans worldwide with flexible payment options.
               </p>
             </div>
 
             {/* Card 4: Direct Fan Connection */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <MessageCircle size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <MessageCircle size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Direct Fan Connection
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Build stronger fan relationships through private access and paid interactions.
               </p>
             </div>
 
             {/* Card 5: Mobile Content Creation */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <Camera size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <Camera size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Mobile Content Creation
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Create and upload content directly from your phone.
               </p>
             </div>
 
             {/* Card 6: Instant Messaging */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <Phone size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <Phone size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Instant Messaging
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Chat privately with fans in real time.
               </p>
             </div>
 
             {/* Card 7: Live Streaming */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <Video size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <Video size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 Live Streaming
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Go live to your audience from any device.
               </p>
             </div>
 
             {/* Card 8: In-Person QR Sign-Ups */}
-            <div className="bg-[#101827] rounded-2xl p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
-                <QrCode size={28} className="text-white" />
+            <div className="bg-[#101827] rounded-2xl p-4 sm:p-5 border border-[#263247] hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 via-pink-500 to-purple-500 flex items-center justify-center mb-3 shadow-lg">
+                <QrCode size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-base font-bold text-white mb-1">
                 In-Person QR Sign-Ups
               </h3>
-              <p className="text-lg leading-relaxed text-slate-300">
+              <p className="text-sm leading-snug text-slate-300">
                 Let fans join and pay on the spot by scanning your unique QR code at events and gyms.
               </p>
             </div>
