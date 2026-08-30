@@ -193,7 +193,7 @@ const HomePage = () => {
       </section>
 
       {/* ===== SECTION 2: FEATURE CARDS ===== */}
-      <section style={{ padding: '4rem 0', background: 'transparent' }}>
+      <section style={{ padding: '4rem 0 .5rem', background: 'transparent' }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2
@@ -277,7 +277,7 @@ const HomePage = () => {
         }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '3rem 1rem' }}>
+          <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '.75rem 1rem 3rem' }}>
             <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
               <div
                 style={{
