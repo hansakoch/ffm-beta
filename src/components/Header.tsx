@@ -28,9 +28,7 @@ const Header = () => {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 h-[72px] ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl border-b border-gray-700' : 'bg-transparent'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 h-[72px] bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-[72px]">
           {/* Logo */}
@@ -50,11 +48,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-semibold transition-colors duration-200 whitespace-nowrap ${
-                  isScrolled 
-                    ? 'text-gray-300 hover:text-orange-400' 
-                    : 'text-white hover:text-orange-400'
-                }`}
+className="font-semibold transition-colors duration-200 whitespace-nowrap text-white hover:text-orange-400"
               >
                 {item.name}
               </Link>
@@ -62,11 +56,7 @@ const Header = () => {
             
             {/* Dropdown for More Options */}
             <div className="relative group">
-              <button className={`font-semibold transition-colors duration-200 flex items-center whitespace-nowrap ${
-                isScrolled 
-                  ? 'text-gray-300 hover:text-orange-400' 
-                  : 'text-white hover:text-orange-400'
-              }`}>
+              <button className="font-semibold transition-colors duration-200 flex items-center whitespace-nowrap text-white hover:text-orange-400">
                 More
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -160,9 +150,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden p-2 rounded-lg transition-colors flex-shrink-0 ${
-              isScrolled ? 'text-gray-300' : 'text-white'
-            }`}
+className="md:hidden p-2 rounded-lg transition-colors flex-shrink-0 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
