@@ -272,7 +272,7 @@ const HomePage = () => {
       <section
         id="fans"
         style={{
-          background: 'linear-gradient(180deg, rgba(11,15,26,.92), rgba(21,27,44,.88)), url("/ffmherobackground.jpg") center/cover no-repeat',
+          background: 'linear-gradient(180deg, rgba(11,15,26,.96), rgba(21,27,44,.96)), radial-gradient(circle at 18% 20%, rgba(96,165,250,.13), transparent 34%), radial-gradient(circle at 82% 72%, rgba(249,115,22,.08), transparent 38%), #0b0f1a',
           paddingBottom: 0
         }}
       >
