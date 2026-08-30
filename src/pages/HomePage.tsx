@@ -114,7 +114,7 @@ const HomePage = () => {
         ]}
       />
       {/* Hero Section */}
-      <section className="relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28 mt-[72px] min-h-[calc(100vh-72px)]">
+      <section className="relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 lg:pb-28 min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
           style={{
