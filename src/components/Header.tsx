@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Search, UserPlus, Film, Radio, Briefcase, MessageSquare } from 'lucide-react'
+import { Menu, X, Film, Radio, Briefcase, MessageSquare } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
@@ -47,9 +47,9 @@ const Header = () => {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4 min-h-[72px]">
+          <div className="flex items-center justify-between gap-4 min-h-[76px]">
             {/* Logo */}
-            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0" aria-label="FansFollow.me">
               <img
                 src="/fans-foloow-me-logo-final-file--png-version.png"
                 alt="FansFollow.me"
@@ -58,7 +58,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center flex-wrap gap-[0.15rem]">
+            <nav className="hidden lg:flex items-center flex-wrap gap-[0.15rem]" aria-label="Primary">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -149,19 +149,18 @@ const Header = () => {
       </header>
 
       {/* Mobile menu overlay */}
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm lg:hidden"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
+      <div
+        className={`fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
 
       {/* Mobile menu panel */}
       <div
         className={`fixed top-0 right-0 bottom-0 z-[101] w-[min(85vw,360px)] bg-gradient-to-b from-[#151b2c] to-[#0f172a] border-l border-white/[0.08] overflow-y-auto flex flex-col p-6 transition-transform duration-300 lg:hidden ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}
       >
         {/* Close button */}
         <div className="flex justify-end mb-4">
@@ -215,8 +214,15 @@ const Header = () => {
           ) : (
             <>
               <Link
+                to="/login"
+                className="block py-3 text-[#94a3b8] font-semibold text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Login
+              </Link>
+              <Link
                 to="/signup"
-                className="block w-full py-4 rounded-xl font-extrabold text-[1rem] text-center text-white min-h-[56px] flex items-center justify-center mb-3"
+                className="block w-full py-4 rounded-xl font-extrabold text-[1rem] text-center text-white min-h-[56px] flex items-center justify-center mt-4"
                 style={{
                   background: 'linear-gradient(135deg, #f97316 0%, #ec4899 48%, #a855f7 100%)',
                   boxShadow: '0 14px 28px rgba(249, 115, 22, 0.24)'
@@ -224,13 +230,6 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
-              </Link>
-              <Link
-                to="/login"
-                className="block w-full py-3 rounded-xl font-bold text-[1rem] text-center text-[#e5e7eb] bg-[rgba(30,41,59,0.9)]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Login
               </Link>
             </>
           )}

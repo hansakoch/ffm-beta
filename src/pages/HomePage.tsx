@@ -40,17 +40,18 @@ const HomePage = () => {
 
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative overflow-hidden flex items-center min-h-[calc(100svh+72px)] -mt-[72px] pt-[72px]"
+        id="celebrities"
+        className="relative overflow-hidden flex items-center min-h-[calc(100svh+76px)] -mt-[76px] pt-[76px]"
         style={{
           background: 'linear-gradient(rgba(0,0,0,0.45), rgba(15,23,42,0.35)), url("/ffmherobackground.jpg") center/cover no-repeat'
         }}
       >
-        <div className="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] gap-6 items-center py-20 lg:py-16">
             {/* Left - Text */}
             <div className="text-left">
               <h1
-                className="text-white mb-2 leading-[1.25] tracking-[-0.025em] max-w-[32ch]"
+                className="text-white m-0 mb-2 leading-[1.25] tracking-[-0.025em] max-w-[32ch]"
                 style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 900 }}
               >
                 FansFollow.me — where fans become friends
@@ -59,7 +60,7 @@ const HomePage = () => {
                 For Fitness, Bodybuilding and Martial Arts Creators
               </div>
               <p
-                className="text-[#f1f5f9] max-w-[32rem] leading-[1.75] font-medium"
+                className="text-[#f1f5f9] max-w-[32rem] leading-[1.75] font-medium m-0"
                 style={{ fontSize: '0.875rem', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
               >
                 Built for fitness coaches, bodybuilders, nutrition experts, martial artists and combat sports creators to earn from fans worldwide through content, coaching and direct fan access.
@@ -99,14 +100,12 @@ const HomePage = () => {
             </div>
 
             {/* Right - Logo */}
-            <div className="flex justify-center items-end self-end justify-self-center mt-8 lg:mt-0 opacity-95">
+            <div className="flex justify-center items-end self-end justify-self-center mt-8 lg:mt-0 opacity-95" style={{ width: '75%', maxWidth: '400px', margin: '2rem auto 0' }}>
               <img
                 src="/fans-foloow-me-logo-final-file--png-version.png"
                 alt="FansFollow.me logo"
                 className="block w-full h-auto"
                 style={{
-                  width: '75%',
-                  maxWidth: '400px',
                   filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))',
                   animation: 'heroFloat 6s ease-in-out infinite'
                 }}
@@ -119,18 +118,18 @@ const HomePage = () => {
       </section>
 
       {/* ===== SECTION 2: FEATURE CARDS ===== */}
-      <section className="py-16 lg:py-16 bg-transparent">
+      <section className="py-16 bg-transparent">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8" style={{ marginBottom: '2rem' }}>
             <h2
-              className="text-white text-center mb-2 leading-[1.25]"
+              className="text-white text-center m-0 mb-2 leading-[1.25]"
               style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900 }}
             >
               One home for fitness creators and their fans
             </h2>
             <p
-              className="text-[#d1d5db] max-w-[48rem] mx-auto mb-8"
-              style={{ fontSize: '0.95rem', lineHeight: 1.75 }}
+              className="text-[#d1d5db] max-w-[48rem] mx-auto m-0"
+              style={{ fontSize: '0.95rem', lineHeight: 1.75, marginBottom: '2rem' }}
             >
               FansFollow.me brings fighters, coaches, fitness influencers, sports professionals and actors with fitness-based content together on one platform, so fans can find them in one place and creators can build real relationships, add new revenue streams and unlock bigger opportunities.
             </p>
@@ -152,6 +151,7 @@ const HomePage = () => {
 
       {/* ===== SECTION 3: FOR FANS ===== */}
       <section
+        id="fans"
         className="relative overflow-hidden"
         style={{
           background: 'linear-gradient(180deg, rgba(11,15,26,0.92), rgba(21,27,44,0.88)), url("/ffmherobackground.jpg") center/cover no-repeat',
@@ -159,25 +159,26 @@ const HomePage = () => {
         }}
       >
         <div className="max-w-[64rem] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-6">
+          <div className="text-center" style={{ marginBottom: '1.5rem' }}>
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4"
               style={{
                 background: 'rgba(249,115,22,0.2)',
-                border: '1px solid rgba(249,115,22,0.3)'
+                border: '1px solid rgba(249,115,22,0.3)',
+                marginBottom: '1rem'
               }}
             >
               <Users size={16} className="text-[#fb923c]" />
               <span className="text-[#fdba74] font-semibold text-[0.75rem]">For Fans Globally | Pay with BTC/ETH/USDT/SOL</span>
             </div>
             <h2
-              className="text-white text-center mb-2 leading-[1.25]"
+              className="text-white text-center m-0 mb-2 leading-[1.25]"
               style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 900 }}
             >
               Get closer access to your favourite athletes &amp; creators
             </h2>
             <p
-              className="text-[#d1d5db] max-w-[48rem] mx-auto mb-6"
+              className="text-[#d1d5db] max-w-[48rem] mx-auto m-0"
               style={{ fontSize: '0.95rem', lineHeight: 1.75 }}
             >
               FansFollow.me lets you build real connections with UFC fighters, bodybuilders, martial artists, fitness models and other creators through private chats, exclusive content, calls and video sessions.
@@ -193,7 +194,7 @@ const HomePage = () => {
                     className={i % 2 === 0 ? 'text-[#fb923c]' : 'text-[#a78bfa]'}
                     style={{ display: 'block', margin: '0 auto 0.5rem' }}
                   />
-                  <h4 className="text-white font-bold text-[0.95rem] mb-1">{card.title}</h4>
+                  <h4 className="text-white font-bold text-[0.95rem] mb-1 m-0">{card.title}</h4>
                   <p className="text-[#d1d5db] text-[0.85rem] m-0">{card.text}</p>
                 </div>
               ))}
@@ -204,21 +205,23 @@ const HomePage = () => {
 
       {/* ===== SECTION 4: CTA ===== */}
       <section
-        className="relative overflow-hidden text-center py-20 lg:py-20"
+        id="business"
+        className="relative overflow-hidden text-center py-20"
         style={{
           background: 'linear-gradient(rgba(0,0,0,0.5), rgba(15,23,42,0.5)), url("/ffmherobackground.jpg") center/cover no-repeat'
         }}
       >
+        <div id="scan" style={{ position: 'relative', top: '-90px', height: 0 }} />
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-white mb-2 leading-[1.25]"
+            className="text-white m-0 mb-2 leading-[1.25]"
             style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 900 }}
           >
             Ready to start as a creator?
           </h2>
           <p
-            className="text-[#d1d5db] mx-auto mb-8"
-            style={{ fontSize: '1rem', maxWidth: '500px', lineHeight: 1.7 }}
+            className="text-[#d1d5db] mx-auto m-0"
+            style={{ fontSize: '1rem', maxWidth: '500px', lineHeight: 1.7, marginBottom: '2rem' }}
           >
             Keep more of what you earn, connect with fans in one place and unlock new media and casting opportunities as you grow on FansFollow.me.
           </p>

@@ -76,12 +76,12 @@ const Footer = () => {
         <div className="ffm-footer-line mb-4" />
 
         {/* Footer link grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pb-6" style={{ gap: '2rem' }}>
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3
-                className="m-0 mb-3 font-bold text-white relative pb-3"
-                style={{ fontSize: '1rem' }}
+                className="m-0 font-bold text-white relative"
+                style={{ fontSize: '1rem', marginBottom: '.75rem' }}
               >
                 {category}
                 <span
@@ -113,8 +113,8 @@ const Footer = () => {
         <div className="ffm-footer-line mt-6 mb-3" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-3 py-3">
-          <div className="flex items-center gap-4 flex-wrap justify-center">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-3 py-3" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '.75rem', padding: '.75rem 0' }}>
+          <div className="flex items-center gap-4 flex-wrap justify-center" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <span className="text-[#94a3b8]" style={{ fontSize: '0.85rem' }}>
               &copy; 2026 FansFollow.me. All rights reserved.
             </span>
@@ -142,9 +142,9 @@ const Footer = () => {
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" style={{ display: 'flex', alignItems: 'center', gap: '.5rem', flexWrap: 'wrap' }}>
             <span className="text-[#94a3b8]" style={{ fontSize: '0.85rem' }}>Follow us:</span>
-            <div className="flex gap-2">
+            <div className="flex gap-2" style={{ display: 'flex', gap: '.5rem' }}>
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
