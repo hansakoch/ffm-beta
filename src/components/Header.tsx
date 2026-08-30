@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Menu, X, Bell } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
@@ -7,18 +7,9 @@ import QRCodeScannerModal from './QRCodeScannerModal'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isQRModalOpen, setIsQRModalOpen] = useState(false)
   const { isAuthenticated, user, logout } = useAuth()
   const navigate = useNavigate()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const navItems = [
     { name: 'For Creators', href: '/creators' },
@@ -28,7 +19,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[72px] bg-transparent">
+    <header className="relative z-50 h-[72px] bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-[72px]">
           {/* Logo */}
